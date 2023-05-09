@@ -1,20 +1,16 @@
-TITLE: Proposal for a Nuclear Talent course at the ECT* in 2017: Theory for Exploring Nuclear Structure Experiments
-AUTHOR: "Alex Brown":"https://people.nscl.msu.edu/~brown/" at National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA
-AUTHOR: "Alexandra Gade":"https://people.nscl.msu.edu/~gade/" at National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA
-AUTHOR: "Robert Grzywacz":"http://web.utk.edu/~rgrzywac/" at Department of Physics and Astronomy, University of Tennessee, Knoxville, TN 37996-1200, USA &  Oak Ridge National Laboratory, Oak Ridge, TN 37831, USA
+TITLE: Proposal for a Nuclear Talent course at the ECT* in 2024: Quantum Computing for Nuclear Physics
+AUTHOR: "Dean Lee":"https://people.nscl.msu.edu/~brown/" at National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA
+AUTHOR: "Ryan Larose":"https://people.nscl.msu.edu/~gade/" at National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA
 AUTHOR: "Morten Hjorth-Jensen":"http://mhjgit.github.io/info/doc/web/"  at National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics, University of Oslo, N-0316 Oslo, Norway
-AUTHOR: "Gustav Jansen":"https://www.ornl.gov/staff-profile/gustav-r-jansen"  at Oak Ridge National Laboratory, Oak Ridge, TN 37831, USA
-DATE: May 26 2016
+DATE: May 9, 2023
 
 !split
-===== Proposal for a Nuclear Talent course at the ECT* in 2017 =====
+===== Proposal for a Nuclear Talent course at the ECT* in 2024 =====
 !bblock
 We would like to propose a three-week Nuclear Talent course on Theory
 for exploring nuclear structure experiments at the ECT* for the summer
-of 2017.  A similar course, but with a strong focus on collective models and symmetries,
-was run and organized at Ganil by Rick Casten and Piet van Isacker in
-2014. The course was oversubscribed with more than 60 student
-applications, clearly demonstrating the need in the community for the
+of 2024.  
+
 selected topics. We believe such a course has a strong potential to
 attract many students, theorists and experimentalists alike. Since the Nuclear Talent 
 initiative aims at proposing the various courses in cycles of three to four years, it 
@@ -301,9 +297,11 @@ Students who have not studied the above topics are expected to gain
 this knowledge prior to attendance.  Additional modules for
 self-teaching on Fortran and/or C++ or Python are also provided.
 !eblock
+
 !split
 ===== Admission =====
 !bblock
+
 The target group is Master of Science students, PhD students and early
 post-doctoral fellows.  Also senior staff can attend but they have to be
 self-supported.  The maximum number of students is 20-25, of which only
