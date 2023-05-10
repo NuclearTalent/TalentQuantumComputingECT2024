@@ -2,7 +2,7 @@ TITLE: Proposal for a Nuclear Talent course at the ECT* in 2024: Quantum Computi
 AUTHOR: "Dean Lee":"https://people.nscl.msu.edu/~brown/" at National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA
 AUTHOR: "Ryan Larose":"https://people.nscl.msu.edu/~gade/" at National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA
 AUTHOR: "Morten Hjorth-Jensen":"http://mhjgit.github.io/info/doc/web/"  at National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics, University of Oslo, N-0316 Oslo, Norway
-DATE: May 9, 2023
+DATE: Today
 
 !split
 ===== Proposal for a Nuclear Talent course at the ECT* in 2024 =====
