@@ -26,8 +26,8 @@ philosophy, as well as various organizational and practical matters.
 The teaching teams consists of quantum computing theorists and nuclear
 theorists, with expertise ranging from many-body methods to quantum
 field theories. Several of us have developed courses on quantum
-computing and/or taught them, in addition to our ongoing research on
-quantum computing, which spans from quantum engineering to
+computing and/or taught similar courses, in addition to our ongoing research on
+quantum computing. This  spans from quantum engineering to
 developments of new algorithms and error correction studies.  We
 believe such a mix is important as it gives the students a better
 understanding on how quantum computing can be applied to nuclear
@@ -41,12 +41,6 @@ planned quantum technologies.
 ===== Motivation =====
 !bblock
 
-To understand why matter is stable, and thereby shed light on the
-limits of nuclear stability, is one of the overarching aims and
-intellectual challenges of basic research in nuclear physics. To
-relate the stability of matter to the underlying fundamental forces
-and particles of nature as manifested in nuclear matter, is central to
-present and planned rare isotope facilities.  
 
 !eblock
 
@@ -54,7 +48,7 @@ present and planned rare isotope facilities.
 ===== Introduction to the Talent Courses =====
 !bblock
 
-A recently established initiative, "Training in Advanced Low Energy
+The TALENT initiative, "Training in Advanced Low Energy
 Nuclear Theory":"http://www.nucleartalent.org", aims at providing an
 advanced and comprehensive training to graduate students and young
 researchers in low-energy nuclear theory. The initiative is a
@@ -63,14 +57,14 @@ institutions and aims at developing a broad curriculum that will
 provide the platform for a cutting-edge theory for understanding
 nuclei and nuclear reactions. These objectives will be met by offering
 series of lectures, commissioned from experienced teachers in nuclear
-theory. The educational material generated under this program will be
+theory and experiemt. The educational material generated under this program will be
 collected in the form of WEB-based courses, textbooks, and a variety
 of modern educational resources. No such all-encompassing material is
 available at present; its development will allow dispersed university
 groups to profit from the best expertise available.
 
 The Nuclear Talent initiative has organized and run
-successfully several advanced courses since the summer of 2012. Several of
+several advanced courses since the summer of 2012. Several of
 these courses have been run and organized (in a very successful way)
 at the premises of the ECT*. We hope thus, if this course gets
 approved by the board of directors of the ECT*, that we can continue
