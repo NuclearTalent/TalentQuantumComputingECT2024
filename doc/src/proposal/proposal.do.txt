@@ -11,29 +11,36 @@ DATE: Today
 !split
 ===== Proposal for a Nuclear Talent course at the ECT* in 2025 =====
 !bblock
-We would like to propose a three-week Nuclear Talent course on Theory
-for exploring quantum computing and quantum information science applied to nuclear physics  at the ECT* for the summer
-of 2025.  
-We believe such a course has a strong potential to
-attract many students, theorists and experimentalists alike.
+
+We would like to propose a three-week Nuclear Talent course on theory
+for exploring quantum computing and quantum information science
+applied to nuclear physics at the ECT* for the summer of 2025.  We
+believe such a course has a strong potential to attract many students,
+theorists and experimentalists alike.
 
 Below we give a short motivation for the proposed course and the
 rationale behind the Nuclear Talent initiative. Thereafter we detail
 our course plans with learning outcomes, objectives and teaching
 philosophy, as well as various organizational and practical matters.
 
-The teaching teams consists of quantum theorists and nuclear
+The teaching teams consists of quantum computing theorists and nuclear
 theorists, with expertise ranging from many-body methods to quantum
-field theories. We believe such a mix is important as it gives the
-students a better understanding on how quantum computing can be applied to nuclear physics problems, and what are
-the limitations and possibilities in understanding and interpreting
-the various algorithms.
+field theories. Several of us have developed courses on quantum
+computing and/or taught them, in addition to our ongoing research on
+quantum computing, which spans from quantum engineering to
+developments of new algorithms and error correction studies.  We
+believe such a mix is important as it gives the students a better
+understanding on how quantum computing can be applied to nuclear
+physics problems, and what are the limitations and possibilities in
+understanding and interpreting the various algorithms on present and
+planned quantum technologies.
 
 !eblock
 
 !split
 ===== Motivation =====
 !bblock
+
 To understand why matter is stable, and thereby shed light on the
 limits of nuclear stability, is one of the overarching aims and
 intellectual challenges of basic research in nuclear physics. To
@@ -46,40 +53,36 @@ present and planned rare isotope facilities.
 !split 
 ===== Introduction to the Talent Courses =====
 !bblock
-A recently established initiative, "Training in Advanced Low Energy Nuclear Theory":"http://www.nucleartalent.org",  
-aims at providing an advanced and comprehensive training to graduate students
-and young researchers in low-energy nuclear theory. The initiative
-is a multinational network between several European and Northern
-American institutions and aims at developing a broad curriculum that
-will provide the platform for a cutting-edge theory for understanding
-nuclei and nuclear reactions. These objectives will be met by
-offering series of lectures, commissioned from experienced teachers
-in nuclear theory. The educational material generated under this
-program will be collected in the form of WEB-based courses,
-textbooks, and a variety of modern educational resources. No such
-all-encompassing material is available at present; its development
-will allow dispersed university groups to profit from the best
-expertise available.
 
-The Nuclear Talent initiative has (as of ) organized and run
-successfully nine advanced courses since the summer of 2012. Three of
+A recently established initiative, "Training in Advanced Low Energy
+Nuclear Theory":"http://www.nucleartalent.org", aims at providing an
+advanced and comprehensive training to graduate students and young
+researchers in low-energy nuclear theory. The initiative is a
+multinational network between several European and Northern American
+institutions and aims at developing a broad curriculum that will
+provide the platform for a cutting-edge theory for understanding
+nuclei and nuclear reactions. These objectives will be met by offering
+series of lectures, commissioned from experienced teachers in nuclear
+theory. The educational material generated under this program will be
+collected in the form of WEB-based courses, textbooks, and a variety
+of modern educational resources. No such all-encompassing material is
+available at present; its development will allow dispersed university
+groups to profit from the best expertise available.
+
+The Nuclear Talent initiative has organized and run
+successfully several advanced courses since the summer of 2012. Several of
 these courses have been run and organized (in a very successful way)
 at the premises of the ECT*. We hope thus, if this course gets
 approved by the board of directors of the ECT*, that we can continue
-this successful and very fruitful collaboration.  The course organized
-by Giuseppina Orlandini *et al* at the ECT* last summer had more than
-fifty applicants. On average, the Nuclear Talent courses we have
-organized till now have had close to 40 applicants per course. We have
-normally accepted between 20 and 25 students, of which approximately
-five or slightly more have been either local students and/or fully
-self-supported.  In 2016 the Nuclear Talent initiatives will run two
-courses, one in the US and one in Europe.
+this successful and very fruitful collaboration.
+
 !eblock
 
 
 !split
 ===== Aims and Learning Outcomes =====
 !bblock
+
 This three-week TALENT course on nuclear theory will focus on the
 interpretation of data on the structure of nuclei using the Nuclear shell model as main tool. 
 
@@ -204,12 +207,14 @@ At the end of the course the students should have a basic understanding of
 ===== Teaching =====
 !bblock
 
-The course will be taught as an intensive  course of duration of three weeks, with a
-total time of 45 h of lectures, 45 h of exercises and  a final assignment of 2 weeks of work.
-The total load will be approximately 160-170 hours, corresponding to  _7 ECTS_ in Europe.
-The final assignment will be graded
-with marks A, B, C, D, E and failed for Master students and passed/not passed for PhD students.
-A course certificate will be issued for students requiring it from the University of Trento. 
+The course will be taught as an intensive course of duration of three
+weeks, with a total time of 45 h of lectures, 45 h of exercises and a
+final assignment of 2 weeks of work.  The total load will be
+approximately 160-170 hours, corresponding to _7 ECTS_ in Europe.  The
+final assignment will be graded with marks A, B, C, D, E and failed
+for Master students and passed/not passed for PhD students.  A course
+certificate will be issued for students requiring it from the
+University of Trento.
 
 The organization of a typical course day is as follows:
 
@@ -222,7 +227,9 @@ The organization of a typical course day is as follows:
 | 6pm-7pm |  Wrap-up of the day and eventual student presentations       |
 |------------------------------------------------------------------------| 
 
-If approved by the ECT* board of directors, our preferred time slot would be from the second half of June till the second half of July. 
+If approved by the ECT* board of directors, our preferred time slot
+would be from the second half of June till the second half of July.
+
 !eblock
 
 !split
@@ -247,22 +254,19 @@ Morten Hjorth-Jensen will also function as student advisor and coordinator.
 !split
 ===== Audience and Prerequisites =====
 !bblock
-Students and post-doctoral fellows interested in quantum computing applied to nuclear physics problems, from nuclear structure to quantum field theories.
-The material will be
-of interest, and accessible, to both theorists and experimentalists,
-and will include learning the practical use of quantum computing software 
-in order to interpret and study nucl.
+
+Students and post-doctoral fellows interested in quantum computing
+applied to nuclear physics problems, from nuclear structure to quantum
+field theories.  The material will be of interest, and accessible, to
+both theorists and experimentalists, and will include learning the
+practical use of quantum computing software in order to interpret and
+study nuclear systems.
 
 The students are expected to have operating programming skills in in
-compiled programming languages like Fortran or C++ or alternatively an
+compiled programming languages like Fortran or C++ or preferentially in  an
 interpreted language like Python and knowledge of quantum mechanics at
-an intermediate level.  Preparatory modules on second quantization,
-Wick's theorem, representation of Hamiltonians and calculations of
-Hamiltonian matrix elements, independent particle models and
-Hartree-Fock theory are provided at the website of the course.
-Students who have not studied the above topics are expected to gain
-this knowledge prior to attendance.  Additional modules for
-self-teaching on Fortran and/or C++ or Python are also provided.
+an intermediate level.  
+
 !eblock
 
 !split
@@ -270,23 +274,38 @@ self-teaching on Fortran and/or C++ or Python are also provided.
 !bblock
 
 The target group is Master of Science students, PhD students and early
-post-doctoral fellows.  Also senior staff can attend but they have to be
-self-supported.  The maximum number of students is 20-25, of which only
-at most 15 can receive full local support. 
+post-doctoral fellows.  Also senior staff can attend but they have to
+be self-supported.  The maximum number of students is 20-30, of which
+hopefully at most 15-20 can receive full local support.
 
-The process of selections of the students will be managed in
-agreement with the ECT*.
+The process of selections of the students will be managed in agreement
+with the ECT*.
+
 !eblock
 
 !split
 ===== Preliminary budget =====
 !bblock
-We expect to accept between 20-25 students. Local students from the University of Trento are fully self-supported. 
-If approved, we would very much appreciate if the ECT* can sponsor 15-20 of the selected students with local expenses, that is lodging and meals during weekdays. Any additional funds for sponsoring further students is highly appreciated. 
-All travel expenses will be covered by the respective home institute. 
-Teachers are self-supported. We plan to raise additional funds to cover local support for additional students and the expenses of the teachers. 
 
-There is no participation fee. Administrative support from the ECT* in organizing the course and setting up the application procedure is essential for a smooth (as always) outcome. The administrative experience of the staff at the ECT* has been unique and essential in running successully our previous Talent courses. We would thus highly appreciate it if these services are provided if the proposal is approved.  
+We expect to accept between 20-30 students. Local students from the
+University of Trento are fully self-supported.  If approved, we would
+very much appreciate if the ECT* can sponsor 15-20 of the selected
+students with local expenses, that is lodging and meals during
+weekdays. Any additional funds for sponsoring further students is
+highly appreciated.
+
+All travel expenses will be covered by the respective home institute.
+Teachers are self-supported. We plan to raise additional funds to
+cover local support for additional students and the expenses of the
+teachers.
+
+There is no participation fee. Administrative support from the ECT* in
+organizing the course and setting up the application procedure is
+essential for a smooth (as always) outcome. The administrative
+experience of the staff at the ECT* has been unique and essential in
+running successully our previous Talent courses. We would thus highly
+appreciate it if these services are provided if the proposal is
+approved.
 
 !eblock
 
