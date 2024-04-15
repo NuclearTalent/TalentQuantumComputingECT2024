@@ -54,13 +54,25 @@ doconce format html proposal.do.txt --html_style=bootstrap --pygments_html_style
                3,
                None,
                'objectives-and-learning-outcomes'),
-              ('Course Content and detailed plan',
+              ('Course Content and detailed plan (_tentative, not final_)',
                2,
                None,
-               'course-content-and-detailed-plan'),
-              ('Week 1', 3, None, 'week-1'),
-              ('Week 2', 3, None, 'week-2'),
-              ('Week 3', 3, None, 'week-3'),
+               'course-content-and-detailed-plan-tentative-not-final'),
+              ('Week 1, Monday', 3, None, 'week-1-monday'),
+              ('Week 1, Tuesday', 3, None, 'week-1-tuesday'),
+              ('Week 1, Wednesday', 3, None, 'week-1-wednesday'),
+              ('Week 1, Thursday', 3, None, 'week-1-thursday'),
+              ('Week 1, Friday', 3, None, 'week-1-friday'),
+              ('Week 2, Monday', 3, None, 'week-2-monday'),
+              ('Week 2, Tuesday', 3, None, 'week-2-tuesday'),
+              ('Week 2, Wednesday', 3, None, 'week-2-wednesday'),
+              ('Week 2, Thursday', 3, None, 'week-2-thursday'),
+              ('Week 2, Friday', 3, None, 'week-2-friday'),
+              ('Week 3, Monday', 3, None, 'week-3-monday'),
+              ('Week 3, Tuesday', 3, None, 'week-3-tuesday'),
+              ('Week 3, Wednesday', 3, None, 'week-3-wednesday'),
+              ('Week 3, Thursday', 3, None, 'week-3-thursday'),
+              ('Week 3, Friday', 3, None, 'week-3-friday'),
               ('Teaching', 2, None, 'teaching'),
               ('Teachers and organizers', 2, None, 'teachers-and-organizers'),
               ('Audience and Prerequisites',
@@ -72,22 +84,6 @@ doconce format html proposal.do.txt --html_style=bootstrap --pygments_html_style
 end of tocinfo -->
 
 <body>
-
-
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  TeX: {
-     equationNumbers: {  autoNumber: "none"  },
-     extensions: ["AMSmath.js", "AMSsymbols.js", "autobold.js", "color.js"]
-  }
-});
-</script>
-<script type="text/javascript" async
- src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
-
 <!-- Bootstrap navigation bar -->
 <div class="navbar navbar-default navbar-fixed-top">
   <div class="navbar-header">
@@ -109,10 +105,22 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="._proposal-bs004.html#aims-and-learning-outcomes" style="font-size: 80%;"><b>Aims and Learning Outcomes</b></a></li>
      <!-- navigation toc: --> <li><a href="._proposal-bs004.html#format" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Format:</a></li>
      <!-- navigation toc: --> <li><a href="._proposal-bs004.html#objectives-and-learning-outcomes" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Objectives and learning outcomes:</a></li>
-     <!-- navigation toc: --> <li><a href="#course-content-and-detailed-plan" style="font-size: 80%;"><b>Course Content and detailed plan</b></a></li>
-     <!-- navigation toc: --> <li><a href="#week-1" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Week 1</a></li>
-     <!-- navigation toc: --> <li><a href="#week-2" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Week 2</a></li>
-     <!-- navigation toc: --> <li><a href="#week-3" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Week 3</a></li>
+     <!-- navigation toc: --> <li><a href="#course-content-and-detailed-plan-tentative-not-final" style="font-size: 80%;"><b>Course Content and detailed plan (<b>tentative, not final</b>)</b></a></li>
+     <!-- navigation toc: --> <li><a href="#week-1-monday" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Week 1, Monday</a></li>
+     <!-- navigation toc: --> <li><a href="#week-1-tuesday" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Week 1, Tuesday</a></li>
+     <!-- navigation toc: --> <li><a href="#week-1-wednesday" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Week 1, Wednesday</a></li>
+     <!-- navigation toc: --> <li><a href="#week-1-thursday" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Week 1, Thursday</a></li>
+     <!-- navigation toc: --> <li><a href="#week-1-friday" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Week 1, Friday</a></li>
+     <!-- navigation toc: --> <li><a href="#week-2-monday" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Week 2, Monday</a></li>
+     <!-- navigation toc: --> <li><a href="#week-2-tuesday" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Week 2, Tuesday</a></li>
+     <!-- navigation toc: --> <li><a href="#week-2-wednesday" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Week 2, Wednesday</a></li>
+     <!-- navigation toc: --> <li><a href="#week-2-thursday" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Week 2, Thursday</a></li>
+     <!-- navigation toc: --> <li><a href="#week-2-friday" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Week 2, Friday</a></li>
+     <!-- navigation toc: --> <li><a href="#week-3-monday" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Week 3, Monday</a></li>
+     <!-- navigation toc: --> <li><a href="#week-3-tuesday" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Week 3, Tuesday</a></li>
+     <!-- navigation toc: --> <li><a href="#week-3-wednesday" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Week 3, Wednesday</a></li>
+     <!-- navigation toc: --> <li><a href="#week-3-thursday" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Week 3, Thursday</a></li>
+     <!-- navigation toc: --> <li><a href="#week-3-friday" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Week 3, Friday</a></li>
      <!-- navigation toc: --> <li><a href="._proposal-bs006.html#teaching" style="font-size: 80%;"><b>Teaching</b></a></li>
      <!-- navigation toc: --> <li><a href="._proposal-bs007.html#teachers-and-organizers" style="font-size: 80%;"><b>Teachers and organizers</b></a></li>
      <!-- navigation toc: --> <li><a href="._proposal-bs008.html#audience-and-prerequisites" style="font-size: 80%;"><b>Audience and Prerequisites</b></a></li>
@@ -129,17 +137,125 @@ MathJax.Hub.Config({
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
 <a name="part0005"></a>
 <!-- !split -->
-<h2 id="course-content-and-detailed-plan" class="anchor">Course Content and detailed plan  </h2>
-<div class="panel panel-default">
-<div class="panel-body">
-<!-- subsequent paragraphs come in larger fonts, so start with a paragraph -->
-<h3 id="week-1" class="anchor">Week 1 </h3>
-<h3 id="week-2" class="anchor">Week 2 </h3>
-<h3 id="week-3" class="anchor">Week 3 </h3>
-</div>
-</div>
+<h2 id="course-content-and-detailed-plan-tentative-not-final" class="anchor">Course Content and detailed plan (<b>tentative, not final</b>)  </h2>
+<h3 id="week-1-monday" class="anchor">Week 1, Monday </h3>
 
+<ul>
+<li> Definitions, Linear Algebra reminder, Hilbert Space, Operators on Hilbert Spaces, Composite Systems</li>
+<ul>
+  <li> Definitions</li>
+  <li> Mathematical notation, Hilbert spaces and operators</li>
+  <li> Computational basis</li>
+  <li> Description of Quantum Systems and one-qubit systems</li> 
+  <li> States in Hilbert Space, pure and mixed states</li>
+</ul>
+</ul>
+<h3 id="week-1-tuesday" class="anchor">Week 1, Tuesday </h3>
 
+<ul>
+<li> Composite Systems and Tensor Products</li>
+<ul>
+  <li> Spectral decomposition and measurements</li>
+  <li> Density matrices</li>
+  <li> Simple Hamiltonians and other operators</li>
+</ul>
+</ul>
+<h3 id="week-1-wednesday" class="anchor">Week 1, Wednesday </h3>
+
+<ul>
+<li> Density matrices and Measurements</li>
+<ul>
+  <li> Spectral decomposition and measurements</li>
+  <li> Density matrices</li>
+  <li> Entanglement and Schmidt decomposition</li>
+  <li> Entropies</li>
+</ul>
+</ul>
+<h3 id="week-1-thursday" class="anchor">Week 1, Thursday </h3>
+
+<ul>
+<li> Entanglement and entropies</li>
+<ul>
+  <li> Entanglement and Schmidt decomposition</li> 
+  <li> Entropy as a measurement of entanglement</li>
+  <li> Introduction to gates and calculations</li>
+</ul>
+</ul>
+<h3 id="week-1-friday" class="anchor">Week 1, Friday </h3>
+<ul>
+<li> Starting with project work</li>
+<ul>
+  <li> Coding examples, with applications to Bell states and simples systems</li>
+  <li> How to set up gates and circuits.</li>
+  <li> Writing own code and comparing with existing computational frameworks</li>
+</ul>
+</ul>
+<h3 id="week-2-monday" class="anchor">Week 2, Monday </h3>
+
+<ul>
+<li> Quantum gates and circuits and Hamiltonians</li>
+<ul>
+  <li> Quantum gates and operations and simple quantum algorithms</li>
+  <li> Discussion of the Varational Quantum Eigensolver algorithm and discussions of computational project</li>
+</ul>
+</ul>
+<h3 id="week-2-tuesday" class="anchor">Week 2, Tuesday </h3>
+
+<ul>
+<li> Algorithms for solving quantum mechanical problems</li>
+<ul>
+  <li> VQE, Variational Quantum Eigensolver and discussion of codes</li>
+  <li> Simulations of  of Hamiltonians, focus on simple  Hamiltonians</li>
+</ul>
+</ul>
+<h3 id="week-2-wednesday" class="anchor">Week 2, Wednesday </h3>
+
+<ul>
+<li> Solving quantum mechanical problems</li>
+<ul>
+  <li> Introducing the Lipkin model</li>
+  <li> Analyzing the solution of eigenvalue problems and the VQE using the Lipkin model</li>
+  <li> Comparison with the nuclear shell model</li>
+</ul>
+</ul>
+<h3 id="week-2-thursday" class="anchor">Week 2, Thursday  </h3>
+<ul>
+<li> Second quantization and Hamiltonians for quantum computing</li>
+<ul>
+  <li> Other Hamiltonians (Pairing) and the Jordan-Wigner transformation</li>
+  <li> Suzuki-Trotter expansion</li>
+</ul>
+</ul>
+<h3 id="week-2-friday" class="anchor">Week 2, Friday </h3>
+
+<ul>
+<li> Discussion of other algorithms</li>
+</ul>
+<h3 id="week-3-monday" class="anchor">Week 3, Monday </h3>
+<ul>
+<li> Quantum Fourier transforms and fast Fourier transform</li>
+<ul>
+  <li> Implementing  Quantum Fourier transforms</li>
+  <li> Quantum phase estimation algorithm</li>
+  <li> Other algorithms</li>
+</ul>
+</ul>
+<h3 id="week-3-tuesday" class="anchor">Week 3, Tuesday </h3>
+<ul>
+<li> Quantum computing for field theory</li>
+</ul>
+<h3 id="week-3-wednesday" class="anchor">Week 3, Wednesday </h3>
+<ul>
+<li> Quantum computing for field theory</li>
+</ul>
+<h3 id="week-3-thursday" class="anchor">Week 3, Thursday </h3>
+<ul>
+<li> Error correction algorithms</li>
+</ul>
+<h3 id="week-3-friday" class="anchor">Week 3, Friday </h3>
+<ul>
+<li> Summary of course</li> 
+</ul>
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pagination">

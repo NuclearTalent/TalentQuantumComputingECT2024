@@ -10,7 +10,6 @@ DATE: Today
 
 !split
 ===== Proposal for a Nuclear Talent course at the ECT* in 2025 =====
-!bblock
 
 We would like to propose a three-week Nuclear Talent course on theory
 for exploring quantum computing and quantum information science
@@ -35,18 +34,53 @@ physics problems, and what are the limitations and possibilities in
 understanding and interpreting the various algorithms on present and
 planned quantum technologies.
 
-!eblock
 
 !split
 ===== Motivation =====
-!bblock
 
 
-!eblock
+For nuclear theorists, the overarching
+challenge is to develop a comprehensive description of nuclei and
+their reactions, grounded in the fundamental interactions between the
+constituent nucleons with quantifiable uncertainties to maximize
+predictive power.  As experimental frontiers have shifted to the study
+of rare isotopes, the predictive power of successful phenomenological
+approaches like the shell model and density functional theory is
+challenged by the scarcity of nearby experimental data to constrain
+model parameters. Therefore, it is expected that few-body and many-body methods
+will play an increasingly prominent role to help improve the
+predictive power of such ``data driven'' methods as experiment moves
+deeper into largely unexplored regions of the nuclear chart.
+
+To understand why nuclear matter is stable, and thereby shed light on
+the limits of nuclear stability, is one of the overarching aims and
+intellectual challenges of basic research in nuclear physics. To
+relate the stability of matter to the underlying fundamental forces
+and particles of nature as manifested in nuclear matter, is central to
+present and planned rare isotope facilities.  From a
+theoretical standpoint, this involves understanding how the basic
+building blocks of Nature interact and conspire to build up atomic
+nuclei as we know them, with the aim to understand what makes visible
+matter stable.  The theoretical efforts span from methods like Lattice
+Quantum Chromodynamics, via effective field theories to many-body
+theories applied to atomic nuclei and infinite nuclear matter. All
+these methods rely on theoretical approximations whose applicabilities
+are often limited by the dimensionality of the specific problem being
+studied. In recent years there has been considerable progress in our
+theoretical understanding of algorithms from quantum information theories
+applied to interacting systems, with the hope to circumvent many of
+the traditional dimensionality problems.
+
+
+This proposal for a Nuclear Talent schoold aims at bringing together the efforts of nuclear many-body theorists,
+quantum information theorists and mathematicians in order to 
+present and discuss algorithms for studying nuclear systems
+using recent progress in quantum information theory. 
+
 
 !split 
 ===== Introduction to the Talent Courses =====
-!bblock
+
 
 The TALENT initiative, "Training in Advanced Low Energy
 Nuclear Theory":"http://www.nucleartalent.org", aims at providing an
@@ -70,12 +104,10 @@ at the premises of the ECT*. We hope thus, if this course gets
 approved by the board of directors of the ECT*, that we can continue
 this successful and very fruitful collaboration.
 
-!eblock
 
 
 !split
 ===== Aims and Learning Outcomes =====
-!bblock
 
 This three-week TALENT course on nuclear theory will focus on the
 interpretation of data on the structure of nuclei using the Nuclear shell model as main tool. 
@@ -110,41 +142,100 @@ the following features for the afternoon sessions:
 
 
 === Objectives and learning outcomes: ===
-At the end of the course the students should have a basic understanding of
-* Configuration interaction methods (nuclear shell-model here) as a central tool to interpret nuclear structure experiment
-* Have an understanding of single-particle basis functions and the construction of many-body basis states built thereupon. Examples are basis states from a Woods-Saxon potential, harmonic oscillator states and mean-field based states from a Hartree-Fock calculation. The single-particle basis states are orthonormal and are used to construct  a corresponding orthonormal basis set of Slater determinants.
-* Develop an understanding of what defines an observable. 
-* Understand how theory  can be used to interpret experimental quantities (separation energies and shell gaps for example).
-* Understand how experiment is used to extract transition probabilities and information about ground and exited states. 
-* Understand how second-quantization is used to represent states and compute expectation values and transition probabilities  of operators
-* Understand how the Hamiltonian matrix is constructed from this orthonormal basis set of many-body states (linear expansion of Slater determinants)
-* For nuclear systems like the $sd$-shell, essentially all nuclei can be studied using direct diagonalization methods. In the construction of the shell-model code during the first two weeks, the students will learn to compute  the ground state and the excited states of selected $sd$-shell nuclei. This project applies to all students. During the last week, students can pursue more individually defined projects
-* The students will also learn to understand the basic elements of effective shell-model Hamiltonians and how to interpret the calculated properties in terms of various components of the nuclear forces (spin-orbit force, tensor force, central force etc). We will provide the students with the necessary tools to perform such analyses. 
-* Understand how to use shell-model calculations to calculate decay rates and transition probabilities and relate these to various electromagnetic transition operators and operators for beta-decays and double-beta decays.  
-* Develop a critical understanding the limits of shell-model studies and how these can be related to interpretations of data such as results from in-beam and decay experiments.
-* Understand how to use second-quantization to construct one-body and two-body transfer operators, overlap functions, spectroscopic factors and experiments related to spectroscopic factors. 
-* For the students which wish to follow a more computational path during the last week, iterative eigenvalue solvers will discussed. Similarly, efficient representations of many-body states and computations of Hamiltonian matrices will also be discussed.
-* We will also discuss modern shell-model codes like NushellX. This suite of programs can be used by students to pursue their own projects. Applications of NushellX to the calculations of various observables will discussed and students who wish to use NushellX, can define individual projects during the last week.
+At the end of the course the students should have a basic understanding of (these will be updated).
+More material will be added here. 
 
-!eblock
 
 
 !split
-===== Course Content and detailed plan  =====
-!bblock
+===== Course Content and detailed plan (_tentative, not final_)  =====
+
+=== Week 1, Monday ===
+
+
+* Definitions, Linear Algebra reminder, Hilbert Space, Operators on Hilbert Spaces, Composite Systems
+  * Definitions
+  * Mathematical notation, Hilbert spaces and operators
+  * Computational basis
+  * Description of Quantum Systems and one-qubit systems 
+  * States in Hilbert Space, pure and mixed states
+
+=== Week 1, Tuesday ===
+
+* Composite Systems and Tensor Products
+  * Spectral decomposition and measurements
+  * Density matrices
+  * Simple Hamiltonians and other operators
+
+=== Week 1, Wednesday ===
+
+* Density matrices and Measurements
+  * Spectral decomposition and measurements
+  * Density matrices
+  * Entanglement and Schmidt decomposition
+  * Entropies
+
+=== Week 1, Thursday ===
+
+* Entanglement and entropies
+  * Entanglement and Schmidt decomposition 
+  * Entropy as a measurement of entanglement
+  * Introduction to gates and calculations
+
+=== Week 1, Friday ===
+* Starting with project work
+  * Coding examples, with applications to Bell states and simples systems
+  * How to set up gates and circuits.
+  * Writing own code and comparing with existing computational frameworks
+
+=== Week 2, Monday ===
+
+* Quantum gates and circuits and Hamiltonians
+  * Quantum gates and operations and simple quantum algorithms
+  * Discussion of the Varational Quantum Eigensolver algorithm and discussions of computational project
+
+=== Week 2, Tuesday ===
+
+* Algorithms for solving quantum mechanical problems
+  * VQE, Variational Quantum Eigensolver and discussion of codes
+  * Simulations of  of Hamiltonians, focus on simple  Hamiltonians
+
+=== Week 2, Wednesday ===
+
+* Solving quantum mechanical problems
+  * Introducing the Lipkin model
+  * Analyzing the solution of eigenvalue problems and the VQE using the Lipkin model
+  * Comparison with the nuclear shell model
+=== Week 2, Thursday  ===
+* Second quantization and Hamiltonians for quantum computing
+  * Other Hamiltonians (Pairing) and the Jordan-Wigner transformation
+  * Suzuki-Trotter expansion
+  
+=== Week 2, Friday ===
+
+* Discussion of other algorithms
+
+
+=== Week 3, Monday ===
+* Quantum Fourier transforms and fast Fourier transform
+  * Implementing  Quantum Fourier transforms
+  * Quantum phase estimation algorithm
+  * Other algorithms
+
+=== Week 3, Tuesday ===
+* Quantum computing for field theory
+
+=== Week 3, Wednesday ===
+* Quantum computing for field theory
+
+=== Week 3, Thursday ===
+* Error correction algorithms
+
+=== Week 3, Friday ===
+* Summary of course 
 
 
 
-=== Week 1 ===
-
-
-=== Week 2 ===
-
-
-=== Week 3 ===
-
-
-!eblock
 
 
 !split
@@ -250,6 +341,10 @@ appreciate it if these services are provided if the proposal is
 approved.
 
 !eblock
+
+
+
+
 
 
 
