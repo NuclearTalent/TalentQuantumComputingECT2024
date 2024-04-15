@@ -1,29 +1,33 @@
-TITLE: Proposal for a Nuclear Talent course at the ECT* in 2024: Quantum Computing for Nuclear Physics
-AUTHOR: "Dean Lee":"https://people.nscl.msu.edu/~brown/" at National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA
-AUTHOR: "Ryan Larose":"https://people.nscl.msu.edu/~gade/" at National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA
-AUTHOR: "Morten Hjorth-Jensen":"http://mhjgit.github.io/info/doc/web/"  at National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics, University of Oslo, N-0316 Oslo, Norway
+TITLE: Proposal for a Nuclear Talent course at the ECT* in 2025: Quantum Computing for Nuclear Physics
+AUTHOR: "Alexei Bazavov":"https://directory.natsci.msu.edu/Directory/Profiles/Person/101033" at Department of Computational Mathematics, Science and Engineering  and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA
+AUTHOR: "Zohreh Davoudi":"https://umdphysics.umd.edu/people/faculty/current/item/927-davoudi.html", Department of Physics, University of Maryland, College Park, MD 20742, USA
+AUTHOR: "Morten Hjorth-Jensen":"http://mhjgit.github.io/info/doc/web/"  at Facility for Rare Isotope Beams and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics, University of Oslo, N-0316 Oslo, Norway
+AUTHOR: "Dean Lee":"https://frib.msu.edu/for-students/faculty/lee-profile" at Facility for Rare Isotope Beams and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA
+AUTHOR: "Ryan Larose":"https://www.ryanlarose.com/" at at Department of Computational Mathematics, Science and Engineering, Michigan State University, East Lansing, MI 48824, USA
+AUTHOR: "Alessandro Roggero":"https://webapps.unitn.it/du/en/Persona/PER0016084/Didattica", Department of Physics, University of Trento, Povo, 38123 Trento, Italy
+
 DATE: Today
 
 !split
-===== Proposal for a Nuclear Talent course at the ECT* in 2024 =====
+===== Proposal for a Nuclear Talent course at the ECT* in 2025 =====
 !bblock
 We would like to propose a three-week Nuclear Talent course on Theory
-for exploring nuclear structure experiments at the ECT* for the summer
-of 2024.  
-
-selected topics. We believe such a course has a strong potential to
-attract many students, theorists and experimentalists alike. Since the Nuclear Talent 
-initiative aims at proposing the various courses in cycles of three to four years, it 
-is timely to propose the above course again, but this time focusing on the nuclear shell model. This course provides a hands-on 
-approach to experimental data and their interpretrations. 
+for exploring quantum computing and quantum information science applied to nuclear physics  at the ECT* for the summer
+of 2025.  
+We believe such a course has a strong potential to
+attract many students, theorists and experimentalists alike.
 
 Below we give a short motivation for the proposed course and the
 rationale behind the Nuclear Talent initiative. Thereafter we detail
 our course plans with learning outcomes, objectives and teaching
 philosophy, as well as various organizational and practical matters.
 
-The teaching teams consists of both theorists and experimentalists. We believe such a mix
-is important as it gives the students a better understanding on how data are obtained, and what are the limitations and possibilities in understanding and interpreting the experimental information. 
+The teaching teams consists of quantum theorists and nuclear
+theorists, with expertise ranging from many-body methods to quantum
+field theories. We believe such a mix is important as it gives the
+students a better understanding on how quantum computing can be applied to nuclear physics problems, and what are
+the limitations and possibilities in understanding and interpreting
+the various algorithms.
 
 !eblock
 
@@ -37,41 +41,6 @@ relate the stability of matter to the underlying fundamental forces
 and particles of nature as manifested in nuclear matter, is central to
 present and planned rare isotope facilities.  
 
-Important properties of nuclear systems which can reveal information about these topics are
-for example masses, and thereby binding energies, and density
-distributions of nuclei.  These are quantities which convey important
-information on the shell structure of nuclei, with their pertinent
-magic numbers and shell closures or the eventual disappearence of the
-latter away from the valley of stability.  
-
-During the last decade,  the study of nuclear
-structure and the models used to describe atomic nuclei are
-experiencing a renaissance. This is driven by three technological
-revolutions: accelerators capable of producing and accelerating exotic
-nuclei far from stability; instrumentation capable of detecting the
-resulting reaction products and gamma radiation, often on an
-event-by-event basis, in situations where data rates may be many
-orders of magnitude less than has been traditional; and computing
-power adequate to analyze the resulting data, often on-line, and to
-carry out sophisticated theoretical calculations to understand these
-nuclei at the limits of stability and to unravel what they tell us
-about nuclei and their structural evolution. 
-
-The nuclear shell model plays  a central role in guiding our analysis of this wealth of 
-experimental data.
-It provides an excellent link to the underlying nuclear forces and the pertinent laws of motion,
-allowing nuclear physicists to interpret complicated experiments in terms of various 
-components of the nuclear Hamiltonian and to understand a swath of nuclei by following chains of isotopes and isotoones over wide ranges of nucleon numbers. The nuclear shell model allows us to see how the structure of nuclei changes and how the occupation of specific nucleonic orbits affects the interplay of residual interactions and configuration mixing.  The computed expectation values and transition probabilities 
-can be directly linked to experiment, with the potential to single out new phenomena and guide future experiments. 
-Large-scale shell-model calculations represent also 
-challenging computational and theoretical topics, spanning from efficient usage of high-performance computing facilities  to consistent theories for deriving effective Hamiltonians and operators. 
-Alltogether, these various facets of nuclear theory represent important elements in our endeavors to understand nuclei and their limits of stability.  
-It is the goal and motivation of this course to introduce and
-develop the nuclear structure tools  needed to carry out forefront research using the shell model as the central tool. The various projects will focus on the development of a shell-model code for simpler systems like $sd$-shell nuclei, giving the participants the essential ideas of configuration interaction methods. During the first two weeks the aim is to develop such a shell-model code. With these insights, the students can divert into several directions
-the last week, from the usage of the NushellX suite of nuclear structure programs to further developing 
-their own shell-model program. After completion, it is our hope that the participants have understood the overarching ideas 
-behind central theoretical tools used to analyse nuclear structure experiments. 
-  
 !eblock
 
 !split 
@@ -92,7 +61,7 @@ all-encompassing material is available at present; its development
 will allow dispersed university groups to profit from the best
 expertise available.
 
-The Nuclear Talent initiative has (as of May 2016) organized and run
+The Nuclear Talent initiative has (as of ) organized and run
 successfully nine advanced courses since the summer of 2012. Three of
 these courses have been run and organized (in a very successful way)
 at the premises of the ECT*. We hope thus, if this course gets
@@ -259,32 +228,30 @@ If approved by the ECT* board of directors, our preferred time slot would be fro
 !split
 ===== Teachers and organizers =====
 !bblock
-The organizers are 
-
-o "Alex Brown":"https://people.nscl.msu.edu/~brown/", "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
-o "Morten Hjorth-Jensen":"http://mhjgit.github.io/info/doc/web/", "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA and Department of Physics, University of Oslo, N-0316 Oslo, Norway 
+The organizers and teachers are
+o "Alexei Bazavov":"https://directory.natsci.msu.edu/Directory/Profiles/Person/101033" at Department of Computational Mathematics, Science and Engineering  and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA
+o "Zohreh Davoudi":"https://umdphysics.umd.edu/people/faculty/current/item/927-davoudi.html", Department of Physics, University of Maryland, College Park, MD 20742, USA
+o "Morten Hjorth-Jensen":"http://mhjgit.github.io/info/doc/web/"  at Facility for Rare Isotope Beams and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics, University of Oslo, N-0316 Oslo, Norway
+o "Dean Lee":"https://frib.msu.edu/for-students/faculty/lee-profile" at Facility for Rare Isotope Beams and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA
+o "Ryan Larose":"https://www.ryanlarose.com/" at at Department of Computational Mathematics, Science and Engineering, Michigan State University, East Lansing, MI 48824, USA
+o "Alessandro Roggero":"https://webapps.unitn.it/du/en/Persona/PER0016084/Didattica", Department of Physics, University of Trento, Povo, 38123 Trento, Italy
+o An eventual Post-doctoral fellow and an advanced graduate student as teaching assistants. 
+!eblock
 
 Morten Hjorth-Jensen will also function as student advisor and coordinator.
 
-The teachers are 
 
-o "Alex Brown":"https://people.nscl.msu.edu/~brown/", "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
-o "Alexandra Gade":"https://people.nscl.msu.edu/~gade/"  "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
-o "Robert Grzywacz":"http://web.utk.edu/~rgrzywac/"  at "Oak Ridge National Laboratory":"http://www.ornl.gov/", Oak Ridge, TN 37831  and "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA
-o "Morten Hjorth-Jensen":"http://mhjgit.github.io/info/doc/web/"  at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA and  Department of Physics, University of Oslo, N-0316 Oslo, Norway
-o "Gustav Jansen":"https://www.ornl.gov/staff-profile/gustav-r-jansen"  at "Oak Ridge National Laboratory":"http://www.ornl.gov/", Oak Ridge, TN 37831, USA
-o An eventual Post-doctoral fellow and an advanced graduate student as teaching assistants. 
-!eblock
+
+
 
 !split
 ===== Audience and Prerequisites =====
 !bblock
-Students and post-doctoral fellows interested in models for nuclear
-structure, phenomenological techniques for interpreting and predicting
-the structure of stable as well as exotic nuclei. The material will be
+Students and post-doctoral fellows interested in quantum computing applied to nuclear physics problems, from nuclear structure to quantum field theories.
+The material will be
 of interest, and accessible, to both theorists and experimentalists,
-and will include learning the practical use of shell-model approaches
-in order to interpret and study nuclear structure experiments.
+and will include learning the practical use of quantum computing software 
+in order to interpret and study nucl.
 
 The students are expected to have operating programming skills in in
 compiled programming languages like Fortran or C++ or alternatively an
@@ -315,11 +282,11 @@ agreement with the ECT*.
 ===== Preliminary budget =====
 !bblock
 We expect to accept between 20-25 students. Local students from the University of Trento are fully self-supported. 
-If approved, we would very much appreciate if the ECT* can sponsor 15 of the selected students with local expenses, that is lodging and meals during weekdays. Any additional funds for sponsoring further students is highly appreciated. 
+If approved, we would very much appreciate if the ECT* can sponsor 15-20 of the selected students with local expenses, that is lodging and meals during weekdays. Any additional funds for sponsoring further students is highly appreciated. 
 All travel expenses will be covered by the respective home institute. 
 Teachers are self-supported. We plan to raise additional funds to cover local support for additional students and the expenses of the teachers. 
 
-There is no participation fee. Administrative support from the ECT* in organizing the course and setting up the application procedure is essential for a smooth (as always) outcome. The administrative experience of the staff at the ECT* has been unique and essential in running successully our previous Talent courses (2012, 2014 and 2015). We would thus highly appreciate it if these services are provided if the proposal is approved.  
+There is no participation fee. Administrative support from the ECT* in organizing the course and setting up the application procedure is essential for a smooth (as always) outcome. The administrative experience of the staff at the ECT* has been unique and essential in running successully our previous Talent courses. We would thus highly appreciate it if these services are provided if the proposal is approved.  
 
 !eblock
 
