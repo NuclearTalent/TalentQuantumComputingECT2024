@@ -1,10 +1,10 @@
 TITLE: Proposal for a Nuclear Talent course at the ECT* in 2025: Quantum Computing for Nuclear Physics
 AUTHOR: "Alexei Bazavov":"https://directory.natsci.msu.edu/Directory/Profiles/Person/101033" at Department of Computational Mathematics, Science and Engineering  and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA
-AUTHOR: "Zohreh Davoudi":"https://umdphysics.umd.edu/people/faculty/current/item/927-davoudi.html", Department of Physics, University of Maryland, College Park, MD 20742, USA
+AUTHOR: "Zohreh Davoudi":"https://umdphysics.umd.edu/people/faculty/current/item/927-davoudi.html" at Department of Physics, University of Maryland, College Park, MD 20742, USA
 AUTHOR: "Morten Hjorth-Jensen":"http://mhjgit.github.io/info/doc/web/"  at Facility for Rare Isotope Beams and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics, University of Oslo, N-0316 Oslo, Norway
 AUTHOR: "Dean Lee":"https://frib.msu.edu/for-students/faculty/lee-profile" at Facility for Rare Isotope Beams and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA
-AUTHOR: "Ryan Larose":"https://www.ryanlarose.com/" at at Department of Computational Mathematics, Science and Engineering, Michigan State University, East Lansing, MI 48824, USA
-AUTHOR: "Alessandro Roggero":"https://webapps.unitn.it/du/en/Persona/PER0016084/Didattica", Department of Physics, University of Trento, Povo, 38123 Trento, Italy
+AUTHOR: "Ryan Larose":"https://www.ryanlarose.com/" at Department of Computational Mathematics, Science and Engineering, Michigan State University, East Lansing, MI 48824, USA
+AUTHOR: "Alessandro Roggero":"https://webapps.unitn.it/du/en/Persona/PER0016084/Didattica" at Department of Physics, University of Trento, Povo, 38123 Trento, Italy
 
 DATE: Today
 
@@ -278,7 +278,7 @@ o "Alessandro Roggero":"https://webapps.unitn.it/du/en/Persona/PER0016084/Didatt
 o An eventual Post-doctoral fellow and an advanced graduate student as teaching assistants. 
 !eblock
 
-Morten Hjorth-Jensen will also function as student advisor and coordinator.
+Morten Hjorth-Jensen Alessandro Roggero will also function as student advisors and coordinators.
 
 
 
