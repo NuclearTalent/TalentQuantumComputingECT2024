@@ -1,0 +1,636 @@
+<!--
+HTML file automatically generated from DocOnce source
+(https://github.com/doconce/doconce/)
+doconce format html proposal-reveal.html proposal-reveal reveal --html_slide_theme=beige
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/doconce/doconce/" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Proposal for a Nuclear Talent course at the ECT* in 2025: Quantum Computing for Nuclear Physics">
+<title>Proposal for a Nuclear Talent course at the ECT* in 2025: Quantum Computing for Nuclear Physics</title>
+
+<!-- reveal.js: https://lab.hakim.se/reveal-js/ -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+<link rel="stylesheet" href="reveal.js/css/reveal.css">
+<link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+<!--
+<link rel="stylesheet" href="reveal.js/css/reveal.css">
+<link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/beigesmall.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/serif.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/night.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/moon.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/darkgray.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/default.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/cbc.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/simula.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/white.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/league.css" id="theme">
+-->
+
+<!-- For syntax highlighting -->
+<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+<!-- Printing and PDF exports -->
+<script>
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+
+<style type="text/css">
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+p.caption { width: 80%; font-size: 60%; font-style: italic; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+.reveal .alert-text-small   { font-size: 80%;  }
+.reveal .alert-text-large   { font-size: 130%; }
+.reveal .alert-text-normal  { font-size: 90%;  }
+.reveal .alert {
+  padding:8px 35px 8px 14px; margin-bottom:18px;
+  text-shadow:0 1px 0 rgba(255,255,255,0.5);
+  border:5px solid #bababa;
+  -webkit-border-radius: 14px; -moz-border-radius: 14px;
+  border-radius:14px;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  background-size: 38px;
+  padding-left: 30px; /* 55px; if icon */
+}
+.reveal .alert-block {padding-top:14px; padding-bottom:14px}
+.reveal .alert-block > p, .alert-block > ul {margin-bottom:1em}
+/*.reveal .alert li {margin-top: 1em}*/
+.reveal .alert-block p+p {margin-top:5px}
+/*.reveal .alert-notice { background-image: url(https://hplgit.github.io/doconce/bundled/html_images/small_gray_notice.png); }
+.reveal .alert-summary  { background-image:url(https://hplgit.github.io/doconce/bundled/html_images/small_gray_summary.png); }
+.reveal .alert-warning { background-image: url(https://hplgit.github.io/doconce/bundled/html_images/small_gray_warning.png); }
+.reveal .alert-question {background-image:url(https://hplgit.github.io/doconce/bundled/html_images/small_gray_question.png); } */
+/* Override reveal.js table border */
+.reveal table td {
+  border: 0;
+}
+
+<style type="text/css">
+/* Override h1, h2, ... styles */
+h1 { font-size: 2.8em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.4em; }
+h4 { font-size: 1.3em; }
+h1, h2, h3, h4 { font-weight: bold; line-height: 1.2; }
+body { overflow: auto; } /* vertical scrolling */
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+p.caption { width: 80%; font-size: 60%; font-style: italic; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+.slide .alert-text-small   { font-size: 80%;  }
+.slide .alert-text-large   { font-size: 130%; }
+.slide .alert-text-normal  { font-size: 90%;  }
+.slide .alert {
+  padding:8px 35px 8px 14px; margin-bottom:18px;
+  text-shadow:0 1px 0 rgba(255,255,255,0.5);
+  border:5px solid #bababa;
+    -webkit-border-radius:14px; -moz-border-radius:14px;
+  border-radius:14px
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  background-size: 38px;
+  padding-left: 30px; /* 55px; if icon */
+}
+.slide .alert-block {padding-top:14px; padding-bottom:14px}
+.slide .alert-block > p, .alert-block > ul {margin-bottom:0}
+/*.slide .alert li {margin-top: 1em}*/
+.deck .alert-block p+p {margin-top:5px}
+/*.slide .alert-notice { background-image: url(https://hplgit.github.io/doconce/
+bundled/html_images//small_gray_notice.png); }
+.slide .alert-summary  { background-image:url(https://hplgit.github.io/doconce/
+bundled/html_images//small_gray_summary.png); }
+.slide .alert-warning { background-image: url(https://hplgit.github.io/doconce/
+bundled/html_images//small_gray_warning.png); }
+.slide .alert-question {background-image:url(https://hplgit.github.io/doconce/
+bundled/html_images/small_gray_question.png); } */
+.dotable table, .dotable th, .dotable tr, .dotable tr td {
+  border: 2px solid black;
+  border-collapse: collapse;
+  padding: 2px;
+}
+</style>
+
+
+<!-- Styles for table layout of slides -->
+<style type="text/css">
+td.padding {
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-right:50px;
+  padding-left:50px;
+}
+</style>
+
+</head>
+
+
+<body>
+<div class="reveal">
+<div class="slides">
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+     equationNumbers: {  autoNumber: "none"  },
+     extensions: ["AMSmath.js", "AMSsymbols.js", "autobold.js", "color.js"]
+  }
+});
+</script>
+<script type="text/javascript" async
+ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+
+<section>
+<!-- ------------------- main content ---------------------- -->
+<center>
+<h1 style="text-align: center;">Proposal for a Nuclear Talent course at the ECT* in 2025: Quantum Computing for Nuclear Physics</h1>
+</center>  <!-- document title -->
+
+<!-- author(s): <a href="https://directory.natsci.msu.edu/Directory/Profiles/Person/101033" target="_blank">Alexei Bazavov</a>, <a href="https://umdphysics.umd.edu/people/faculty/current/item/927-davoudi.html" target="_blank">Zohreh Davoudi</a>, Department of Physics, University of Maryland, College Park, MD 20742, USA, <a href="http://mhjgit.github.io/info/doc/web/" target="_blank">Morten Hjorth-Jensen</a>, <a href="https://frib.msu.edu/for-students/faculty/lee-profile" target="_blank">Dean Lee</a>, <a href="https://www.ryanlarose.com/" target="_blank">Ryan Larose</a>, and <a href="https://webapps.unitn.it/du/en/Persona/PER0016084/Didattica" target="_blank">Alessandro Roggero</a>, Department of Physics, University of Trento, Povo, 38123 Trento, Italy -->
+<center>
+<b><a href="https://directory.natsci.msu.edu/Directory/Profiles/Person/101033" target="_blank">Alexei Bazavov</a></b> [1]
+</center>
+<center>
+<b><a href="https://umdphysics.umd.edu/people/faculty/current/item/927-davoudi.html" target="_blank">Zohreh Davoudi</a>, Department of Physics, University of Maryland, College Park, MD 20742, USA</b> 
+</center>
+<center>
+<b><a href="http://mhjgit.github.io/info/doc/web/" target="_blank">Morten Hjorth-Jensen</a></b> [2, 3]
+</center>
+<center>
+<b><a href="https://frib.msu.edu/for-students/faculty/lee-profile" target="_blank">Dean Lee</a></b> [2]
+</center>
+<center>
+<b><a href="https://www.ryanlarose.com/" target="_blank">Ryan Larose</a></b> [4]
+</center>
+<center>
+<b><a href="https://webapps.unitn.it/du/en/Persona/PER0016084/Didattica" target="_blank">Alessandro Roggero</a>, Department of Physics, University of Trento, Povo, 38123 Trento, Italy</b> 
+</center>
+<!-- institution(s) -->
+<center>
+[1] <b>Department of Computational Mathematics, Science and Engineering  and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA</b>
+</center>
+<center>
+[2] <b>Facility for Rare Isotope Beams and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA</b>
+</center>
+<center>
+[3] <b>Department of Physics, University of Oslo, N-0316 Oslo, Norway</b>
+</center>
+<center>
+[4] <b>at Department of Computational Mathematics, Science and Engineering, Michigan State University, East Lansing, MI 48824, USA</b>
+</center>
+<br>
+
+<center>
+<h4>Apr 15, 2024</h4>
+</center> <!-- date -->
+<br>
+</section>
+
+<section>
+<h2 id="proposal-for-a-nuclear-talent-course-at-the-ect-in-2025">Proposal for a Nuclear Talent course at the ECT* in 2025 </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>We would like to propose a three-week Nuclear Talent course on theory
+for exploring quantum computing and quantum information science
+applied to nuclear physics at the ECT* for the summer of 2025.  We
+believe such a course has a strong potential to attract many students,
+theorists and experimentalists alike.
+</p>
+
+<p>Below we give a short motivation for the proposed course and the
+rationale behind the Nuclear Talent initiative. Thereafter we detail
+our course plans with learning outcomes, objectives and teaching
+philosophy, as well as various organizational and practical matters.
+</p>
+
+<p>The teaching teams consists of quantum computing theorists and nuclear
+theorists, with expertise ranging from many-body methods to quantum
+field theories. Several of us have developed courses on quantum
+computing and/or taught similar courses, in addition to our ongoing research on
+quantum computing. This  spans from quantum engineering to
+developments of new algorithms and error correction studies.  We
+believe such a mix is important as it gives the students a better
+understanding on how quantum computing can be applied to nuclear
+physics problems, and what are the limitations and possibilities in
+understanding and interpreting the various algorithms on present and
+planned quantum technologies.
+</p>
+</div>
+</section>
+
+<section>
+<h2 id="motivation">Motivation </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+</div>
+</section>
+
+<section>
+<h2 id="introduction-to-the-talent-courses">Introduction to the Talent Courses </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>The TALENT initiative, <a href="http://www.nucleartalent.org" target="_blank">Training in Advanced Low Energy
+Nuclear Theory</a>, aims at providing an
+advanced and comprehensive training to graduate students and young
+researchers in low-energy nuclear theory. The initiative is a
+multinational network between several European and Northern American
+institutions and aims at developing a broad curriculum that will
+provide the platform for a cutting-edge theory for understanding
+nuclei and nuclear reactions. These objectives will be met by offering
+series of lectures, commissioned from experienced teachers in nuclear
+theory and experiemt. The educational material generated under this program will be
+collected in the form of WEB-based courses, textbooks, and a variety
+of modern educational resources. No such all-encompassing material is
+available at present; its development will allow dispersed university
+groups to profit from the best expertise available.
+</p>
+
+<p>The Nuclear Talent initiative has organized and run
+several advanced courses since the summer of 2012. Several of
+these courses have been run and organized (in a very successful way)
+at the premises of the ECT*. We hope thus, if this course gets
+approved by the board of directors of the ECT*, that we can continue
+this successful and very fruitful collaboration.
+</p>
+</div>
+</section>
+
+<section>
+<h2 id="aims-and-learning-outcomes">Aims and Learning Outcomes </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>This three-week TALENT course on nuclear theory will focus on the
+interpretation of data on the structure of nuclei using the Nuclear shell model as main tool. 
+</p>
+<h3 id="format">Format: </h3>
+
+<p>We propose approximately forty-five hours of lectures over three weeks and a
+comparable amount of practical computer and exercise sessions, including the
+setting of individual problems and the organization of various individual projects.
+</p>
+
+<p>The mornings will consist of lectures and the
+afternoons will be devoted to exercises meant to shed light on the exposed theory, 
+the computational projects  and individual student projects. These
+components will be coordinated to foster student engagement,
+maximize learning and create lasting value for the students. For the
+benefit of the TALENT series and of the community, material (courses,
+slides, problems and solutions, reports on students' projects) will be
+made publicly available using version control software like <em>git</em> and posted electronically on 
+<a href="https://github.com" target="_blank">github</a>. 
+</p>
+
+<p>As with previous TALENT courses, we envision
+the following features for the afternoon sessions: 
+</p>
+<ul>
+<p><li> We will use both individual and group work to carry out tasks that are very specific in technical instructions, but leave freedom for creativity.</li>
+
+<p><li> Groups will be carefully put together to maximize diversity of backgrounds.</li>
+
+<p><li> Results will be presented in a conference-like setting to create accountability.</li>
+
+<p><li> We will organize events where individuals and groups exchange their experiences, difficulties and successes to foster interaction.</li>
+
+<p><li> During the school, on-line and lecture-based training tailored to technical issues will be provided. Students will learn to use and interpret the results of computer-based and hand calculations of quantum computing algorithms. The lectures will be aligned with the practical computational projects and exercises and the lecturers will be available to help students and work with them during the exercise sessions.</li>
+
+<p><li> These interactions will raise topics not originally envisioned for the course but which are recognized to be valuable for the students. There will be flexibility to organize mini-lectures and discussion sessions on an ad-hoc basis in such cases.</li>
+
+<p><li> Each group of students will maintain an online logbook of their activities and results.</li>
+
+<p><li> Training modules, codes, lectures, practical exercise instructions, online logbooks, instructions and information created by participants will be merged into a comprehensive website that will be available to the community and the public for self-guided training or for use in various educational settings (for example, a graduate course at a university could assign some of the projects as homework or an extra credit project, etc).</li>
+</ul>
+<p>
+<h3 id="objectives-and-learning-outcomes">Objectives and learning outcomes: </h3>
+<p>At the end of the course the students should have a basic understanding of</p>
+<ul>
+<p><li> Configuration interaction methods (nuclear shell-model here) as a central tool to interpret nuclear structure experiment</li>
+<p><li> Have an understanding of single-particle basis functions and the construction of many-body basis states built thereupon. Examples are basis states from a Woods-Saxon potential, harmonic oscillator states and mean-field based states from a Hartree-Fock calculation. The single-particle basis states are orthonormal and are used to construct  a corresponding orthonormal basis set of Slater determinants.</li>
+<p><li> Develop an understanding of what defines an observable.</li> 
+<p><li> Understand how theory  can be used to interpret experimental quantities (separation energies and shell gaps for example).</li>
+<p><li> Understand how experiment is used to extract transition probabilities and information about ground and exited states.</li> 
+<p><li> Understand how second-quantization is used to represent states and compute expectation values and transition probabilities  of operators</li>
+<p><li> Understand how the Hamiltonian matrix is constructed from this orthonormal basis set of many-body states (linear expansion of Slater determinants)</li>
+<p><li> For nuclear systems like the \( sd \)-shell, essentially all nuclei can be studied using direct diagonalization methods. In the construction of the shell-model code during the first two weeks, the students will learn to compute  the ground state and the excited states of selected \( sd \)-shell nuclei. This project applies to all students. During the last week, students can pursue more individually defined projects</li>
+<p><li> The students will also learn to understand the basic elements of effective shell-model Hamiltonians and how to interpret the calculated properties in terms of various components of the nuclear forces (spin-orbit force, tensor force, central force etc). We will provide the students with the necessary tools to perform such analyses.</li> 
+<p><li> Understand how to use shell-model calculations to calculate decay rates and transition probabilities and relate these to various electromagnetic transition operators and operators for beta-decays and double-beta decays.</li>
+
+<p><li> Develop a critical understanding the limits of shell-model studies and how these can be related to interpretations of data such as results from in-beam and decay experiments.</li>
+<p><li> Understand how to use second-quantization to construct one-body and two-body transfer operators, overlap functions, spectroscopic factors and experiments related to spectroscopic factors.</li> 
+<p><li> For the students which wish to follow a more computational path during the last week, iterative eigenvalue solvers will discussed. Similarly, efficient representations of many-body states and computations of Hamiltonian matrices will also be discussed.</li>
+<p><li> We will also discuss modern shell-model codes like NushellX. This suite of programs can be used by students to pursue their own projects. Applications of NushellX to the calculations of various observables will discussed and students who wish to use NushellX, can define individual projects during the last week.</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2 id="course-content-and-detailed-plan">Course Content and detailed plan  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<h3 id="week-1">Week 1 </h3>
+<h3 id="week-2">Week 2 </h3>
+<h3 id="week-3">Week 3 </h3>
+</div>
+</section>
+
+<section>
+<h2 id="teaching">Teaching </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>The course will be taught as an intensive course of duration of three
+weeks, with a total time of 45 h of lectures, 45 h of exercises and a
+final assignment of 2 weeks of work.  The total load will be
+approximately 160-170 hours, corresponding to <b>7 ECTS</b> in Europe.  The
+final assignment will be graded with marks A, B, C, D, E and failed
+for Master students and passed/not passed for PhD students.  A course
+certificate will be issued for students requiring it from the
+University of Trento.
+</p>
+
+<p>The organization of a typical course day is as follows:</p>
+
+<ol>
+<p><li> 9am-12pm: Lectures, project relevant information and directed exercises</li>
+<p><li> 12pm-2pm: Lunch</li>
+<p><li> 2pm-6pm: Computational projects, exercises  and hands-on sessions</li>
+<p><li> 6pm-7pm: Wrap-up of the day and eventual student presentations</li>
+</ol>
+<p>
+<p>If approved by the ECT* board of directors, our preferred time slot
+would be from the second half of June till the second half of July.
+</p>
+</div>
+</section>
+
+<section>
+<h2 id="teachers-and-organizers">Teachers and organizers </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<p>The organizers and teachers are</p>
+<ol>
+<p><li> <a href="https://directory.natsci.msu.edu/Directory/Profiles/Person/101033" target="_blank">Alexei Bazavov</a> at Department of Computational Mathematics, Science and Engineering  and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA</li>
+<p><li> <a href="https://umdphysics.umd.edu/people/faculty/current/item/927-davoudi.html" target="_blank">Zohreh Davoudi</a>, Department of Physics, University of Maryland, College Park, MD 20742, USA</li>
+<p><li> <a href="http://mhjgit.github.io/info/doc/web/" target="_blank">Morten Hjorth-Jensen</a>  at Facility for Rare Isotope Beams and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA &amp; Department of Physics, University of Oslo, N-0316 Oslo, Norway</li>
+<p><li> <a href="https://frib.msu.edu/for-students/faculty/lee-profile" target="_blank">Dean Lee</a> at Facility for Rare Isotope Beams and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA</li>
+<p><li> <a href="https://www.ryanlarose.com/" target="_blank">Ryan Larose</a> at at Department of Computational Mathematics, Science and Engineering, Michigan State University, East Lansing, MI 48824, USA</li>
+<p><li> <a href="https://webapps.unitn.it/du/en/Persona/PER0016084/Didattica" target="_blank">Alessandro Roggero</a>, Department of Physics, University of Trento, Povo, 38123 Trento, Italy</li>
+<p><li> An eventual Post-doctoral fellow and an advanced graduate student as teaching assistants.</li> 
+</ol>
+</div>
+
+<p>Morten Hjorth-Jensen will also function as student advisor and coordinator.</p>
+</section>
+
+<section>
+<h2 id="audience-and-prerequisites">Audience and Prerequisites </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>Students and post-doctoral fellows interested in quantum computing
+applied to nuclear physics problems, from nuclear structure to quantum
+field theories.  The material will be of interest, and accessible, to
+both theorists and experimentalists, and will include learning the
+practical use of quantum computing software in order to interpret and
+study nuclear systems.
+</p>
+
+<p>The students are expected to have operating programming skills in in
+compiled programming languages like Fortran or C++ or preferentially in  an
+interpreted language like Python and knowledge of quantum mechanics at
+an intermediate level.  
+</p>
+</div>
+</section>
+
+<section>
+<h2 id="admission">Admission </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>The target group is Master of Science students, PhD students and early
+post-doctoral fellows.  Also senior staff can attend but they have to
+be self-supported.  The maximum number of students is 20-30, of which
+hopefully at most 15-20 can receive full local support.
+</p>
+
+<p>The process of selections of the students will be managed in agreement
+with the ECT*.
+</p>
+</div>
+</section>
+
+<section>
+<h2 id="preliminary-budget">Preliminary budget </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>We expect to accept between 20-30 students. Local students from the
+University of Trento are fully self-supported.  If approved, we would
+very much appreciate if the ECT* can sponsor 15-20 of the selected
+students with local expenses, that is lodging and meals during
+weekdays. Any additional funds for sponsoring further students is
+highly appreciated.
+</p>
+
+<p>All travel expenses will be covered by the respective home institute.
+Teachers are self-supported. We plan to raise additional funds to
+cover local support for additional students and the expenses of the
+teachers.
+</p>
+
+<p>There is no participation fee. Administrative support from the ECT* in
+organizing the course and setting up the application procedure is
+essential for a smooth (as always) outcome. The administrative
+experience of the staff at the ECT* has been unique and essential in
+running successully our previous Talent courses. We would thus highly
+appreciate it if these services are provided if the proposal is
+approved.
+</p>
+</div>
+</section>
+
+
+
+</div> <!-- class="slides" -->
+</div> <!-- class="reveal" -->
+
+<script src="reveal.js/lib/js/head.min.js"></script>
+<script src="reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+  // Display navigation controls in the bottom right corner
+  controls: true,
+
+  // Display progress bar (below the horiz. slider)
+  progress: true,
+
+  // Display the page number of the current slide
+  slideNumber: true,
+
+  // Push each slide change to the browser history
+  history: false,
+
+  // Enable keyboard shortcuts for navigation
+  keyboard: true,
+
+  // Enable the slide overview mode
+  overview: true,
+
+  // Vertical centering of slides
+  //center: true,
+  center: false,
+
+  // Enables touch navigation on devices with touch input
+  touch: true,
+
+  // Loop the presentation
+  loop: false,
+
+  // Change the presentation direction to be RTL
+  rtl: false,
+
+  // Turns fragments on and off globally
+  fragments: true,
+
+  // Flags if the presentation is running in an embedded mode,
+  // i.e. contained within a limited portion of the screen
+  embedded: false,
+
+  // Number of milliseconds between automatically proceeding to the
+  // next slide, disabled when set to 0, this value can be overwritten
+  // by using a data-autoslide attribute on your slides
+  autoSlide: 0,
+
+  // Stop auto-sliding after user input
+  autoSlideStoppable: true,
+
+  // Enable slide navigation via mouse wheel
+  mouseWheel: false,
+
+  // Hides the address bar on mobile devices
+  hideAddressBar: true,
+
+  // Opens links in an iframe preview overlay
+  previewLinks: false,
+
+  // Transition style
+  transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+  // Transition speed
+  transitionSpeed: 'default', // default/fast/slow
+
+  // Transition style for full page slide backgrounds
+  backgroundTransition: 'default', // default/none/slide/concave/convex/zoom
+
+  // Number of slides away from the current that are visible
+  viewDistance: 3,
+
+  // Parallax background image
+    //parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+  // Parallax background size
+  //parallaxBackgroundSize: '' // CSS syntax, e.g. "2100px 900px"
+
+  theme: Reveal.getQueryHash().theme, // available themes are in reveal.js/css/theme
+    transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/none
+
+});
+
+Reveal.initialize({
+  dependencies: [
+      // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+      { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+      // Interpret Markdown in <section> elements
+      { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+      // Syntax highlight for <code> elements
+      { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+      // Zoom in and out with Alt+click
+      { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+
+      // Speaker notes
+      { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } },
+
+      // MathJax
+      //{ src: 'reveal.js/plugin/math/math.js', async: true }
+  ]
+});
+
+Reveal.initialize({
+
+  // The "normal" size of the presentation, aspect ratio will be preserved
+  // when the presentation is scaled to fit different resolutions. Can be
+  // specified using percentage units.
+  width: 1170,  // original: 960,
+  height: 700,
+
+  // Factor of the display size that should remain empty around the content
+  margin: 0.1,
+
+  // Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.2,
+  maxScale: 1.0
+
+});
+</script>
+
+<!-- begin footer logo
+<div style="position: absolute; bottom: 0px; left: 0; margin-left: 0px">
+<img src="somelogo.png">
+</div>
+   end footer logo -->
+
+
+
+
+</body>
+</html>

@@ -103,7 +103,7 @@ the following features for the afternoon sessions:
 * Groups will be carefully put together to maximize diversity of backgrounds.  
 * Results will be presented in a conference-like setting to create accountability.  
 * We will organize events where individuals and groups exchange their experiences, difficulties and successes to foster interaction.  
-* During the school, on-line and lecture-based training tailored to technical issues will be provided. Students will learn to use and interpret the results of computer-based and hand calculations of nuclear models. The lectures will be aligned with the practical computational projects and exercises and the lecturers will be available to help students and work with them during the exercise sessions.  
+* During the school, on-line and lecture-based training tailored to technical issues will be provided. Students will learn to use and interpret the results of computer-based and hand calculations of quantum computing algorithms. The lectures will be aligned with the practical computational projects and exercises and the lecturers will be available to help students and work with them during the exercise sessions.  
 * These interactions will raise topics not originally envisioned for the course but which are recognized to be valuable for the students. There will be flexibility to organize mini-lectures and discussion sessions on an ad-hoc basis in such cases.  
 * Each group of students will maintain an online logbook of their activities and results.  
 * Training modules, codes, lectures, practical exercise instructions, online logbooks, instructions and information created by participants will be merged into a comprehensive website that will be available to the community and the public for self-guided training or for use in various educational settings (for example, a graduate course at a university could assign some of the projects as homework or an extra credit project, etc).
@@ -136,63 +136,13 @@ At the end of the course the students should have a basic understanding of
 
 
 === Week 1 ===
-|--------------------------------------------------------------------------|
-|    |  Lecture Topics |   Projects and exercises                                    |
-|--------------------------------------------------------------------------|
-| Monday |  Introduction and discussion of data|  Discussion of separation energies, shells gaps and selected excited states|
-|       |  Hamiltonians and mean field |   Discussion of harmonic oscillator and Woods-Saxon potentials |
-|--------------------------------------------------------------------------|
-| Tuesday| Mean field models and Hartree-Fock theory| Discussion of harmonic oscillator and Woods-Saxon potentials |
-|--------------------------------------------------------------------------|
-| Wednesday | Second quantization and shell-model basics |  Discussion of Hartree-Fock calculations  | 
-|           | Experiments and data that justify a mean-field interpretation |                                |  
-|--------------------------------------------------------------------------|
-| Thursday  | Shell-model code for a simple pairing problem |  Properties of the pairing problem  |
-|           | Basic shell-model algorithm                   | How  to structure a shell-model program |
-|--------------------------------------------------------------------------|
-| Friday    | Writing a shell-model program for the simple pairing problem | Work on shell-model code |
-|--------------------------------------------------------------------------|
 
 
 === Week 2 ===
 
-|--------------------------------------------------------------------------|
-|    |  Lecture Topics |   Projects and exercises                                    |
-|--------------------------------------------------------------------------|
-| Monday |   Shell-model Hamiltonians and the $sd$-shell as case | Extend shell-model to realistic nuclear structure cases| 
-|       |  Efficient computations of Hamiltonian matrices|                |
-|--------------------------------------------------------------------------|
-| Tuesday|  Effective Hamiltonians and angular momentum algebra | Bit representations of state functions and setup of Hamiltonian matrices |
-|--------------------------------------------------------------------------|
-| Wednesday | Effective Hamiltonians from data    | Continue work on shell-model code|
-|--------------------------------------------------------------------------|
-| Thursday  | One- and two-particle transfer operators |  Computing angular momentum expectation values|
-|           | Spectroscopic factors (SFs), overlap functions and experiments related to SFs  |       |
-|           |   |       |
-|--------------------------------------------------------------------------|
-| Friday    | Electromagnetic decays, theory and experiment |  Finalize shell-model code for spectra|
-|           | Introducing NushellX                          | Demonstrations of NushellX  and comparison with own code|
-|--------------------------------------------------------------------------|
-
-
 
 === Week 3 ===
 
-|--------------------------------------------------------------------------|
-|    |  Lecture Topics |   Projects and exercises                                    |
-|--------------------------------------------------------------------------|
-| Monday | Electromagnetic decays and NushellX calculations |   Individual projects| 
-|       |  More on onebody operators and transition densities |            |
-|--------------------------------------------------------------------------|
-| Tuesday| Beta-decays and Gamow-Teller transitions, theory and experiments | Individual projects |
-|--------------------------------------------------------------------------|
-| Wednesday | Beta-decays and Gamow-Teller transitions, theory and experiments | Individual projects |
-|           | Using NushellX for studies of beta-decays |    | 
-|--------------------------------------------------------------------------|
-| Thursday  | Two-body transition operators and double-beta decay| Individual projects         |
-|--------------------------------------------------------------------------|
-| Friday    | Double-beta decay and wrap-up of course | Work on final projects|
-|--------------------------------------------------------------------------|
 
 !eblock
 
@@ -212,14 +162,12 @@ University of Trento.
 
 The organization of a typical course day is as follows:
 
-|------------------------------------------------------------------------|
-|  Time  |  Activity                                                     |
-|------------------------------------------------------------------------|
-| 9am-12pm| Lectures, project relevant information and directed exercises|
-| 12pm-2pm| Lunch                                       |
-| 2pm-6pm |  Computational projects, exercises  and hands-on sessions    |
-| 6pm-7pm |  Wrap-up of the day and eventual student presentations       |
-|------------------------------------------------------------------------| 
+
+o 9am-12pm: Lectures, project relevant information and directed exercises
+o 12pm-2pm: Lunch
+o 2pm-6pm: Computational projects, exercises  and hands-on sessions
+o 6pm-7pm: Wrap-up of the day and eventual student presentations
+
 
 If approved by the ECT* board of directors, our preferred time slot
 would be from the second half of June till the second half of July.
