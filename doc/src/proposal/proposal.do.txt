@@ -109,8 +109,6 @@ this successful and very fruitful collaboration.
 !split
 ===== Aims and Learning Outcomes =====
 
-This three-week TALENT course on nuclear theory will focus on the
-interpretation of data on the structure of nuclei using the Nuclear shell model as main tool. 
 
 
 === Format: === 
@@ -142,6 +140,7 @@ the following features for the afternoon sessions:
 
 
 === Objectives and learning outcomes: ===
+
 At the end of the course the students should have a basic understanding of (these will be updated).
 More material will be added here. 
 
