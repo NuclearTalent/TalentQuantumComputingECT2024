@@ -1,4 +1,4 @@
-\documentclass[twocolumn,superscriptaddress,amsmath,amssymb,aps,floatfix]{revtex4-2}
+\documentclass[superscriptaddress,amsmath,amssymb,aps,floatfix]{revtex4-2}
 \usepackage{graphicx,tikz} 
 \usepackage[mode=buildmissing]{standalone} 
 \usepackage{dcolumn}
@@ -14,23 +14,7 @@
 \newcommand{\may}[1]{\textcolor{orange}{#1}}
 \newcommand{\ale}[1]{{\color{blue}{\bf Ale}: #1}}
 \newcommand{\zd}[1]{{\color{purple}{\bf ZD}: #1}}
-\usepackage[usenames,dvipsnames]{xcolor}
-\usepackage{tcolorbox}
-\usepackage{tabularx}
-\usepackage{array}
-\usepackage{colortbl}
-\tcbuselibrary{skins}
-\newcolumntype{Y}{>{\raggedleft\arraybackslash}X}
-
-\tcbset{tab1/.style={fonttitle=\bfseries\large,fontupper=\normalsize\sffamily,
-colback=yellow!10!white,colframe=red!75!black,colbacktitle=Salmon!40!white,
-coltitle=black,center title,freelance,frame code={
-\foreach \n in {north east,north west,south east,south west}
-{\path [fill=red!75!black] (interior.\n) circle (3mm); };},}}
-
-\tcbset{tab2/.style={enhanced,fonttitle=\bfseries,fontupper=\normalsize\sffamily,
-colback=yellow!10!white,colframe=red!50!black,colbacktitle=Salmon!40!white,
-coltitle=black,center title}}
+\usepackage{xcolor}
 
 \begin{document}
 \title{Proposal for a Nuclear Talent course at the ECT* in 2025:\\Quantum Computing for Nuclear
@@ -63,105 +47,91 @@ Astronomy, Michigan State University, East Lansing, MI 48824, USA}
 
 \author{Alessandro Roggero} 
 \affiliation{Department of Physics, University of Trento, Povo, 38123 Trento, Italy}
-
-
-
-
     
 \maketitle
-    
-    
 
-
-    \section{Proposal for a Nuclear Talent course at the ECT* in
-2025}\label{proposal-for-a-nuclear-talent-course-at-the-ect-in-2025}
+\section{Proposal for a Nuclear Talent course at the ECT* in 2025}
 
 We would like to propose a three-week Nuclear Talent course on theory
-for exploring quantum computing and quantum information science applied
-to nuclear physics at the ECT* for the summer of 2025. We believe such a
-course has a strong potential to attract many students, theorists and
-experimentalists alike.
+for exploring quantum computing and quantum information science
+applied to nuclear physics at the ECT* for the summer of 2025. We
+believe such a course has a strong potential to attract many students,
+theorists and experimentalists alike.
 
 Below we give a short motivation for the proposed course and the
-rationale behind the Nuclear Talent initiative. Thereafter we detail our
-course plans with learning outcomes, objectives and teaching philosophy,
-as well as various organizational and practical matters.
+rationale behind the Nuclear Talent initiative. Thereafter we detail
+our course plans with learning outcomes, objectives and teaching
+philosophy, as well as various organizational and practical matters.
 
 The teaching teams consists of quantum computing theorists and nuclear
 theorists, with expertise ranging from many-body methods to quantum
 field theories. Several of us have developed courses on quantum
 computing and/or taught similar courses, in addition to our ongoing
 research on quantum computing. This spans from quantum engineering to
-developments of new algorithms and error correction studies. We believe
-such a mix is important as it gives the students a better understanding
-on how quantum computing can be applied to nuclear physics problems, and
-what are the limitations and possibilities in understanding and
-interpreting the various algorithms on present and planned quantum
-technologies.
+developments of new algorithms and error correction studies. We
+believe such a mix is important as it gives the students a better
+understanding on how quantum computing can be applied to nuclear
+physics problems, and what are the limitations and possibilities in
+understanding and interpreting the various algorithms on present and
+planned quantum technologies.
 
-    \subsection{Motivation}\label{motivation}
+\subsection{Motivation}\label{motivation}
 
 For nuclear theorists, the overarching challenge is to develop a
-comprehensive description of nuclei and their reactions, grounded in the
-fundamental interactions between the constituent nucleons with
-quantifiable uncertainties to maximize predictive power. As experimental
-frontiers have shifted to the study of rare isotopes, the predictive
-power of successful phenomenological approaches like the shell model and
-density functional theory is challenged by the scarcity of nearby
-experimental data to constrain model parameters. Therefore, it is
-expected that few-body and many-body methods will play an increasingly
-prominent role to help improve the predictive power of such ``data
-driven'' methods as experiment moves deeper into largely unexplored
-regions of the nuclear chart.
+comprehensive description of nuclei and their reactions, grounded in
+the fundamental interactions between the constituent nucleons with
+quantifiable uncertainties to maximize predictive power. As
+experimental frontiers have shifted to the study of rare isotopes, the
+predictive power of successful phenomenological approaches like the
+shell model and density functional theory is challenged by the
+scarcity of nearby experimental data to constrain model
+parameters. Therefore, it is expected that few-body and many-body
+methods will play an increasingly prominent role to help improve the
+predictive power of such ``data driven'' methods as experiment moves
+deeper into largely unexplored regions of the nuclear chart.
 
 To understand why nuclear matter is stable, and thereby shed light on
 the limits of nuclear stability, is one of the overarching aims and
-intellectual challenges of basic research in nuclear physics. To relate
-the stability of matter to the underlying fundamental forces and
-particles of nature as manifested in nuclear matter, is central to
+intellectual challenges of basic research in nuclear physics. To
+relate the stability of matter to the underlying fundamental forces
+and particles of nature as manifested in nuclear matter, is central to
 present and planned rare isotope facilities. From a theoretical
-standpoint, this involves understanding how the basic building blocks of
-Nature interact and conspire to build up atomic nuclei as we know them,
-with the aim to understand what makes visible matter stable. The
+standpoint, this involves understanding how the basic building blocks
+of Nature interact and conspire to build up atomic nuclei as we know
+them, with the aim to understand what makes visible matter stable. The
 theoretical efforts span from methods like lattice quantum
 chromodynamics, via effective field theories to many-body theories
-applied to atomic nuclei and infinite nuclear matter. All these methods
-rely on theoretical approximations whose applicabilities are often
-limited by the dimensionality of the specific problem being studied. In
-recent years, there has been considerable progress in 
-%our theoretical understanding of 
-developing quantum-computing algorithms
-%from quantum information theories 
-applied to quantum many-body systems, with the hope to circumvent many of the 
-%traditional dimensionality 
-classically intractable problems.
+applied to atomic nuclei and infinite nuclear matter. All these
+methods rely on theoretical approximations whose applicabilities are
+often limited by the dimensionality of the specific problem being
+studied. In recent years, there has been considerable progress in
+developing quantum-computing algorithms applied to quantum many-body
+systems, with the hope to circumvent many of the classically
+intractable problems.
 
-This proposal for a Nuclear Talent school aims at bringing together the
-efforts of nuclear many-body theorists, quantum information theorists,
-and mathematicians in order to present and discuss algorithms for
-studying nuclear systems using recent progress in quantum information
-theory.
+This proposal for a Nuclear Talent school aims at bringing together
+the efforts of nuclear many-body theorists, quantum information
+theorists, and mathematicians in order to present and discuss
+algorithms for studying nuclear systems using recent progress in
+quantum information theory.
 
-    \subsection{Introduction to the Talent
-Courses}\label{introduction-to-the-talent-courses}
+\subsection{Introduction to the Talent Courses}
 
 The TALENT initiative, \href{http://www.nucleartalent.org}{Training in
-Advanced Low Energy Nuclear Theory}, aims at providing an advanced and
-comprehensive training to graduate students and young researchers in
-low-energy nuclear theory. The initiative is a multinational network
-of several European and Northern American institutions and aims at
-developing a broad curriculum that will provide %the platform for a
-the necessary training in cutting-edge theory for understanding nuclei and nuclear reactions.
-These objectives will be met by offering a series of lectures,
-%commissioned from 
-delivered by 
-%experienced instructors 
-experts in nuclear theory and experiment.
-The educational material generated under this program will be collected
-in the form of WEB-based courses, textbooks, and a variety of modern
-educational resources. No such all-encompassing material is available at
-present; its development will allow dispersed university groups to
-profit from the best expertise available worldwide.
+  Advanced Low Energy Nuclear Theory}, aims at providing an advanced
+and comprehensive training to graduate students and young researchers
+in low-energy nuclear theory. The initiative is a multinational
+network of several European and Northern American institutions and
+aims at developing a broad curriculum that will provide the necessary
+training in cutting-edge theory for understanding nuclei and nuclear
+reactions.  These objectives will be met by offering a series of
+lectures, delivered by experts in nuclear many-body theory and quantum
+information theories.  The educational material generated under this
+program will be collected in the form of WEB-based courses, textbooks,
+and a variety of modern educational resources. No such
+all-encompassing material is available at present; its development
+will allow dispersed university groups to profit from the best
+expertise available worldwide.
 
 The Nuclear Talent initiative has organized and run several advanced
 courses since the summer of 2012. Several of these courses have been run
@@ -170,20 +140,12 @@ ECT\emph{. We hope thus, if this course gets approved by the board of
 directors of the ECT}, that we can continue this successful and very
 fruitful collaboration.
 
-    \section{Aims and Learning
-Outcomes}\label{aims-and-learning-outcomes}
-
-    \subsubsection{Format:}\label{format}
+\section{Aims and Learning Outcomes}
+\subsection{Format}
 
 We propose approximately forty-five hours of lectures over three weeks
-and a comparable amount of 
-%practical computer and exercise sessions,
-supervised practices and tutorials,
-including 
-%the setting of individual 
-with the aid of well-thought-of problem sets and 
-%the organization of
-various individual projects.
+and a comparable amount of practical computer and exercise sessions with
+supervised practices and tutorials.
 
 The mornings will consist of lectures and the afternoons will be devoted
 to exercises meant to shed light on the exposed theory, the
@@ -236,27 +198,24 @@ leave freedom for creativity.
   credit project, etc).
 \end{itemize}
 
-    \subsubsection{Objectives and learning
-outcomes:}\label{objectives-and-learning-outcomes}
+\subsection{Objectives and learning outcomes:}
 
-At the end of the course the students should have a basic understanding
-of (these will be updated). More material will be added here.
+At the end of the course the students should have a basic
+understanding of (these will be updated). More material will be added
+here.
 
-    \subsection{Course Content and detailed plan}
-%(\textbf{tentative, not
-%final})}{Course Content and detailed plan (tentative, not final)}}\label{course-content-and-detailed-plan-tentative-not-final}
+\subsection{Course Content and detailed plan}
 
-
-    \subsection{Teaching}\label{teaching}
+\subsection{Teaching}\label{teaching}
 
 The course will be taught as an intensive course of duration of three
 weeks, with a total time of 45 h of lectures, 45 h of exercises and a
 final assignment of 2 weeks of work. The total load will be
-approximately 160-170 hours, corresponding to \textbf{7 ECTS} in Europe.
-The final assignment will be graded with marks A, B, C, D, E and failed
-for Master students and passed/not passed for PhD students. A course
-certificate will be issued for students requiring it from the University
-of Trento.
+approximately 160-170 hours, corresponding to \textbf{7 ECTS} in
+Europe.  The final assignment will be graded with marks A, B, C, D, E
+and failed for Master students and passed/not passed for PhD
+students. A course certificate will be issued for students requiring
+it from the University of Trento.
 
 The organization of a typical course day is as follows:
 
@@ -276,9 +235,25 @@ The organization of a typical course day is as follows:
 If approved by the ECT* board of directors, our preferred time slot
 would be from the second half of June till the second half of July.
 
-    \subsection{Instructors and organizers}\label{instructors-and-organizers}
 
-The organizers and instructors are \zd{It would be good to mention what each instructor's area of expertise is. For me, you can add: Davoudi is an expert in lattice QCD for nuclear physics. She further specializes in quantum simulation and computing for quantum field theories, including lattice gauge theories and effective field theories of nuclear physics.}
+\subsection{Weekly lecture schedule with topics}
+
+\begin{table}[hbtp]
+\begin{tabular}{|l|l|l|l|l|} \hline
+    & First session  & Second session  & Exercises and project work & Student presentations \\ \hline
+  Monday & & & & \\
+  Tuesday & & & & \\
+  Wednesday & & & & \\
+  Thursday & & & & \\
+  Friday & & & & \\ \hline
+\end{tabular}
+\caption{Teaching schedule first week}
+\end{table}
+
+
+\subsection{Instructors and organizers}\label{instructors-and-organizers}
+
+The organizers and instructors are
 
 
 \begin{enumerate}
@@ -290,12 +265,16 @@ University, East Lansing, MI 48824, USA
 \item
   \href{https://umdphysics.umd.edu/people/faculty/current/item/927-davoudi.html}{Zohreh
   Davoudi}, Department of Physics and Center for Quantum Information and Computer Science (QuICS), University of Maryland, College Park,
-  MD 20742, USA
+  MD 20742, USA. Davoudi is an expert in lattice QCD for nuclear physics. She further
+  specializes in quantum simulation and computing for quantum field
+  theories, including lattice gauge theories and effective field
+  theories of nuclear physics.
+
 \item
   \href{http://mhjgit.github.io/info/doc/web/}{Morten Hjorth-Jensen} at
   Facility for Rare Isotope Beams and Department of Physics and
   Astronomy, Michigan State University, East Lansing, MI 48824, USA \&
-  Department of Physics, University of Oslo, N-0316 Oslo, Norway
+  Department of Physics, University of Oslo, N-0316 Oslo, Norway. Hjorth-Jensen has his background in studies of different many-body theories applied to problems in nuclear physics and condensed matter physics. He works also on quantum engineering and machine learning applied to many-body systems. He has over many years developed introductory and advanced learning material in many-body physics, quantum computing, computational physics and machine learning.
 \item
   \href{https://frib.msu.edu/for-students/faculty/lee-profile}{Dean Lee}
   at Facility for Rare Isotope Beams and Department of Physics and
@@ -316,8 +295,7 @@ University, East Lansing, MI 48824, USA
 Morten Hjorth-Jensen Alessandro Roggero will also function as student
 advisors and coordinators.
 
-    \subsection{Audience and
-Prerequisites}\label{audience-and-prerequisites}
+\subsection{Audience and Prerequisites}
 
 Students and post-doctoral fellows interested in quantum computing
 applied to nuclear physics problems, from nuclear structure to quantum
@@ -331,7 +309,7 @@ compiled programming languages like Fortran or C++ or preferentially in
 an interpreted language like Python and knowledge of quantum mechanics
 at an intermediate level.
 
-    \subsection{Admission}\label{admission}
+\subsection{Admission}
 
 The target group is Master of Science students, PhD students and early
 post-doctoral fellows. Also senior staff can attend but they have to be
@@ -341,7 +319,7 @@ hopefully at most 15-20 can receive full local support.
 The process of selections of the students will be managed in agreement
 with the ECT*.
 
-    \subsection{Preliminary budget}\label{preliminary-budget}
+\subsection{Preliminary budget}
 
 We expect to accept between 20-30 students. Local students from the
 University of Trento are fully self-supported. If approved, we would
@@ -351,8 +329,9 @@ Any additional funds for sponsoring further students is highly
 appreciated.
 
 All travel expenses will be covered by the respective home institute.
-Instructors are self-supported. We plan to raise additional funds to cover
-local support for additional students and the expenses of the instructors.
+Instructors are self-supported. We plan to raise additional funds to
+cover local support for additional students and the expenses of the
+instructors.
 
 There is no participation fee. Administrative support from the ECT* in
 organizing the course and setting up the application procedure is
@@ -363,39 +342,45 @@ appreciate it if these services are provided if the proposal is
 approved.
 
 
-\begin{tcolorbox}[tab2,tabularx={X||Y|Y|Y|Y||Y}]
-Group & One     & Two     & Three    & Four     & Sum      \\\hline\hline
-Red   & 1000.00 & 2000.00 &  3000.00 &  4000.00 & 10000.00 \\\hline
-Green & 2000.00 & 3000.00 &  4000.00 &  5000.00 & 14000.00 \\\hline
-Blue  & 3000.00 & 4000.00 &  5000.00 &  6000.00 & 18000.00 \\\hline\hline
-Sum   & 6000.00 & 9000.00 & 12000.00 & 15000.00 & 42000.00
-\end{tcolorbox}
-
-\begin{tcolorbox}[tab2,tabularx={X||Y|Y|Y|Y||Y},title=My table,boxrule=0.5pt]
-Group & One     & Two     & Three    & Four     & Sum      \\\hline\hline
-Red   & 1000.00 & 2000.00 &  3000.00 &  4000.00 & 10000.00 \\
-Green & 2000.00 & 3000.00 &  4000.00 &  5000.00 & 14000.00 \\
-Blue  & 3000.00 & 4000.00 &  5000.00 &  6000.00 & 18000.00 \\\hline\hline
-Sum   & 6000.00 & 9000.00 & 12000.00 & 15000.00 & 42000.00
-\end{tcolorbox}
-
-\begin{tcolorbox}[tab1,tabularx={X||YYYY||Y}]
-Group & One     & Two     & Three    & Four     & Sum      \\\hline\hline
-Red   & 1000.00 & 2000.00 &  3000.00 &  4000.00 & 10000.00 \\
-Green & 2000.00 & 3000.00 &  4000.00 &  5000.00 & 14000.00 \\
-Blue  & 3000.00 & 4000.00 &  5000.00 &  6000.00 & 18000.00 \\\hline\hline
-Sum   & 6000.00 & 9000.00 & 12000.00 & 15000.00 & 42000.00
-\end{tcolorbox}
-
-
 
 \end{document}
+
+    Mathematical notation, Hilbert spaces and operators
+    Description of Quantum Systems and one-qubit systems
+    States in Hilbert Space, pure and mixed states
+    Spectral decomposition and measurements
+    Density matrices
+    Simple Hamiltonians and other operators
+    Spectral decomposition and measurements
+    Density matrices
+    Entanglement and Schmidt decomposition
+    Entropies
+    Entanglement and Schmidt decomposition
+    Entropy as a measurement of entanglement
+    Introduction to gates and calculations
+    Coding examples, with applications to Bell states and simple
+    systems
+    How to set up gates and circuits.
+    Writing own code and comparing with existing computational
+    frameworks
+
+
+\begin{table}[hbtp]
+\begin{tabular}{|l|l|l|l|l|} \hline
+    & First session  & Second session  & Exercises and project work & Student presentations \\ \hline
+  Monday & Review of Linear Algebra and quantum mechanics & Density matrices  & & \\
+  Tuesday & & & & \\
+  Wednesday & & & & \\
+  Thursday & & & & \\
+  Friday & & & & \\ \hline
+\end{tabular}
+\caption{Teaching schedule first week}
+\end{table}
+
 
 
 Week 1: Quantum computing preliminaries
 
-[Day 1, Lect 1] Review of QM and linear algebra
-[Day 1, Lect 2] Qubits, gates, and circuits
 [Day 2, Lect 1] Introduction to quantum algorithms
 [Day 2, Lect 2] Quantum fourier transform and quantum phase estimation
 [Day 3, Lect 1] Quantum simulation: product formula algorithms
@@ -436,93 +421,6 @@ Week 1: Quantum computing for quantum (gauge) field theories
 \begin{table}
 \caption{
 
-
-\begin{itemize}
-\item
-  Definitions, Linear Algebra reminder, Hilbert Space, Operators on
-  Hilbert Spaces, Composite Systems
-
-  \begin{itemize}
-  \item
-    Definitions
-  \item
-    Mathematical notation, Hilbert spaces and operators
-  \item
-    Computational basis
-  \item
-    Description of Quantum Systems and one-qubit systems
-  \item
-    States in Hilbert Space, pure and mixed states
-  \end{itemize}
-\end{itemize}
-
-    \subsubsection{Week 1, Tuesday}\label{week-1-tuesday}
-
-\begin{itemize}
-\item
-  Composite Systems and Tensor Products
-
-  \begin{itemize}
-  \item
-    Spectral decomposition and measurements
-  \item
-    Density matrices
-  \item
-    Simple Hamiltonians and other operators
-  \end{itemize}
-\end{itemize}
-
-    \subsubsection{Week 1, Wednesday}\label{week-1-wednesday}
-
-\begin{itemize}
-\item
-  Density matrices and Measurements
-
-  \begin{itemize}
-  \item
-    Spectral decomposition and measurements
-  \item
-    Density matrices
-  \item
-    Entanglement and Schmidt decomposition
-  \item
-    Entropies
-  \end{itemize}
-\end{itemize}
-
-    \subsubsection{Week 1, Thursday}\label{week-1-thursday}
-
-\begin{itemize}
-\item
-  Entanglement and entropies
-
-  \begin{itemize}
-  \item
-    Entanglement and Schmidt decomposition
-  \item
-    Entropy as a measurement of entanglement
-  \item
-    Introduction to gates and calculations
-  \end{itemize}
-\end{itemize}
-
-    \subsubsection{Week 1, Friday}\label{week-1-friday}
-
-\begin{itemize}
-\item
-  Starting with project work
-
-  \begin{itemize}
-  \item
-    Coding examples, with applications to Bell states and simple
-    systems
-  \item
-    How to set up gates and circuits.
-  \item
-    Writing own code and comparing with existing computational
-    frameworks
-  \end{itemize}
-\end{itemize}
 
 
 \subsection{Tentative schedule for second week}
