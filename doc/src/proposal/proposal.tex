@@ -1,11 +1,9 @@
-\documentclass[twocolumn,superscriptaddress,amsmath,amssymb,
-aps,floatfix]{revtex4-2}
+\documentclass[twocolumn,superscriptaddress,amsmath,amssymb,aps,floatfix]{revtex4-2}
 \usepackage{graphicx,tikz} 
 \usepackage[mode=buildmissing]{standalone} 
 \usepackage{dcolumn}
 \usepackage{bm}
 \usepackage{physics}
-\usepackage{xcolor}
 \usepackage{siunitx}
 \usepackage{soul}
 \usepackage{comment}
@@ -16,6 +14,23 @@ aps,floatfix]{revtex4-2}
 \newcommand{\may}[1]{\textcolor{orange}{#1}}
 \newcommand{\ale}[1]{{\color{blue}{\bf Ale}: #1}}
 \newcommand{\zd}[1]{{\color{purple}{\bf ZD}: #1}}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{tcolorbox}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{colortbl}
+\tcbuselibrary{skins}
+\newcolumntype{Y}{>{\raggedleft\arraybackslash}X}
+
+\tcbset{tab1/.style={fonttitle=\bfseries\large,fontupper=\normalsize\sffamily,
+colback=yellow!10!white,colframe=red!75!black,colbacktitle=Salmon!40!white,
+coltitle=black,center title,freelance,frame code={
+\foreach \n in {north east,north west,south east,south west}
+{\path [fill=red!75!black] (interior.\n) circle (3mm); };},}}
+
+\tcbset{tab2/.style={enhanced,fonttitle=\bfseries,fontupper=\normalsize\sffamily,
+colback=yellow!10!white,colframe=red!50!black,colbacktitle=Salmon!40!white,
+coltitle=black,center title}}
 
 \begin{document}
 \title{Proposal for a Nuclear Talent course at the ECT* in 2025:\\Quantum Computing for Nuclear
@@ -231,212 +246,6 @@ of (these will be updated). More material will be added here.
 %(\textbf{tentative, not
 %final})}{Course Content and detailed plan (tentative, not final)}}\label{course-content-and-detailed-plan-tentative-not-final}
 
-    \subsubsection{Week 1, Monday}\label{week-1-monday}
-
-\begin{itemize}
-\item
-  Definitions, Linear Algebra reminder, Hilbert Space, Operators on
-  Hilbert Spaces, Composite Systems
-
-  \begin{itemize}
-  \item
-    Definitions
-  \item
-    Mathematical notation, Hilbert spaces and operators
-  \item
-    Computational basis
-  \item
-    Description of Quantum Systems and one-qubit systems
-  \item
-    States in Hilbert Space, pure and mixed states
-  \end{itemize}
-\end{itemize}
-
-    \subsubsection{Week 1, Tuesday}\label{week-1-tuesday}
-
-\begin{itemize}
-\item
-  Composite Systems and Tensor Products
-
-  \begin{itemize}
-  \item
-    Spectral decomposition and measurements
-  \item
-    Density matrices
-  \item
-    Simple Hamiltonians and other operators
-  \end{itemize}
-\end{itemize}
-
-    \subsubsection{Week 1, Wednesday}\label{week-1-wednesday}
-
-\begin{itemize}
-\item
-  Density matrices and Measurements
-
-  \begin{itemize}
-  \item
-    Spectral decomposition and measurements
-  \item
-    Density matrices
-  \item
-    Entanglement and Schmidt decomposition
-  \item
-    Entropies
-  \end{itemize}
-\end{itemize}
-
-    \subsubsection{Week 1, Thursday}\label{week-1-thursday}
-
-\begin{itemize}
-\item
-  Entanglement and entropies
-
-  \begin{itemize}
-  \item
-    Entanglement and Schmidt decomposition
-  \item
-    Entropy as a measurement of entanglement
-  \item
-    Introduction to gates and calculations
-  \end{itemize}
-\end{itemize}
-
-    \subsubsection{Week 1, Friday}\label{week-1-friday}
-
-\begin{itemize}
-\item
-  Starting with project work
-
-  \begin{itemize}
-  \item
-    Coding examples, with applications to Bell states and simple
-    systems
-  \item
-    How to set up gates and circuits.
-  \item
-    Writing own code and comparing with existing computational
-    frameworks
-  \end{itemize}
-\end{itemize}
-
-    \subsubsection{Week 2, Monday}\label{week-2-monday}
-
-\begin{itemize}
-\item
-  Quantum gates and circuits and Hamiltonians
-    \textcolor{orange}{RL: This day could be just ``Quantum algorithms'' and include some subset of DJ, BV, Simon, Shor, Grover, etc. There should be some discussion of quantum advantage via Shor, random circuit sampling, and/or boson sampling. VQE could be after this.}
-
-  \begin{itemize}
-  \item
-    Quantum gates and operations and simple quantum algorithms
-  \item
-    Discussion of the Varational Quantum Eigensolver (VQE) algorithm and
-    discussions of computational project
-  \end{itemize}
-\end{itemize}
-
-    \subsubsection{Week 2, Tuesday}\label{week-2-tuesday}
-
-\begin{itemize}
-\item
-  Algorithms for solving quantum mechanical problems
-
-  \begin{itemize}
-  \item
-    Variational Quantum Eigensolver and discussion of codes\ale{This seems repeated from the previous day, how about we dedicate the day to Hamiltonian dynamics and introduce Trotter-Suzuki here}
-  \item
-    Simulation of Hamiltonian dynamics, focus on simple Hamiltonians \ale{Heisenberg chain?}
-  \end{itemize}
-\end{itemize}
-
-    \subsubsection{Week 2, Wednesday}\label{week-2-wednesday}
-
-\begin{itemize}
-\item
-  Solving quantum mechanical problems
-
-  \begin{itemize}
-  \item
-    Introducing the Lipkin model
-  \item
-    Analyzing the solution of eigenvalue problems and the VQE using the
-    Lipkin model. Discussion of ansatzes for initializations of qubits
-  \item
-    Comparison with the nuclear shell model
-  \end{itemize}
-\end{itemize}
-
-    \subsubsection{Week 2, Thursday}\label{week-2-thursday}
-
-\begin{itemize}
-\item
-  Second quantization and Hamiltonians for quantum computing
-
-  \begin{itemize}
-  \item
-    Other Hamiltonians (Pairing \ale{Since we are doing nuclear physics how about pionless-EFT instead?}) and the Jordan-Wigner transformation
-  \item
-    Suzuki-Trotter expansion \ale{This should be moved to Tuesday of week 2. Given the scope of the day I would maybe do some more advanced material on fermions like e.g. fermionic swap-networks and alternative encoding schemes}
-  \end{itemize}
-\end{itemize}
-
-    \subsubsection{Week 2, Friday}\label{week-2-friday}
-
-\begin{itemize}
-%\tightlist
-\item
-  Rodeo algorithm and comparison with the VQE algorithm
-\end{itemize}
-
-    \subsubsection{Week 3, Monday}\label{week-3-monday}
-
-\begin{itemize}
-\item
-  Do we need this? Quantum Fourier transforms and fast Fourier transform\ale{How about we focus this day instead on more advanced simulation techniques introducing things like Linear Combination of Unitaries (LCU), Block encodings and maybe Quantum Signal Processing (QSP). I feel like we should also dedicate a bit of time to discuss Quantum Phase Estimation since that's something that needs to be covered in an introductory course of QC, not sure where to put it though. If needed we could use the bulk of this day for that}
-  \begin{itemize}
-  \item
-    Do we need this? Implementing Quantum Fourier transforms
-  \item
-    Other algorithms
-  \end{itemize}
-\end{itemize}
-
-    \subsubsection{Week 3, Tuesday}\label{week-3-tuesday}
-
-\begin{itemize}
-%\tightlist
-\item
-  Quantum computing for field theory
-\end{itemize}
-
-    \subsubsection{Week 3, Wednesday}\label{week-3-wednesday}
-
-\begin{itemize}
-%\tightlist
-\item
-  Quantum computing for field theory
-\end{itemize}
-
-    \subsubsection{Week 3, Thursday}\label{week-3-thursday}
-
-\begin{itemize}
-%\tightlist
-\item
-  Quantum error correction\ale{(I feel like we should also say something about error mitigation but I am not sure how to fit that in the current schedule. Maybe we can compress a bit the material of the first week to make room? If we are targeting PhD students in physics we can probably cover those things  bit more quickly. Otherwise we can switch quantum error correction with quantum error mitigation)}
-  \ale{\begin{itemize}
-      \item Kraus representation and error channels
-      \item standard [9,1,3] code and threshold theorem
-  \end{itemize}}
-\end{itemize}
-
-    \subsubsection{Week 3, Friday}\label{week-3-friday}
-
-\begin{itemize}
-%\tightlist
-\item
-  Summary of course
-\end{itemize}
 
     \subsection{Teaching}\label{teaching}
 
@@ -552,5 +361,298 @@ experience of the staff at the ECT* has been unique and essential in
 running successfully our previous Talent courses. We would thus highly
 appreciate it if these services are provided if the proposal is
 approved.
+
+
+\begin{tcolorbox}[tab2,tabularx={X||Y|Y|Y|Y||Y}]
+Group & One     & Two     & Three    & Four     & Sum      \\\hline\hline
+Red   & 1000.00 & 2000.00 &  3000.00 &  4000.00 & 10000.00 \\\hline
+Green & 2000.00 & 3000.00 &  4000.00 &  5000.00 & 14000.00 \\\hline
+Blue  & 3000.00 & 4000.00 &  5000.00 &  6000.00 & 18000.00 \\\hline\hline
+Sum   & 6000.00 & 9000.00 & 12000.00 & 15000.00 & 42000.00
+\end{tcolorbox}
+
+\begin{tcolorbox}[tab2,tabularx={X||Y|Y|Y|Y||Y},title=My table,boxrule=0.5pt]
+Group & One     & Two     & Three    & Four     & Sum      \\\hline\hline
+Red   & 1000.00 & 2000.00 &  3000.00 &  4000.00 & 10000.00 \\
+Green & 2000.00 & 3000.00 &  4000.00 &  5000.00 & 14000.00 \\
+Blue  & 3000.00 & 4000.00 &  5000.00 &  6000.00 & 18000.00 \\\hline\hline
+Sum   & 6000.00 & 9000.00 & 12000.00 & 15000.00 & 42000.00
+\end{tcolorbox}
+
+\begin{tcolorbox}[tab1,tabularx={X||YYYY||Y}]
+Group & One     & Two     & Three    & Four     & Sum      \\\hline\hline
+Red   & 1000.00 & 2000.00 &  3000.00 &  4000.00 & 10000.00 \\
+Green & 2000.00 & 3000.00 &  4000.00 &  5000.00 & 14000.00 \\
+Blue  & 3000.00 & 4000.00 &  5000.00 &  6000.00 & 18000.00 \\\hline\hline
+Sum   & 6000.00 & 9000.00 & 12000.00 & 15000.00 & 42000.00
+\end{tcolorbox}
+
+
+
+\end{document}
+
+
+Week 1: Quantum computing preliminaries
+
+[Day 1, Lect 1] Review of QM and linear algebra
+[Day 1, Lect 2] Qubits, gates, and circuits
+[Day 2, Lect 1] Introduction to quantum algorithms
+[Day 2, Lect 2] Quantum fourier transform and quantum phase estimation
+[Day 3, Lect 1] Quantum simulation: product formula algorithms
+[Day 3, Lect 2] Quantum simulation: non-product formula algorithms
+[Day 4, Lect 1] Variational quantum algorithms
+[Day 4, Lect 2] Quantum measurements and state tomography
+[Day 5, Lect 1] Noise mitigation and NISQ computing
+[Day 5, Lect 2] Quantum error correction and fault tolerance
+
+Week 1: Quantum computing for nuclear/neutrino many-body physics
+
+[Day 1, Lect 1] Encoding (relativistic and nonrelativistic) fermions and bosons on quantum computers I
+[Day 1, Lect 2] Encoding (relativistic and nonrelativistic) fermions and bosons on quantum computers I
+[Day 2, Lect 1] Quantum simulation of pionless EFT
+[Day 2, Lect 2] Quantum simulation of pionfull EFT
+[Day 3, Lect 1] Quantum simulation of phenomenological nuclear models
+[Day 3, Lect 2] Quantum state preparation (ground, excited, and thermal states) I
+[Day 4, Lect 1] Quantum state preparation (ground, excited, and thermal states) II
+[Day 4, Lect 2] Physics target: nuclear response functions
+[Day 5, Lect 1] Physics target: neutrino dynamics in dense environments
+[Day 5, Lect 2] Entanglement in nuclear many-body systems
+
+Week 1: Quantum computing for quantum (gauge) field theories
+
+[Day 1, Lect 1] Quantum simulation of scattering in scalar field theory I
+[Day 1, Lect 2] Quantum simulation of scattering in scalar field theory I
+[Day 2, Lect 1] Hamiltonian formulations of gauge theories I (Abelian)
+[Day 2, Lect 2] Hamiltonian formulations of gauge theories II (Non-Abelian)
+[Day 3, Lect 1] Time evolution in gauge theories I (Abelian examples)
+[Day 3, Lect 2] Time evolution in gauge theories II (Non-Abelian examples)
+[Day 4, Lect 1] Vacuum, hadronic, and thermal state preparation in gauge theories I
+[Day 4, Lect 2] Vacuum, hadronic, and thermal state preparation in gauge theories II
+[Day 5, Lect 1] Physics targets: scattering and decay amplitudes, structure functions, transport coefficients, (dynamical) phases and phase transitions, thermalization
+[Day 5, Lect 2] Entanglement in quantum field theories
+~
+\subsection{First week}
+
+\begin{table}
+\caption{
+
+
+\begin{itemize}
+\item
+  Definitions, Linear Algebra reminder, Hilbert Space, Operators on
+  Hilbert Spaces, Composite Systems
+
+  \begin{itemize}
+  \item
+    Definitions
+  \item
+    Mathematical notation, Hilbert spaces and operators
+  \item
+    Computational basis
+  \item
+    Description of Quantum Systems and one-qubit systems
+  \item
+    States in Hilbert Space, pure and mixed states
+  \end{itemize}
+\end{itemize}
+
+    \subsubsection{Week 1, Tuesday}\label{week-1-tuesday}
+
+\begin{itemize}
+\item
+  Composite Systems and Tensor Products
+
+  \begin{itemize}
+  \item
+    Spectral decomposition and measurements
+  \item
+    Density matrices
+  \item
+    Simple Hamiltonians and other operators
+  \end{itemize}
+\end{itemize}
+
+    \subsubsection{Week 1, Wednesday}\label{week-1-wednesday}
+
+\begin{itemize}
+\item
+  Density matrices and Measurements
+
+  \begin{itemize}
+  \item
+    Spectral decomposition and measurements
+  \item
+    Density matrices
+  \item
+    Entanglement and Schmidt decomposition
+  \item
+    Entropies
+  \end{itemize}
+\end{itemize}
+
+    \subsubsection{Week 1, Thursday}\label{week-1-thursday}
+
+\begin{itemize}
+\item
+  Entanglement and entropies
+
+  \begin{itemize}
+  \item
+    Entanglement and Schmidt decomposition
+  \item
+    Entropy as a measurement of entanglement
+  \item
+    Introduction to gates and calculations
+  \end{itemize}
+\end{itemize}
+
+    \subsubsection{Week 1, Friday}\label{week-1-friday}
+
+\begin{itemize}
+\item
+  Starting with project work
+
+  \begin{itemize}
+  \item
+    Coding examples, with applications to Bell states and simple
+    systems
+  \item
+    How to set up gates and circuits.
+  \item
+    Writing own code and comparing with existing computational
+    frameworks
+  \end{itemize}
+\end{itemize}
+
+
+\subsection{Tentative schedule for second week}
+
+
+    \subsubsection{Week 2, Monday}\label{week-2-monday}
+
+\begin{itemize}
+\item
+  Quantum gates and circuits and Hamiltonians
+    \textcolor{orange}{RL: This day could be just ``Quantum algorithms'' and include some subset of DJ, BV, Simon, Shor, Grover, etc. There should be some discussion of quantum advantage via Shor, random circuit sampling, and/or boson sampling. VQE could be after this.}
+
+  \begin{itemize}
+  \item
+    Quantum gates and operations and simple quantum algorithms
+  \item
+    Discussion of the Varational Quantum Eigensolver (VQE) algorithm and
+    discussions of computational project
+  \end{itemize}
+\end{itemize}
+
+    \subsubsection{Week 2, Tuesday}\label{week-2-tuesday}
+
+\begin{itemize}
+\item
+  Algorithms for solving quantum mechanical problems
+
+  \begin{itemize}
+  \item
+    Variational Quantum Eigensolver and discussion of codes\ale{This seems repeated from the previous day, how about we dedicate the day to Hamiltonian dynamics and introduce Trotter-Suzuki here}
+  \item
+    Simulation of Hamiltonian dynamics, focus on simple Hamiltonians \ale{Heisenberg chain?}
+  \end{itemize}
+\end{itemize}
+
+    \subsubsection{Week 2, Wednesday}\label{week-2-wednesday}
+
+\begin{itemize}
+\item
+  Solving quantum mechanical problems
+
+  \begin{itemize}
+  \item
+    Introducing the Lipkin model
+  \item
+    Analyzing the solution of eigenvalue problems and the VQE using the
+    Lipkin model. Discussion of ansatzes for initializations of qubits
+  \item
+    Comparison with the nuclear shell model
+  \end{itemize}
+\end{itemize}
+
+    \subsubsection{Week 2, Thursday}\label{week-2-thursday}
+
+\begin{itemize}
+\item
+  Second quantization and Hamiltonians for quantum computing
+
+  \begin{itemize}
+  \item
+    Other Hamiltonians (Pairing \ale{Since we are doing nuclear physics how about pionless-EFT instead?}) and the Jordan-Wigner transformation
+  \item
+    Suzuki-Trotter expansion \ale{This should be moved to Tuesday of week 2. Given the scope of the day I would maybe do some more advanced material on fermions like e.g. fermionic swap-networks and alternative encoding schemes}
+  \end{itemize}
+\end{itemize}
+
+    \subsubsection{Week 2, Friday}\label{week-2-friday}
+
+\begin{itemize}
+%\tightlist
+\item
+  Rodeo algorithm and comparison with the VQE algorithm
+\end{itemize}
+
+
+\subsection{Tentative schedule third  week}
+
+
+    \subsubsection{Week 3, Monday}\label{week-3-monday}
+
+\begin{itemize}
+\item
+  Do we need this? Quantum Fourier transforms and fast Fourier transform\ale{How about we focus this day instead on more advanced simulation techniques introducing things like Linear Combination of Unitaries (LCU), Block encodings and maybe Quantum Signal Processing (QSP). I feel like we should also dedicate a bit of time to discuss Quantum Phase Estimation since that's something that needs to be covered in an introductory course of QC, not sure where to put it though. If needed we could use the bulk of this day for that}
+  \begin{itemize}
+  \item
+    Do we need this? Implementing Quantum Fourier transforms
+  \item
+    Other algorithms
+  \end{itemize}
+\end{itemize}
+
+    \subsubsection{Week 3, Tuesday}\label{week-3-tuesday}
+
+\begin{itemize}
+%\tightlist
+\item
+  Quantum computing for field theory
+\end{itemize}
+
+    \subsubsection{Week 3, Wednesday}\label{week-3-wednesday}
+
+\begin{itemize}
+%\tightlist
+\item
+  Quantum computing for field theory
+\end{itemize}
+
+    \subsubsection{Week 3, Thursday}\label{week-3-thursday}
+
+\begin{itemize}
+%\tightlist
+\item
+  Quantum error correction\ale{(I feel like we should also say something about error mitigation but I am not sure how to fit that in the current schedule. Maybe we can compress a bit the material of the first week to make room? If we are targeting PhD students in physics we can probably cover those things  bit more quickly. Otherwise we can switch quantum error correction with quantum error mitigation)}
+  \ale{\begin{itemize}
+      \item Kraus representation and error channels
+      \item standard [9,1,3] code and threshold theorem
+  \end{itemize}}
+\end{itemize}
+
+    \subsubsection{Week 3, Friday}\label{week-3-friday}
+
+\begin{itemize}
+%\tightlist
+\item
+  Summary of course
+\end{itemize}
+
+
+
+\begin{document}
+
 
 \end{document}
