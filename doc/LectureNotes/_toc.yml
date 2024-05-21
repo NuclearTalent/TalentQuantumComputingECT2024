@@ -9,12 +9,4 @@ parts:
   - caption: First week, quantum computing elements and simulating simple Hamiltonians
     numbered: true
     chapters:
-    - file: day1part1.ipynb
-  - caption: Second week, nuclear physics systems and more advanced algorithms
-    numbered: true
-    chapters:
-    - file: day6part1.ipynb
-  - caption: Third week, quantum computing for field theories
-    numbered: true
-    chapters:
-    - file: day13part1.ipynb
+    - file: day1.ipynb
