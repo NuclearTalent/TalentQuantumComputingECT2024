@@ -10,7 +10,7 @@ latex:
 
 
 repository:
-  url                       : https://github.com/NuclearTalent/TalentQuantumComputingECT2024/doc/LectureNotes/_build/html/index.html
+  url                       : https://nucleartalent.github.io/TalentQuantumComputingECT2024/doc/LectureNotes/_build/html/index.html
 html:
   use_repository_button: true
 
