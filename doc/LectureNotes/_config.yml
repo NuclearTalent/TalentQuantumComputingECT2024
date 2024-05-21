@@ -7,9 +7,10 @@ latex:
   latex_documents:
     targetname: book.tex
 
-repository:
-  url                       : https://compphysics.github.io/MachineLearning/doc/LectureNotes/_build/html/index.html
 
+
+repository:
+  url                       : https://github.com/NuclearTalent/TalentQuantumComputingECT2024/doc/LectureNotes/_build/html/index.html
 html:
   use_repository_button: true
 
