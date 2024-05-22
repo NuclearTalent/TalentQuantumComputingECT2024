@@ -10,3 +10,4 @@ parts:
     numbered: true
     chapters:
     - file: day1.ipynb
+    - file: day4.ipynb
