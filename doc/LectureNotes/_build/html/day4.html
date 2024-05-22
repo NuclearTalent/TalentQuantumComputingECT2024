@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2. Variational Quantum Eigensolver and the Lipkin model &#8212; Nuclear TALENT course on Quantum Computing</title>
+    <title>3. Variational Quantum Eigensolver and the Lipkin model &#8212; Nuclear TALENT course on Quantum Computing</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -55,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="1. Basic notion of quantum computing" href="day1.html" />
+    <link rel="prev" title="2. Quantum Fourier Transforms and the Quantum Phase Estimation algorithm" href="day2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -132,9 +132,14 @@ const thebe_selector_output = ".output, .cell_output"
    1. Basic notion of quantum computing
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="day2.html">
+   2. Quantum Fourier Transforms and the Quantum Phase Estimation algorithm
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   2. Variational Quantum Eigensolver and the Lipkin model
+   3. Variational Quantum Eigensolver and the Lipkin model
   </a>
  </li>
 </ul>
@@ -210,137 +215,137 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#variational-quantum-eigensolver">
-   2.1. Variational Quantum Eigensolver
+   3.1. Variational Quantum Eigensolver
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-vqe">
-   2.2. The VQE
+   3.2. The VQE
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#expectation-value-of-hamiltonian">
-   2.3. Expectation value of Hamiltonian
+   3.3. Expectation value of Hamiltonian
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#expanding-in-the-eigenstates">
-   2.4. Expanding in the eigenstates
+   3.4. Expanding in the eigenstates
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#basic-steps-of-the-vqe-algorithm">
-   2.5. Basic steps of the VQE algorithm
+   3.5. Basic steps of the VQE algorithm
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#expectation-values">
-   2.6. Expectation values
+   3.6. Expectation values
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#measurements-of-eigenvalues-of-the-pauli-operators">
-   2.7. Measurements of eigenvalues of the Pauli operators
+   3.7. Measurements of eigenvalues of the Pauli operators
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#single-qubit-states">
-   2.8. Single-qubit states
+   3.8. Single-qubit states
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#interpretations">
-   2.9. Interpretations
+   3.9. Interpretations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reminder-on-rotations">
-   2.10. Reminder on rotations
+   3.10. Reminder on rotations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#arbitrary-pauli-gate">
-   2.11. Arbitrary Pauli gate
+   3.11. Arbitrary Pauli gate
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#arbitrary-string-of-pauli-operators">
-   2.12. Arbitrary string of Pauli operators
+   3.12. Arbitrary string of Pauli operators
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#which-gives-us">
-   2.13. Which gives us
+   3.13. Which gives us
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#final-observables">
-   2.14. Final observables
+   3.14. Final observables
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#measurement">
-   2.15. Measurement
+   3.15. Measurement
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#law-of-large-numbers-aka-bernoulli-s-theorem">
-   2.16. Law of large numbers aka Bernoulli’s theorem
+   3.16. Law of large numbers aka Bernoulli’s theorem
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#implementing-the-vqe-method-one-qubit-system">
-   2.17. Implementing the  VQE method, one qubit system
+   3.17. Implementing the  VQE method, one qubit system
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rewriting-the-hamiltonian">
-   2.18. Rewriting the Hamiltonian
+   3.18. Rewriting the Hamiltonian
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-pauli-matrices">
-   2.19. Using Pauli matrices
+   3.19. Using Pauli matrices
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#selecting-parameters">
-   2.20. Selecting parameters
+   3.20. Selecting parameters
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#setting-up-the-matrix">
-   2.21. Setting up the matrix
+   3.21. Setting up the matrix
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#implementing-the-vqe">
-   2.22. Implementing the VQE
+   3.22. Implementing the VQE
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#possible-ansatzes">
-   2.23. Possible ansatzes
+   3.23. Possible ansatzes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-on-rotation-operators">
-   2.24. More on rotation operators
+   3.24. More on rotation operators
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#code-example">
-   2.25. Code example
+   3.25. Code example
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-smarter-way-of-doing-this">
-   2.26. A smarter way of doing this
+   3.26. A smarter way of doing this
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-the-pauli-z-matrix">
-   2.27. Using the Pauli
+   3.27. Using the Pauli
    <span class="math notranslate nohighlight">
     \(Z\)
    </span>
@@ -349,7 +354,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-pauli-x-matrix">
-   2.28. The Pauli
+   3.28. The Pauli
    <span class="math notranslate nohighlight">
     \(X\)
    </span>
@@ -358,7 +363,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rewriting-in-terms-of-pauli-z-matrices">
-   2.29. Rewriting in terms of Pauli
+   3.29. Rewriting in terms of Pauli
    <span class="math notranslate nohighlight">
     \(Z\)
    </span>
@@ -367,47 +372,47 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   2.30. Rewriting the Hamiltonian
+   3.30. Rewriting the Hamiltonian
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#main-advantage">
-   2.31. Main advantage
+   3.31. Main advantage
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#basic-idea">
-   2.32. Basic idea
+   3.32. Basic idea
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vqe-and-quantum-circuits">
-   2.33. VQE and quantum circuits
+   3.33. VQE and quantum circuits
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#varying-paramters">
-   2.34. Varying paramters
+   3.34. Varying paramters
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#constructing-trial-states">
-   2.35. Constructing trial states
+   3.35. Constructing trial states
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#hybrid-operations">
-   2.36. Hybrid operations
+   3.36. Hybrid operations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reminder-on-technicalities">
-   2.37. Reminder on technicalities
+   3.37. Reminder on technicalities
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pauli-x-reminder">
-   2.38. Pauli
+   3.38. Pauli
    <span class="math notranslate nohighlight">
     \(X\)
    </span>
@@ -416,7 +421,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rewriting-the-pauli-x-matrix">
-   2.39. Rewriting the Pauli
+   3.39. Rewriting the Pauli
    <span class="math notranslate nohighlight">
     \(X\)
    </span>
@@ -425,7 +430,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-pauli-y-matrix">
-   2.40. The Pauli
+   3.40. The Pauli
    <span class="math notranslate nohighlight">
     \(Y\)
    </span>
@@ -434,102 +439,102 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rotations">
-   2.41. Rotations
+   3.41. Rotations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rayleigh-ritz-variational-principle">
-   2.42. Rayleigh-Ritz variational principle
+   3.42. Rayleigh-Ritz variational principle
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-ansatz">
-   2.43. The ansatz
+   3.43. The ansatz
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rotations-again">
-   2.44. Rotations again
+   3.44. Rotations again
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#measurements-and-more">
-   2.45. Measurements and more
+   3.45. Measurements and more
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#collecting-data">
-   2.46. Collecting data
+   3.46. Collecting data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-vqe-algoritm">
-   2.47. The VQE algoritm
+   3.47. The VQE algoritm
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vqe-overview">
-   2.48. VQE overview
+   3.48. VQE overview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ansatzes">
-   2.49. Ansatzes
+   3.49. Ansatzes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#preparing-the-states">
-   2.50. Preparing the states
+   3.50. Preparing the states
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rotations-used">
-   2.51. Rotations used
+   3.51. Rotations used
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#implementing-using-qiskit">
-   2.52. Implementing using qiskit
+   3.52. Implementing using qiskit
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vqe-and-efficient-computations-of-gradients">
-   2.53. VQE and efficient computations of gradients
+   3.53. VQE and efficient computations of gradients
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#symmetric-matrix">
-   2.54. Symmetric matrix
+   3.54. Symmetric matrix
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#non-interacting-solution">
-   2.55. Non-interacting solution
+   3.55. Non-interacting solution
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rewriting-with-pauli-matrices">
-   2.56. Rewriting with Pauli matrices
+   3.56. Rewriting with Pauli matrices
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
-   2.57. Selecting parameters
+   3.57. Selecting parameters
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id3">
-   2.58. Setting up the matrix
+   3.58. Setting up the matrix
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#measurements-and-computational-basis">
-   2.59. Measurements and computational basis
+   3.59. Measurements and computational basis
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#expectation-value-of-boldsymbol-i">
-   2.60. Expectation value of
+   3.60. Expectation value of
    <span class="math notranslate nohighlight">
     \(\boldsymbol{I}\)
    </span>
@@ -537,47 +542,47 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-pauli-matrices">
-   2.61. The Pauli matrices
+   3.61. The Pauli matrices
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#in-more-detail">
-   2.62. In more detail
+   3.62. In more detail
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#for-the-other-two-matrices">
-   2.63. For the other two matrices
+   3.63. For the other two matrices
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#analyzing-these-equations">
-   2.64. Analyzing these equations
+   3.64. Analyzing these equations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-the-inner-products">
-   2.65. Using the inner products
+   3.65. Using the inner products
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rethinking-the-basis">
-   2.66. Rethinking the basis
+   3.66. Rethinking the basis
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#measurements">
-   2.67. Measurements
+   3.67. Measurements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#computational-basis">
-   2.68. Computational basis
+   3.68. Computational basis
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#unitary-transformation-of-boldsymbol-x">
-   2.69. Unitary transformation of
+   3.69. Unitary transformation of
    <span class="math notranslate nohighlight">
     \(\boldsymbol{X}\)
    </span>
@@ -585,127 +590,127 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#generalizing">
-   2.70. Generalizing
+   3.70. Generalizing
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id4">
-   2.71. Implementing the VQE
+   3.71. Implementing the VQE
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#multiple-ansatzes">
-   2.72. Multiple ansatzes
+   3.72. Multiple ansatzes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id5">
-   2.73. Rotations again
+   3.73. Rotations again
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#simple-code">
-   2.74. Simple code
+   3.74. Simple code
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gradient-descent-and-calculations-of-gradients">
-   2.75. Gradient descent and calculations of gradients
+   3.75. Gradient descent and calculations of gradients
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#setting-up-gradients">
-   2.76. Setting up gradients
+   3.76. Setting up gradients
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#derivatives">
-   2.77. Derivatives
+   3.77. Derivatives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#derivatives-of-the-expectation-value-of-the-hamiltonian">
-   2.78. Derivatives of the expectation value of the Hamiltonian
+   3.78. Derivatives of the expectation value of the Hamiltonian
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#two-addtional-expectation-values">
-   2.79. Two addtional expectation values
+   3.79. Two addtional expectation values
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rotations-again-and-again">
-   2.80. Rotations again and again
+   3.80. Rotations again and again
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bloch-sphere-math">
-   2.81. Bloch sphere math
+   3.81. Bloch sphere math
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id6">
-   2.82. Derivatives
+   3.82. Derivatives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rewriting">
-   2.83. Rewriting
+   3.83. Rewriting
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#final-manipulations">
-   2.84. Final manipulations
+   3.84. Final manipulations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-expressions-to-implement">
-   2.85. The expressions to implement
+   3.85. The expressions to implement
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#final-expression">
-   2.86. Final expression
+   3.86. Final expression
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#basics-of-gradient-descent-and-stochastic-gradient-descent">
-   2.87. Basics of gradient descent and stochastic gradient descent
+   3.87. Basics of gradient descent and stochastic gradient descent
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#computing-quantum-gradients">
-   2.88. Computing quantum gradients
+   3.88. Computing quantum gradients
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id7">
-   2.89. A smarter way of doing this
+   3.89. A smarter way of doing this
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-code-for-the-one-qubit-case-code-developed-by-august-gude-2023">
-   2.90. The code for the one qubit case (code developed by August Gude, 2023)
+   3.90. The code for the one qubit case (code developed by August Gude, 2023)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lipkin-model">
-   2.91. Lipkin model
+   3.91. Lipkin model
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id8">
-   2.92. Rewriting the Hamiltonian
+   3.92. Rewriting the Hamiltonian
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#commutation-relations-for-the-hamiltonian">
-   2.93. Commutation relations for the Hamiltonian
+   3.93. Commutation relations for the Hamiltonian
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#constructing-the-hamiltonian-matrix-for-j-2">
-   2.94. Constructing the Hamiltonian matrix for
+   3.94. Constructing the Hamiltonian matrix for
    <span class="math notranslate nohighlight">
     \(J=2\)
    </span>
@@ -713,22 +718,22 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reminder-from-last-week-on-expectation-values">
-   2.95. Reminder from last week on Expectation values
+   3.95. Reminder from last week on Expectation values
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id9">
-   2.96. Measurement
+   3.96. Measurement
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#quantum-computing-and-solving-the-eigenvalue-problem-for-the-lipkin-model">
-   2.97. Quantum computing and solving  the eigenvalue problem for the Lipkin model
+   3.97. Quantum computing and solving  the eigenvalue problem for the Lipkin model
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#quantum-circuit-rewriting-the-lipkin-model-in-terms-of-pauli-matrices">
-   2.98. Quantum Circuit, rewriting the Lipkin model in terms of Pauli matrices
+   3.98. Quantum Circuit, rewriting the Lipkin model in terms of Pauli matrices
   </a>
  </li>
 </ul>
@@ -753,137 +758,137 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#variational-quantum-eigensolver">
-   2.1. Variational Quantum Eigensolver
+   3.1. Variational Quantum Eigensolver
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-vqe">
-   2.2. The VQE
+   3.2. The VQE
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#expectation-value-of-hamiltonian">
-   2.3. Expectation value of Hamiltonian
+   3.3. Expectation value of Hamiltonian
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#expanding-in-the-eigenstates">
-   2.4. Expanding in the eigenstates
+   3.4. Expanding in the eigenstates
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#basic-steps-of-the-vqe-algorithm">
-   2.5. Basic steps of the VQE algorithm
+   3.5. Basic steps of the VQE algorithm
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#expectation-values">
-   2.6. Expectation values
+   3.6. Expectation values
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#measurements-of-eigenvalues-of-the-pauli-operators">
-   2.7. Measurements of eigenvalues of the Pauli operators
+   3.7. Measurements of eigenvalues of the Pauli operators
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#single-qubit-states">
-   2.8. Single-qubit states
+   3.8. Single-qubit states
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#interpretations">
-   2.9. Interpretations
+   3.9. Interpretations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reminder-on-rotations">
-   2.10. Reminder on rotations
+   3.10. Reminder on rotations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#arbitrary-pauli-gate">
-   2.11. Arbitrary Pauli gate
+   3.11. Arbitrary Pauli gate
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#arbitrary-string-of-pauli-operators">
-   2.12. Arbitrary string of Pauli operators
+   3.12. Arbitrary string of Pauli operators
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#which-gives-us">
-   2.13. Which gives us
+   3.13. Which gives us
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#final-observables">
-   2.14. Final observables
+   3.14. Final observables
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#measurement">
-   2.15. Measurement
+   3.15. Measurement
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#law-of-large-numbers-aka-bernoulli-s-theorem">
-   2.16. Law of large numbers aka Bernoulli’s theorem
+   3.16. Law of large numbers aka Bernoulli’s theorem
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#implementing-the-vqe-method-one-qubit-system">
-   2.17. Implementing the  VQE method, one qubit system
+   3.17. Implementing the  VQE method, one qubit system
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rewriting-the-hamiltonian">
-   2.18. Rewriting the Hamiltonian
+   3.18. Rewriting the Hamiltonian
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-pauli-matrices">
-   2.19. Using Pauli matrices
+   3.19. Using Pauli matrices
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#selecting-parameters">
-   2.20. Selecting parameters
+   3.20. Selecting parameters
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#setting-up-the-matrix">
-   2.21. Setting up the matrix
+   3.21. Setting up the matrix
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#implementing-the-vqe">
-   2.22. Implementing the VQE
+   3.22. Implementing the VQE
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#possible-ansatzes">
-   2.23. Possible ansatzes
+   3.23. Possible ansatzes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-on-rotation-operators">
-   2.24. More on rotation operators
+   3.24. More on rotation operators
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#code-example">
-   2.25. Code example
+   3.25. Code example
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-smarter-way-of-doing-this">
-   2.26. A smarter way of doing this
+   3.26. A smarter way of doing this
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-the-pauli-z-matrix">
-   2.27. Using the Pauli
+   3.27. Using the Pauli
    <span class="math notranslate nohighlight">
     \(Z\)
    </span>
@@ -892,7 +897,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-pauli-x-matrix">
-   2.28. The Pauli
+   3.28. The Pauli
    <span class="math notranslate nohighlight">
     \(X\)
    </span>
@@ -901,7 +906,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rewriting-in-terms-of-pauli-z-matrices">
-   2.29. Rewriting in terms of Pauli
+   3.29. Rewriting in terms of Pauli
    <span class="math notranslate nohighlight">
     \(Z\)
    </span>
@@ -910,47 +915,47 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   2.30. Rewriting the Hamiltonian
+   3.30. Rewriting the Hamiltonian
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#main-advantage">
-   2.31. Main advantage
+   3.31. Main advantage
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#basic-idea">
-   2.32. Basic idea
+   3.32. Basic idea
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vqe-and-quantum-circuits">
-   2.33. VQE and quantum circuits
+   3.33. VQE and quantum circuits
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#varying-paramters">
-   2.34. Varying paramters
+   3.34. Varying paramters
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#constructing-trial-states">
-   2.35. Constructing trial states
+   3.35. Constructing trial states
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#hybrid-operations">
-   2.36. Hybrid operations
+   3.36. Hybrid operations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reminder-on-technicalities">
-   2.37. Reminder on technicalities
+   3.37. Reminder on technicalities
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pauli-x-reminder">
-   2.38. Pauli
+   3.38. Pauli
    <span class="math notranslate nohighlight">
     \(X\)
    </span>
@@ -959,7 +964,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rewriting-the-pauli-x-matrix">
-   2.39. Rewriting the Pauli
+   3.39. Rewriting the Pauli
    <span class="math notranslate nohighlight">
     \(X\)
    </span>
@@ -968,7 +973,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-pauli-y-matrix">
-   2.40. The Pauli
+   3.40. The Pauli
    <span class="math notranslate nohighlight">
     \(Y\)
    </span>
@@ -977,102 +982,102 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rotations">
-   2.41. Rotations
+   3.41. Rotations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rayleigh-ritz-variational-principle">
-   2.42. Rayleigh-Ritz variational principle
+   3.42. Rayleigh-Ritz variational principle
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-ansatz">
-   2.43. The ansatz
+   3.43. The ansatz
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rotations-again">
-   2.44. Rotations again
+   3.44. Rotations again
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#measurements-and-more">
-   2.45. Measurements and more
+   3.45. Measurements and more
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#collecting-data">
-   2.46. Collecting data
+   3.46. Collecting data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-vqe-algoritm">
-   2.47. The VQE algoritm
+   3.47. The VQE algoritm
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vqe-overview">
-   2.48. VQE overview
+   3.48. VQE overview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ansatzes">
-   2.49. Ansatzes
+   3.49. Ansatzes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#preparing-the-states">
-   2.50. Preparing the states
+   3.50. Preparing the states
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rotations-used">
-   2.51. Rotations used
+   3.51. Rotations used
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#implementing-using-qiskit">
-   2.52. Implementing using qiskit
+   3.52. Implementing using qiskit
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vqe-and-efficient-computations-of-gradients">
-   2.53. VQE and efficient computations of gradients
+   3.53. VQE and efficient computations of gradients
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#symmetric-matrix">
-   2.54. Symmetric matrix
+   3.54. Symmetric matrix
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#non-interacting-solution">
-   2.55. Non-interacting solution
+   3.55. Non-interacting solution
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rewriting-with-pauli-matrices">
-   2.56. Rewriting with Pauli matrices
+   3.56. Rewriting with Pauli matrices
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
-   2.57. Selecting parameters
+   3.57. Selecting parameters
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id3">
-   2.58. Setting up the matrix
+   3.58. Setting up the matrix
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#measurements-and-computational-basis">
-   2.59. Measurements and computational basis
+   3.59. Measurements and computational basis
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#expectation-value-of-boldsymbol-i">
-   2.60. Expectation value of
+   3.60. Expectation value of
    <span class="math notranslate nohighlight">
     \(\boldsymbol{I}\)
    </span>
@@ -1080,47 +1085,47 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-pauli-matrices">
-   2.61. The Pauli matrices
+   3.61. The Pauli matrices
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#in-more-detail">
-   2.62. In more detail
+   3.62. In more detail
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#for-the-other-two-matrices">
-   2.63. For the other two matrices
+   3.63. For the other two matrices
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#analyzing-these-equations">
-   2.64. Analyzing these equations
+   3.64. Analyzing these equations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-the-inner-products">
-   2.65. Using the inner products
+   3.65. Using the inner products
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rethinking-the-basis">
-   2.66. Rethinking the basis
+   3.66. Rethinking the basis
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#measurements">
-   2.67. Measurements
+   3.67. Measurements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#computational-basis">
-   2.68. Computational basis
+   3.68. Computational basis
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#unitary-transformation-of-boldsymbol-x">
-   2.69. Unitary transformation of
+   3.69. Unitary transformation of
    <span class="math notranslate nohighlight">
     \(\boldsymbol{X}\)
    </span>
@@ -1128,127 +1133,127 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#generalizing">
-   2.70. Generalizing
+   3.70. Generalizing
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id4">
-   2.71. Implementing the VQE
+   3.71. Implementing the VQE
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#multiple-ansatzes">
-   2.72. Multiple ansatzes
+   3.72. Multiple ansatzes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id5">
-   2.73. Rotations again
+   3.73. Rotations again
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#simple-code">
-   2.74. Simple code
+   3.74. Simple code
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gradient-descent-and-calculations-of-gradients">
-   2.75. Gradient descent and calculations of gradients
+   3.75. Gradient descent and calculations of gradients
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#setting-up-gradients">
-   2.76. Setting up gradients
+   3.76. Setting up gradients
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#derivatives">
-   2.77. Derivatives
+   3.77. Derivatives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#derivatives-of-the-expectation-value-of-the-hamiltonian">
-   2.78. Derivatives of the expectation value of the Hamiltonian
+   3.78. Derivatives of the expectation value of the Hamiltonian
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#two-addtional-expectation-values">
-   2.79. Two addtional expectation values
+   3.79. Two addtional expectation values
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rotations-again-and-again">
-   2.80. Rotations again and again
+   3.80. Rotations again and again
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bloch-sphere-math">
-   2.81. Bloch sphere math
+   3.81. Bloch sphere math
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id6">
-   2.82. Derivatives
+   3.82. Derivatives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rewriting">
-   2.83. Rewriting
+   3.83. Rewriting
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#final-manipulations">
-   2.84. Final manipulations
+   3.84. Final manipulations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-expressions-to-implement">
-   2.85. The expressions to implement
+   3.85. The expressions to implement
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#final-expression">
-   2.86. Final expression
+   3.86. Final expression
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#basics-of-gradient-descent-and-stochastic-gradient-descent">
-   2.87. Basics of gradient descent and stochastic gradient descent
+   3.87. Basics of gradient descent and stochastic gradient descent
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#computing-quantum-gradients">
-   2.88. Computing quantum gradients
+   3.88. Computing quantum gradients
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id7">
-   2.89. A smarter way of doing this
+   3.89. A smarter way of doing this
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-code-for-the-one-qubit-case-code-developed-by-august-gude-2023">
-   2.90. The code for the one qubit case (code developed by August Gude, 2023)
+   3.90. The code for the one qubit case (code developed by August Gude, 2023)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lipkin-model">
-   2.91. Lipkin model
+   3.91. Lipkin model
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id8">
-   2.92. Rewriting the Hamiltonian
+   3.92. Rewriting the Hamiltonian
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#commutation-relations-for-the-hamiltonian">
-   2.93. Commutation relations for the Hamiltonian
+   3.93. Commutation relations for the Hamiltonian
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#constructing-the-hamiltonian-matrix-for-j-2">
-   2.94. Constructing the Hamiltonian matrix for
+   3.94. Constructing the Hamiltonian matrix for
    <span class="math notranslate nohighlight">
     \(J=2\)
    </span>
@@ -1256,22 +1261,22 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reminder-from-last-week-on-expectation-values">
-   2.95. Reminder from last week on Expectation values
+   3.95. Reminder from last week on Expectation values
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id9">
-   2.96. Measurement
+   3.96. Measurement
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#quantum-computing-and-solving-the-eigenvalue-problem-for-the-lipkin-model">
-   2.97. Quantum computing and solving  the eigenvalue problem for the Lipkin model
+   3.97. Quantum computing and solving  the eigenvalue problem for the Lipkin model
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#quantum-circuit-rewriting-the-lipkin-model-in-terms-of-pauli-matrices">
-   2.98. Quantum Circuit, rewriting the Lipkin model in terms of Pauli matrices
+   3.98. Quantum Circuit, rewriting the Lipkin model in terms of Pauli matrices
   </a>
  </li>
 </ul>
@@ -1286,11 +1291,11 @@ const thebe_selector_output = ".output, .cell_output"
   <!-- HTML file automatically generated from DocOnce source (https://github.com/doconce/doconce/)
 doconce format html day4.do.txt --no_abort -->
 <!-- dom:TITLE: Variational Quantum Eigensolver and the Lipkin model --><div class="tex2jax_ignore mathjax_ignore section" id="variational-quantum-eigensolver-and-the-lipkin-model">
-<h1><span class="section-number">2. </span>Variational Quantum Eigensolver and the Lipkin model<a class="headerlink" href="#variational-quantum-eigensolver-and-the-lipkin-model" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">3. </span>Variational Quantum Eigensolver and the Lipkin model<a class="headerlink" href="#variational-quantum-eigensolver-and-the-lipkin-model" title="Permalink to this headline">¶</a></h1>
 <p><strong>Nuclear TALENT course on quantum computing</strong></p>
 <p>Date: <strong>May 22, 2024</strong></p>
 <div class="section" id="variational-quantum-eigensolver">
-<h2><span class="section-number">2.1. </span>Variational Quantum Eigensolver<a class="headerlink" href="#variational-quantum-eigensolver" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.1. </span>Variational Quantum Eigensolver<a class="headerlink" href="#variational-quantum-eigensolver" title="Permalink to this headline">¶</a></h2>
 <p>One initial algorithm to estimate the eigenenergies of a quantum
 Hamiltonian was <a class="reference external" href="https://qiskit.org/textbook/ch-algorithms/quantum-phase-estimation.html">quantum phase estimation</a>. In it, one
 encodes the eigenenergies, one binary bit at a time (up to <span class="math notranslate nohighlight">\(n\)</span> bits),
@@ -1306,7 +1311,7 @@ binary fraction which corresponds to the eigen-energies of the quantum
 state acted upon by the controlled unitary operators.</p>
 </div>
 <div class="section" id="the-vqe">
-<h2><span class="section-number">2.2. </span>The VQE<a class="headerlink" href="#the-vqe" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.2. </span>The VQE<a class="headerlink" href="#the-vqe" title="Permalink to this headline">¶</a></h2>
 <p>While quantum
 phase estimation (QPE) is provably efficient, non-hybrid, and
 non-variational, the number of qubits and length of circuits required
@@ -1323,7 +1328,7 @@ by varying parameters and thus is not as deterministic as QPE. The
 variational quantum eigensolver is based on the variational principle:</p>
 </div>
 <div class="section" id="expectation-value-of-hamiltonian">
-<h2><span class="section-number">2.3. </span>Expectation value of Hamiltonian<a class="headerlink" href="#expectation-value-of-hamiltonian" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.3. </span>Expectation value of Hamiltonian<a class="headerlink" href="#expectation-value-of-hamiltonian" title="Permalink to this headline">¶</a></h2>
 <p>The expectation value of a Hamiltonian <span class="math notranslate nohighlight">\(H\)</span> in a state
 <span class="math notranslate nohighlight">\(|\psi(\theta)\rangle\)</span> parameterized by a set of angles <span class="math notranslate nohighlight">\(\theta\)</span>, is
 always greater than or equal to the minimum eigen-energy <span class="math notranslate nohighlight">\(E_0\)</span>. To see
@@ -1334,7 +1339,7 @@ H|n\rangle=E_n|n\rangle.
 \]</div>
 </div>
 <div class="section" id="expanding-in-the-eigenstates">
-<h2><span class="section-number">2.4. </span>Expanding in the eigenstates<a class="headerlink" href="#expanding-in-the-eigenstates" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4. </span>Expanding in the eigenstates<a class="headerlink" href="#expanding-in-the-eigenstates" title="Permalink to this headline">¶</a></h2>
 <p>We can then expand our state <span class="math notranslate nohighlight">\(|\psi(\theta)\rangle\)</span> in terms of said eigenstates</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1353,7 +1358,7 @@ H|n\rangle=E_n|n\rangle.
 \]</div>
 </div>
 <div class="section" id="basic-steps-of-the-vqe-algorithm">
-<h2><span class="section-number">2.5. </span>Basic steps of the VQE algorithm<a class="headerlink" href="#basic-steps-of-the-vqe-algorithm" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.5. </span>Basic steps of the VQE algorithm<a class="headerlink" href="#basic-steps-of-the-vqe-algorithm" title="Permalink to this headline">¶</a></h2>
 <p>Using this fact, the VQE algorithm can be broken down into the following steps</p>
 <ol class="simple">
 <li><p>Prepare the variational state <span class="math notranslate nohighlight">\(|\psi(\theta)\rangle\)</span> on a quantum computer.</p></li>
@@ -1368,7 +1373,7 @@ an estimate for the ground state energy
 <span class="math notranslate nohighlight">\(\langle\psi(\theta_{\text{min}})|H|\psi(\theta_{\text{min}})\rangle\)</span>.</p>
 </div>
 <div class="section" id="expectation-values">
-<h2><span class="section-number">2.6. </span>Expectation values<a class="headerlink" href="#expectation-values" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.6. </span>Expectation values<a class="headerlink" href="#expectation-values" title="Permalink to this headline">¶</a></h2>
 <p>To execute the second step of VQE, we need to understand how
 expectation values of operators can be estimated via quantum computers
 by post-processing measurements of quantum circuits in different
@@ -1404,7 +1409,7 @@ I,  \text{if} \ \sigma = Z.
 \]</div>
 </div>
 <div class="section" id="measurements-of-eigenvalues-of-the-pauli-operators">
-<h2><span class="section-number">2.7. </span>Measurements of eigenvalues of the Pauli operators<a class="headerlink" href="#measurements-of-eigenvalues-of-the-pauli-operators" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.7. </span>Measurements of eigenvalues of the Pauli operators<a class="headerlink" href="#measurements-of-eigenvalues-of-the-pauli-operators" title="Permalink to this headline">¶</a></h2>
 <p>We can show that these rotations allow us to measure the eigenvalues of the Pauli operators. The eigenvectors of the Pauli <span class="math notranslate nohighlight">\(X\)</span> gate are</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1423,7 +1428,7 @@ H\vert -\rangle = -1\vert 1\rangle.
 \]</div>
 </div>
 <div class="section" id="single-qubit-states">
-<h2><span class="section-number">2.8. </span>Single-qubit states<a class="headerlink" href="#single-qubit-states" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.8. </span>Single-qubit states<a class="headerlink" href="#single-qubit-states" title="Permalink to this headline">¶</a></h2>
 <p>Any single-qubit state can be written as a linear combination of these eigenvectors,</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1441,7 +1446,7 @@ H \vert \psi\rangle = \alpha \vert 0\rangle - \beta \vert 1\rangle.
 \]</div>
 </div>
 <div class="section" id="interpretations">
-<h2><span class="section-number">2.9. </span>Interpretations<a class="headerlink" href="#interpretations" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.9. </span>Interpretations<a class="headerlink" href="#interpretations" title="Permalink to this headline">¶</a></h2>
 <p>This tells us that we are able to estimate <span class="math notranslate nohighlight">\(|\alpha|^2\)</span> and
 <span class="math notranslate nohighlight">\(|\beta|^2\)</span> (and hence the expectation value of the Pauli <span class="math notranslate nohighlight">\(X\)</span>
 operator) by using the rotation in eq. (<a class="reference external" href="#eq:auto8">37</a>) and measure the
@@ -1449,7 +1454,7 @@ resulting state in the computational basis. We can show this for the
 Pauli <span class="math notranslate nohighlight">\(Z\)</span> and Pauli <span class="math notranslate nohighlight">\(Y\)</span> similarly.</p>
 </div>
 <div class="section" id="reminder-on-rotations">
-<h2><span class="section-number">2.10. </span>Reminder on rotations<a class="headerlink" href="#reminder-on-rotations" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.10. </span>Reminder on rotations<a class="headerlink" href="#reminder-on-rotations" title="Permalink to this headline">¶</a></h2>
 <p>Note the following identity of the basis rotator</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1458,7 +1463,7 @@ R^\dagger_\sigma Z R_\sigma = \sigma,
 <p>which follows from the fact that <span class="math notranslate nohighlight">\(HZH=X\)</span> and <span class="math notranslate nohighlight">\(SXS^\dagger=Y\)</span>.</p>
 </div>
 <div class="section" id="arbitrary-pauli-gate">
-<h2><span class="section-number">2.11. </span>Arbitrary Pauli gate<a class="headerlink" href="#arbitrary-pauli-gate" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.11. </span>Arbitrary Pauli gate<a class="headerlink" href="#arbitrary-pauli-gate" title="Permalink to this headline">¶</a></h2>
 <p>With this, we see that the expectation value of an arbitrary
 Pauli-gate <span class="math notranslate nohighlight">\(\sigma\)</span> in the state <span class="math notranslate nohighlight">\(\vert\psi\rangle\)</span> can be expressed as a linear combination of probabilities</p>
 <div class="math notranslate nohighlight">
@@ -1492,7 +1497,7 @@ E_{\psi}(\sigma)
 <span class="math notranslate nohighlight">\(\vert \phi\rangle\)</span> collapses to the state <span class="math notranslate nohighlight">\(\vert x\rangle\)</span> when measured.</p>
 </div>
 <div class="section" id="arbitrary-string-of-pauli-operators">
-<h2><span class="section-number">2.12. </span>Arbitrary string of Pauli operators<a class="headerlink" href="#arbitrary-string-of-pauli-operators" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.12. </span>Arbitrary string of Pauli operators<a class="headerlink" href="#arbitrary-string-of-pauli-operators" title="Permalink to this headline">¶</a></h2>
 <p>This can
 be extended to any arbitrary Pauli string: consider the string of
 Pauli operators <span class="math notranslate nohighlight">\(P=\bigotimes_{p\in Q}\sigma_p\)</span> which acts
@@ -1523,7 +1528,7 @@ E_{\psi}\left(P\right)
 \]</div>
 </div>
 <div class="section" id="which-gives-us">
-<h2><span class="section-number">2.13. </span>Which gives us<a class="headerlink" href="#which-gives-us" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.13. </span>Which gives us<a class="headerlink" href="#which-gives-us" title="Permalink to this headline">¶</a></h2>
 <div class="math notranslate nohighlight">
 \[
 E_{\psi}\left(P\right)
@@ -1569,7 +1574,7 @@ E_{\psi}\left(P\right)
 <p>where <span class="math notranslate nohighlight">\(\vert \phi\rangle=\vert \bigotimes_{p\in Q}R_{\sigma_p}\psi\rangle\)</span>.</p>
 </div>
 <div class="section" id="final-observables">
-<h2><span class="section-number">2.14. </span>Final observables<a class="headerlink" href="#final-observables" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.14. </span>Final observables<a class="headerlink" href="#final-observables" title="Permalink to this headline">¶</a></h2>
 <p>Finally, because the expectation value is
 linear</p>
 <div class="math notranslate nohighlight">
@@ -1579,7 +1584,7 @@ E_\psi\left(\sum_{m}\lambda_mP_m\right) = \sum_m\lambda_mE_\psi(P_m),
 <p>one can estimate any observable that can be written as a linear combination of Pauli-string terms.</p>
 </div>
 <div class="section" id="measurement">
-<h2><span class="section-number">2.15. </span>Measurement<a class="headerlink" href="#measurement" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.15. </span>Measurement<a class="headerlink" href="#measurement" title="Permalink to this headline">¶</a></h2>
 <p>To estimate the probability <span class="math notranslate nohighlight">\(P(\vert \phi\rangle\to \vert x\rangle)\)</span> from the
 previous results, one prepares the state <span class="math notranslate nohighlight">\(\vert \phi\rangle\)</span> on a quantum
 computer and measures it, and then repeats this process (prepare and
@@ -1594,7 +1599,7 @@ P(\vert \phi\rangle\to \vert x\rangle\rangle \approx \sum_{m=1}^M\frac{x_m}{M},
 if the result of measurement is <span class="math notranslate nohighlight">\(x\)</span> and  <span class="math notranslate nohighlight">\(0\)</span> if the result of measurement is not <span class="math notranslate nohighlight">\(x\)</span>.</p>
 </div>
 <div class="section" id="law-of-large-numbers-aka-bernoulli-s-theorem">
-<h2><span class="section-number">2.16. </span><a class="reference external" href="https://en.wikipedia.org/wiki/Law_of_large_numbers">Law of large numbers</a> aka Bernoulli’s theorem<a class="headerlink" href="#law-of-large-numbers-aka-bernoulli-s-theorem" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.16. </span><a class="reference external" href="https://en.wikipedia.org/wiki/Law_of_large_numbers">Law of large numbers</a> aka Bernoulli’s theorem<a class="headerlink" href="#law-of-large-numbers-aka-bernoulli-s-theorem" title="Permalink to this headline">¶</a></h2>
 <p>By the law of large numbers the approximation approaches equality as
 <span class="math notranslate nohighlight">\(M\)</span> goes to infinity</p>
 <div class="math notranslate nohighlight">
@@ -1609,7 +1614,7 @@ estimation subroutine within VQE requires <span class="math notranslate nohighli
 samples from circuits with depth <span class="math notranslate nohighlight">\(\mathcal{O}(1)\)</span>.</p>
 </div>
 <div class="section" id="implementing-the-vqe-method-one-qubit-system">
-<h2><span class="section-number">2.17. </span>Implementing the  VQE method, one qubit system<a class="headerlink" href="#implementing-the-vqe-method-one-qubit-system" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.17. </span>Implementing the  VQE method, one qubit system<a class="headerlink" href="#implementing-the-vqe-method-one-qubit-system" title="Permalink to this headline">¶</a></h2>
 <p>We start with a simple <span class="math notranslate nohighlight">\(2\times 2\)</span> Hamiltonian matrix expressed in
 terms of Pauli <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Z\)</span> matrices, as discussed in the project text.</p>
 <p>We define a  symmetric matrix  <span class="math notranslate nohighlight">\(H\in {\mathbb{R}}^{2\times 2}\)</span></p>
@@ -1620,7 +1625,7 @@ H = \begin{bmatrix} H_{11} &amp; H_{12} \\ H_{21} &amp; H_{22}
 \end{split}\]</div>
 </div>
 <div class="section" id="rewriting-the-hamiltonian">
-<h2><span class="section-number">2.18. </span>Rewriting the Hamiltonian<a class="headerlink" href="#rewriting-the-hamiltonian" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.18. </span>Rewriting the Hamiltonian<a class="headerlink" href="#rewriting-the-hamiltonian" title="Permalink to this headline">¶</a></h2>
 <p>We  let <span class="math notranslate nohighlight">\(H = H_0 + H_I\)</span>, where</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -1655,7 +1660,7 @@ We can view <span class="math notranslate nohighlight">\(H_0\)</span> as the non
 <p>where we have defined the orthogonal computational one-qubit basis states <span class="math notranslate nohighlight">\(\vert 0\rangle\)</span> and <span class="math notranslate nohighlight">\(\vert 1\rangle\)</span>.</p>
 </div>
 <div class="section" id="using-pauli-matrices">
-<h2><span class="section-number">2.19. </span>Using Pauli matrices<a class="headerlink" href="#using-pauli-matrices" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.19. </span>Using Pauli matrices<a class="headerlink" href="#using-pauli-matrices" title="Permalink to this headline">¶</a></h2>
 <p>We rewrite <span class="math notranslate nohighlight">\(H\)</span> (and <span class="math notranslate nohighlight">\(H_0\)</span> and <span class="math notranslate nohighlight">\(H_I\)</span>)  via Pauli matrices</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1679,7 +1684,7 @@ system, respectively.  The model is an eigenvalue problem with only
 two available states.</p>
 </div>
 <div class="section" id="selecting-parameters">
-<h2><span class="section-number">2.20. </span>Selecting parameters<a class="headerlink" href="#selecting-parameters" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.20. </span>Selecting parameters<a class="headerlink" href="#selecting-parameters" title="Permalink to this headline">¶</a></h2>
 <p>Here we set the parameters <span class="math notranslate nohighlight">\(E_1=0\)</span>,
 <span class="math notranslate nohighlight">\(E_2=4\)</span>, <span class="math notranslate nohighlight">\(V_{11}=-V_{22}=3\)</span> and <span class="math notranslate nohighlight">\(V_{12}=V_{21}=0.2\)</span>.</p>
 <p>The non-interacting solutions represent our computational basis.
@@ -1693,7 +1698,7 @@ value of the parameter <span class="math notranslate nohighlight">\(V_{12}\)</sp
 between the two states.</p>
 </div>
 <div class="section" id="setting-up-the-matrix">
-<h2><span class="section-number">2.21. </span>Setting up the matrix<a class="headerlink" href="#setting-up-the-matrix" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.21. </span>Setting up the matrix<a class="headerlink" href="#setting-up-the-matrix" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -1756,7 +1761,7 @@ between the two states.</p>
 </div>
 </div>
 <div class="section" id="implementing-the-vqe">
-<h2><span class="section-number">2.22. </span>Implementing the VQE<a class="headerlink" href="#implementing-the-vqe" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.22. </span>Implementing the VQE<a class="headerlink" href="#implementing-the-vqe" title="Permalink to this headline">¶</a></h2>
 <p>For a one-qubit system we can reach every point on the Bloch sphere
 (as discussed earlier) with a rotation about the <span class="math notranslate nohighlight">\(x\)</span>-axis and the
 <span class="math notranslate nohighlight">\(y\)</span>-axis.</p>
@@ -1767,7 +1772,7 @@ between the two states.</p>
 \]</div>
 </div>
 <div class="section" id="possible-ansatzes">
-<h2><span class="section-number">2.23. </span>Possible ansatzes<a class="headerlink" href="#possible-ansatzes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.23. </span>Possible ansatzes<a class="headerlink" href="#possible-ansatzes" title="Permalink to this headline">¶</a></h2>
 <p>We can produce multiple ansatzes for the new state in terms of the
 angles <span class="math notranslate nohighlight">\(\theta\)</span> and <span class="math notranslate nohighlight">\(\phi\)</span>.  With these ansatzes we can in turn
 calculate the expectation value of the above Hamiltonian, now
@@ -1781,7 +1786,7 @@ function of the angles <span class="math notranslate nohighlight">\(\theta\)</sp
 variational minimum using for example a gradient descent method.</p>
 </div>
 <div class="section" id="more-on-rotation-operators">
-<h2><span class="section-number">2.24. </span>More on rotation operators<a class="headerlink" href="#more-on-rotation-operators" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.24. </span>More on rotation operators<a class="headerlink" href="#more-on-rotation-operators" title="Permalink to this headline">¶</a></h2>
 <p>To do so, we need to remind ourselves about the mathematical expressions for
 the rotational matrices/operators.</p>
 <div class="math notranslate nohighlight">
@@ -1795,7 +1800,7 @@ R_y(\phi)=\cos{\frac{\phi}{2}}\boldsymbol{I}-\imath \sin{\frac{\phi}{2}}\boldsym
 \]</div>
 </div>
 <div class="section" id="code-example">
-<h2><span class="section-number">2.25. </span>Code example<a class="headerlink" href="#code-example" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.25. </span>Code example<a class="headerlink" href="#code-example" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the rotation matrices</span>
@@ -1861,7 +1866,7 @@ add code example using gradient descent for the one- and two-qubit case. We will
 <a class="reference external" href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.99.032331">https://journals.aps.org/pra/abstract/10.1103/PhysRevA.99.032331</a> as a guideline to calculate gradients of the Hamiltonian.</p>
 </div>
 <div class="section" id="a-smarter-way-of-doing-this">
-<h2><span class="section-number">2.26. </span>A smarter way of doing this<a class="headerlink" href="#a-smarter-way-of-doing-this" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.26. </span>A smarter way of doing this<a class="headerlink" href="#a-smarter-way-of-doing-this" title="Permalink to this headline">¶</a></h2>
 <p>The above approach means that we are setting up several matrix-matrix
 amd matrix-vector multiplications. Although straight forward it is not
 the most efficient way of doing this, in particular in case the
@@ -1875,7 +1880,7 @@ to measure along the bases of the Pauli matrices and reconstruct the
 eigenvalues from these measurements.</p>
 </div>
 <div class="section" id="using-the-pauli-z-matrix">
-<h2><span class="section-number">2.27. </span>Using the Pauli <span class="math notranslate nohighlight">\(Z\)</span> matrix<a class="headerlink" href="#using-the-pauli-z-matrix" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.27. </span>Using the Pauli <span class="math notranslate nohighlight">\(Z\)</span> matrix<a class="headerlink" href="#using-the-pauli-z-matrix" title="Permalink to this headline">¶</a></h2>
 <p>From our earlier discussions we know that the Pauli <span class="math notranslate nohighlight">\(Z\)</span> matrix has the above basis states as eigen states through</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1889,7 +1894,7 @@ eigenvalues from these measurements.</p>
 <p>with eigenvalue <span class="math notranslate nohighlight">\(-1\)</span>.</p>
 </div>
 <div class="section" id="the-pauli-x-matrix">
-<h2><span class="section-number">2.28. </span>The Pauli <span class="math notranslate nohighlight">\(X\)</span> matrix<a class="headerlink" href="#the-pauli-x-matrix" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.28. </span>The Pauli <span class="math notranslate nohighlight">\(X\)</span> matrix<a class="headerlink" href="#the-pauli-x-matrix" title="Permalink to this headline">¶</a></h2>
 <p>For the Pauli <span class="math notranslate nohighlight">\(X\)</span> matrix on the other hand we have</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1905,7 +1910,7 @@ that the computational basis we have chosen, and in which we will
 prepare our states, is not an eigenbasis of the <span class="math notranslate nohighlight">\(\sigma_x\)</span> matrix.</p>
 </div>
 <div class="section" id="rewriting-in-terms-of-pauli-z-matrices">
-<h2><span class="section-number">2.29. </span>Rewriting in terms of Pauli <span class="math notranslate nohighlight">\(Z\)</span> matrices<a class="headerlink" href="#rewriting-in-terms-of-pauli-z-matrices" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.29. </span>Rewriting in terms of Pauli <span class="math notranslate nohighlight">\(Z\)</span> matrices<a class="headerlink" href="#rewriting-in-terms-of-pauli-z-matrices" title="Permalink to this headline">¶</a></h2>
 <p>We will thus try to rewrite the Pauli <span class="math notranslate nohighlight">\(X\)</span> matrix in terms of a Pauli <span class="math notranslate nohighlight">\(Z\)</span> matrix. Fortunately this can be done using the Hadamard matrix twice, that is</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1923,7 +1928,7 @@ S = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; \imath \end{bmatrix}.
 \end{split}\]</div>
 </div>
 <div class="section" id="id1">
-<h2><span class="section-number">2.30. </span>Rewriting the Hamiltonian<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.30. </span>Rewriting the Hamiltonian<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>From here and on we will denote the Pauli matrices by <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(Y\)</span> and <span class="math notranslate nohighlight">\(Z\)</span> and we can write the expectation value of the Hamiltonian as</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1939,7 +1944,7 @@ S = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; \imath \end{bmatrix}.
 For the final term we need just to add the action of the Hadamard matrix and we are done.</p>
 </div>
 <div class="section" id="main-advantage">
-<h2><span class="section-number">2.31. </span>Main advantage<a class="headerlink" href="#main-advantage" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.31. </span>Main advantage<a class="headerlink" href="#main-advantage" title="Permalink to this headline">¶</a></h2>
 <p>The main advantage
 is that VQE uses much smaller circuit depths (or gates) than
 QPE, what is very important for NISQ (Noisy Intermediate-Scale
@@ -1952,7 +1957,7 @@ advantage to those algorithms (like VQE) that are using small depth
 circuits.</p>
 </div>
 <div class="section" id="basic-idea">
-<h2><span class="section-number">2.32. </span>Basic idea<a class="headerlink" href="#basic-idea" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.32. </span>Basic idea<a class="headerlink" href="#basic-idea" title="Permalink to this headline">¶</a></h2>
 <p>The idea of the VQE algorithm is as follows. We have a Hamiltonian that can be expressed by the sum of tensor products of Pauli operators (Pauli terms):</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1965,7 +1970,7 @@ H = 0.4 \cdot IX + 0.6 \cdot IZ + 0.8 \cdot XY.
 \]</div>
 </div>
 <div class="section" id="vqe-and-quantum-circuits">
-<h2><span class="section-number">2.33. </span>VQE and quantum circuits<a class="headerlink" href="#vqe-and-quantum-circuits" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.33. </span>VQE and quantum circuits<a class="headerlink" href="#vqe-and-quantum-circuits" title="Permalink to this headline">¶</a></h2>
 <p>How one can see the <span class="math notranslate nohighlight">\(\left\langle H \right\rangle\)</span> expectation value
 could be computed by adding the expectation values of its parts (Pauli
 terms). The algorithm does exactly that. It constructs a quantum
@@ -1977,7 +1982,7 @@ expectation value of <span class="math notranslate nohighlight">\(H\)</span> ove
 wavefunctions (ansatz states) <span class="math notranslate nohighlight">\(\left| \psi \right\rangle\)</span>.</p>
 </div>
 <div class="section" id="varying-paramters">
-<h2><span class="section-number">2.34. </span>Varying paramters<a class="headerlink" href="#varying-paramters" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.34. </span>Varying paramters<a class="headerlink" href="#varying-paramters" title="Permalink to this headline">¶</a></h2>
 <p>It is known that the eigenvector <span class="math notranslate nohighlight">\(\left| \psi_g \right\rangle\)</span> that
 minimizes the expectation value <span class="math notranslate nohighlight">\(\left\langle H \right\rangle\)</span>
 corresponds to the eigenvector of <span class="math notranslate nohighlight">\(H\)</span> that has the smallest
@@ -1987,7 +1992,7 @@ that has the smallest expectation value. Here the question is how we
 create those trial states?</p>
 </div>
 <div class="section" id="constructing-trial-states">
-<h2><span class="section-number">2.35. </span>Constructing trial states<a class="headerlink" href="#constructing-trial-states" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.35. </span>Constructing trial states<a class="headerlink" href="#constructing-trial-states" title="Permalink to this headline">¶</a></h2>
 <p>In the algorithm, the trial states are
 created from a parametrized circuit. By changing the parameters one
 obtains different wavefunctions (ansatz states). If your circuit
@@ -1998,7 +2003,7 @@ to generate our desired <span class="math notranslate nohighlight">\(\left| \psi
 impossible to find the right solution.</p>
 </div>
 <div class="section" id="hybrid-operations">
-<h2><span class="section-number">2.36. </span>Hybrid operations<a class="headerlink" href="#hybrid-operations" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.36. </span>Hybrid operations<a class="headerlink" href="#hybrid-operations" title="Permalink to this headline">¶</a></h2>
 <p>The parameters of the state preparation circuit are controlled by a
 classical computer. At each step, the classical computer will change
 the parameters by using some optimization method in order to create an
@@ -2009,7 +2014,7 @@ find the ground state energy). That’s way, VQE is a quantum-classical
 hybrid algorithm.</p>
 </div>
 <div class="section" id="reminder-on-technicalities">
-<h2><span class="section-number">2.37. </span>Reminder on technicalities<a class="headerlink" href="#reminder-on-technicalities" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.37. </span>Reminder on technicalities<a class="headerlink" href="#reminder-on-technicalities" title="Permalink to this headline">¶</a></h2>
 <p>From our earlier discussions we know that the Pauli <span class="math notranslate nohighlight">\(Z\)</span> matrix has the
 above basis states as eigen states through</p>
 <div class="math notranslate nohighlight">
@@ -2024,7 +2029,7 @@ above basis states as eigen states through</p>
 <p>with eigenvalue <span class="math notranslate nohighlight">\(-1\)</span>.</p>
 </div>
 <div class="section" id="pauli-x-reminder">
-<h2><span class="section-number">2.38. </span>Pauli <span class="math notranslate nohighlight">\(X\)</span> reminder<a class="headerlink" href="#pauli-x-reminder" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.38. </span>Pauli <span class="math notranslate nohighlight">\(X\)</span> reminder<a class="headerlink" href="#pauli-x-reminder" title="Permalink to this headline">¶</a></h2>
 <p>For the Pauli <span class="math notranslate nohighlight">\(X\)</span> matrix on the other hand we have</p>
 <div class="math notranslate nohighlight">
 \[
@@ -2040,7 +2045,7 @@ that the computational basis we have chosen, and in which we will
 prepare our states, is not an eigenbasis of the <span class="math notranslate nohighlight">\(\boldsymbol{X}\)</span> matrix.</p>
 </div>
 <div class="section" id="rewriting-the-pauli-x-matrix">
-<h2><span class="section-number">2.39. </span>Rewriting the Pauli <span class="math notranslate nohighlight">\(X\)</span> matrix<a class="headerlink" href="#rewriting-the-pauli-x-matrix" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.39. </span>Rewriting the Pauli <span class="math notranslate nohighlight">\(X\)</span> matrix<a class="headerlink" href="#rewriting-the-pauli-x-matrix" title="Permalink to this headline">¶</a></h2>
 <p>We rewrite the Pauli <span class="math notranslate nohighlight">\(X\)</span> matrix in terms of a Pauli
 <span class="math notranslate nohighlight">\(Z\)</span> matrix using the Hadamard matrix
 twice, that is</p>
@@ -2050,7 +2055,7 @@ twice, that is</p>
 \]</div>
 </div>
 <div class="section" id="the-pauli-y-matrix">
-<h2><span class="section-number">2.40. </span>The Pauli <span class="math notranslate nohighlight">\(Y\)</span> matrix<a class="headerlink" href="#the-pauli-y-matrix" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.40. </span>The Pauli <span class="math notranslate nohighlight">\(Y\)</span> matrix<a class="headerlink" href="#the-pauli-y-matrix" title="Permalink to this headline">¶</a></h2>
 <p>The Pauli <span class="math notranslate nohighlight">\(Y\)</span> matrix can be written as</p>
 <div class="math notranslate nohighlight">
 \[
@@ -2063,7 +2068,7 @@ S = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; \imath \end{bmatrix}.
 \end{split}\]</div>
 </div>
 <div class="section" id="rotations">
-<h2><span class="section-number">2.41. </span>Rotations<a class="headerlink" href="#rotations" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.41. </span>Rotations<a class="headerlink" href="#rotations" title="Permalink to this headline">¶</a></h2>
 <p>Another important set of gates are the <strong>rotation operators</strong> <span class="math notranslate nohighlight">\(R_x, R_y\)</span> and <span class="math notranslate nohighlight">\(R_z\)</span>.
 By application to a qubit, we can reach any point on the Bloch sphere by usage of all three once. They are expressed as</p>
 <div class="math notranslate nohighlight">
@@ -2088,7 +2093,7 @@ By application to a qubit, we can reach any point on the Bloch sphere by usage o
 <p>with all having a period of <span class="math notranslate nohighlight">\(4\pi\)</span>.</p>
 </div>
 <div class="section" id="rayleigh-ritz-variational-principle">
-<h2><span class="section-number">2.42. </span>Rayleigh-Ritz variational principle<a class="headerlink" href="#rayleigh-ritz-variational-principle" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.42. </span>Rayleigh-Ritz variational principle<a class="headerlink" href="#rayleigh-ritz-variational-principle" title="Permalink to this headline">¶</a></h2>
 <p>The Rayleigh-Ritz variational principle states that for a given
 Hamiltonian <span class="math notranslate nohighlight">\(H\)</span>, the expectation value of a trial state or
 just ansatz <span class="math notranslate nohighlight">\(\vert \psi \rangle\)</span> puts a lower bound on the ground state
@@ -2099,7 +2104,7 @@ energy <span class="math notranslate nohighlight">\(E_0\)</span>.</p>
 \]</div>
 </div>
 <div class="section" id="the-ansatz">
-<h2><span class="section-number">2.43. </span>The ansatz<a class="headerlink" href="#the-ansatz" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.43. </span>The ansatz<a class="headerlink" href="#the-ansatz" title="Permalink to this headline">¶</a></h2>
 <p>The ansatz is typically chosen to be a parameterized superposition of
 basis states that can be varied to improve the energy estimate,
 <span class="math notranslate nohighlight">\(\vert \psi\rangle \equiv \vert psi(\boldsymbol{\theta})\rangle\)</span> where
@@ -2107,7 +2112,7 @@ basis states that can be varied to improve the energy estimate,
 optimization parameters.</p>
 </div>
 <div class="section" id="rotations-again">
-<h2><span class="section-number">2.44. </span>Rotations again<a class="headerlink" href="#rotations-again" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.44. </span>Rotations again<a class="headerlink" href="#rotations-again" title="Permalink to this headline">¶</a></h2>
 <p>To have any flexibility in the
 ansatz <span class="math notranslate nohighlight">\(\vert \psi\rangle\)</span>, we need to allow for parametrization. The most
 common approach is the so-called <span class="math notranslate nohighlight">\(R_y\)</span> ansatz, where we apply chained
@@ -2118,7 +2123,7 @@ specifically ensures that our coefficients always remain real, which
 often is satisfactory when dealing with many-body systems.</p>
 </div>
 <div class="section" id="measurements-and-more">
-<h2><span class="section-number">2.45. </span>Measurements and more<a class="headerlink" href="#measurements-and-more" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.45. </span>Measurements and more<a class="headerlink" href="#measurements-and-more" title="Permalink to this headline">¶</a></h2>
 <p>After the ansatz has been constructed, the Hamiltonian must
 be applied. As discussed, the Hamiltonian must be written in terms of
 Pauli strings.</p>
@@ -2134,7 +2139,7 @@ each Pauli string,</p>
 <p>where <span class="math notranslate nohighlight">\(f_i\)</span> is the expectation value of the Pauli string <span class="math notranslate nohighlight">\(i\)</span>.</p>
 </div>
 <div class="section" id="collecting-data">
-<h2><span class="section-number">2.46. </span>Collecting data<a class="headerlink" href="#collecting-data" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.46. </span>Collecting data<a class="headerlink" href="#collecting-data" title="Permalink to this headline">¶</a></h2>
 <p>This is estimated statistically by considering measurements in the
 appropriate basis of the operator in the Pauli string.</p>
 <p>With <span class="math notranslate nohighlight">\(N_0\)</span> and <span class="math notranslate nohighlight">\(N_1\)</span> as the number of <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(1\)</span> measurements respectively, we can estimate <span class="math notranslate nohighlight">\(f_i\)</span> since</p>
@@ -2152,7 +2157,7 @@ optimize with respect to  <span class="math notranslate nohighlight">\(\boldsymb
 applied.</p>
 </div>
 <div class="section" id="the-vqe-algoritm">
-<h2><span class="section-number">2.47. </span>The VQE algoritm<a class="headerlink" href="#the-vqe-algoritm" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.47. </span>The VQE algoritm<a class="headerlink" href="#the-vqe-algoritm" title="Permalink to this headline">¶</a></h2>
 <p>The VQE algorithm consists of several steps, partially done on a classical computer:</p>
 <ol class="simple">
 <li><p>A parameterized ansatz for the quantum state is implemented on a quantum computer.</p></li>
@@ -2165,13 +2170,13 @@ computer, and the process is repeated until the optimal variational
 parameters are found.</p>
 </div>
 <div class="section" id="vqe-overview">
-<h2><span class="section-number">2.48. </span>VQE overview<a class="headerlink" href="#vqe-overview" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.48. </span>VQE overview<a class="headerlink" href="#vqe-overview" title="Permalink to this headline">¶</a></h2>
 <!-- dom:FIGURE: [figures/vqe.png, width=700 frac=0.9] -->
 <!-- begin figure -->
 <p><img src="figures/vqe.png" width="700"><p style="font-size: 0.9em"><i>Figure 1: </i></p></p>
 <!-- end figure --></div>
 <div class="section" id="ansatzes">
-<h2><span class="section-number">2.49. </span>Ansatzes<a class="headerlink" href="#ansatzes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.49. </span>Ansatzes<a class="headerlink" href="#ansatzes" title="Permalink to this headline">¶</a></h2>
 <p>Every possible qubit wavefunction <span class="math notranslate nohighlight">\(\left| \psi \right\rangle\)</span> can be presented as a vector:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -2187,7 +2192,7 @@ circuit should be able to generate all possible states in the Bloch
 sphere.</p>
 </div>
 <div class="section" id="preparing-the-states">
-<h2><span class="section-number">2.50. </span>Preparing the states<a class="headerlink" href="#preparing-the-states" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.50. </span>Preparing the states<a class="headerlink" href="#preparing-the-states" title="Permalink to this headline">¶</a></h2>
 <p>Before quantum state preparation, our qubit is in the <span class="math notranslate nohighlight">\(\vert 0\rangle\)</span> state.
 This corresponds to the vertical position of
 the vector in the Bloch sphere. In order to generate any possible
@@ -2202,13 +2207,13 @@ corresponds to the rotation in the Bloch
 sphere around the <span class="math notranslate nohighlight">\(x\)</span>-axis and <span class="math notranslate nohighlight">\(R_y(\phi)\)</span> the rotation around the <span class="math notranslate nohighlight">\(y\)</span>-axis.</p>
 </div>
 <div class="section" id="rotations-used">
-<h2><span class="section-number">2.51. </span>Rotations used<a class="headerlink" href="#rotations-used" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.51. </span>Rotations used<a class="headerlink" href="#rotations-used" title="Permalink to this headline">¶</a></h2>
 <p>These two gates with there parameters (<span class="math notranslate nohighlight">\(\theta\)</span> and <span class="math notranslate nohighlight">\(\phi\)</span>) will generate
 for us the trial (ansatz) wavefunctions. The two parameters will be in
 control of the Classical Computer and its optimization model.</p>
 </div>
 <div class="section" id="implementing-using-qiskit">
-<h2><span class="section-number">2.52. </span>Implementing using qiskit<a class="headerlink" href="#implementing-using-qiskit" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.52. </span>Implementing using qiskit<a class="headerlink" href="#implementing-using-qiskit" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -2225,7 +2230,7 @@ control of the Classical Computer and its optimization model.</p>
 </div>
 </div>
 <div class="section" id="vqe-and-efficient-computations-of-gradients">
-<h2><span class="section-number">2.53. </span>VQE and efficient computations of gradients<a class="headerlink" href="#vqe-and-efficient-computations-of-gradients" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.53. </span>VQE and efficient computations of gradients<a class="headerlink" href="#vqe-and-efficient-computations-of-gradients" title="Permalink to this headline">¶</a></h2>
 <p>We start with a reminder on the VQE method with applications to the
 one-qubit system discussed last week.</p>
 <p>Here we revisit the one-qubit system and develop a VQE
@@ -2235,7 +2240,7 @@ optimize the variational ansatz.</p>
 terms of Pauli <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Z\)</span> matrices, as discussed in the project text.</p>
 </div>
 <div class="section" id="symmetric-matrix">
-<h2><span class="section-number">2.54. </span>Symmetric matrix<a class="headerlink" href="#symmetric-matrix" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.54. </span>Symmetric matrix<a class="headerlink" href="#symmetric-matrix" title="Permalink to this headline">¶</a></h2>
 <p>We define a  symmetric matrix  <span class="math notranslate nohighlight">\(H\in {\mathbb{R}}^{2\times 2}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -2255,7 +2260,7 @@ H_I= \begin{bmatrix} V_{11} &amp; V_{12} \\ V_{21} &amp; V_{22}\end{bmatrix},
 <p>where <span class="math notranslate nohighlight">\(V_{ij}\)</span> represent various interaction matrix elements.</p>
 </div>
 <div class="section" id="non-interacting-solution">
-<h2><span class="section-number">2.55. </span>Non-interacting solution<a class="headerlink" href="#non-interacting-solution" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.55. </span>Non-interacting solution<a class="headerlink" href="#non-interacting-solution" title="Permalink to this headline">¶</a></h2>
 <p>We can view <span class="math notranslate nohighlight">\(H_0\)</span> as the non-interacting solution</p>
 <!-- Equation labels as ordinary links -->
 <div id="_auto7"></div>
@@ -2279,7 +2284,7 @@ H_I= \begin{bmatrix} V_{11} &amp; V_{12} \\ V_{21} &amp; V_{22}\end{bmatrix},
 <p>where we have defined the orthogonal computational one-qubit basis states <span class="math notranslate nohighlight">\(\vert 0\rangle\)</span> and <span class="math notranslate nohighlight">\(\vert 1\rangle\)</span>.</p>
 </div>
 <div class="section" id="rewriting-with-pauli-matrices">
-<h2><span class="section-number">2.56. </span>Rewriting with Pauli matrices<a class="headerlink" href="#rewriting-with-pauli-matrices" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.56. </span>Rewriting with Pauli matrices<a class="headerlink" href="#rewriting-with-pauli-matrices" title="Permalink to this headline">¶</a></h2>
 <p>We rewrite <span class="math notranslate nohighlight">\(H\)</span> (and <span class="math notranslate nohighlight">\(H_0\)</span> and <span class="math notranslate nohighlight">\(H_I\)</span>)  via Pauli matrices</p>
 <div class="math notranslate nohighlight">
 \[
@@ -2302,7 +2307,7 @@ represent the non-interacting (or unperturbed) and fully interacting
 system, respectively.</p>
 </div>
 <div class="section" id="id2">
-<h2><span class="section-number">2.57. </span>Selecting parameters<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.57. </span>Selecting parameters<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>The model is an eigenvalue problem with only
 two available states.</p>
 <p>Here we set the parameters <span class="math notranslate nohighlight">\(E_1=0\)</span>,
@@ -2318,7 +2323,7 @@ value of the parameter <span class="math notranslate nohighlight">\(V_{12}\)</sp
 between the two states.</p>
 </div>
 <div class="section" id="id3">
-<h2><span class="section-number">2.58. </span>Setting up the matrix<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.58. </span>Setting up the matrix<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>This part is best seen using the jupyter-notebook</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2380,7 +2385,7 @@ between the two states.</p>
 </div>
 </div>
 <div class="section" id="measurements-and-computational-basis">
-<h2><span class="section-number">2.59. </span>Measurements and computational basis<a class="headerlink" href="#measurements-and-computational-basis" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.59. </span>Measurements and computational basis<a class="headerlink" href="#measurements-and-computational-basis" title="Permalink to this headline">¶</a></h2>
 <p>We have seen how to rewrite the above <span class="math notranslate nohighlight">\(2\times 2\)</span> eiegenvalue problem in terms of a Hamiltonian defined by Pauli <span class="math notranslate nohighlight">\(\boldsymbol{X}\)</span> and <span class="math notranslate nohighlight">\(\boldsymbol{Z}\)</span> matrices,
 and the identity matrix <span class="math notranslate nohighlight">\(\boldsymbol{I}\)</span>. Let us make this Hamiltonian that involves only one qubit somewhat more general</p>
 <div class="math notranslate nohighlight">
@@ -2389,7 +2394,7 @@ and the identity matrix <span class="math notranslate nohighlight">\(\boldsymbol
 \]</div>
 </div>
 <div class="section" id="expectation-value-of-boldsymbol-i">
-<h2><span class="section-number">2.60. </span>Expectation value of <span class="math notranslate nohighlight">\(\boldsymbol{I}\)</span><a class="headerlink" href="#expectation-value-of-boldsymbol-i" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.60. </span>Expectation value of <span class="math notranslate nohighlight">\(\boldsymbol{I}\)</span><a class="headerlink" href="#expectation-value-of-boldsymbol-i" title="Permalink to this headline">¶</a></h2>
 <p>For the <span class="math notranslate nohighlight">\(I\)</span> operator the expectation value is always unity:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -2398,7 +2403,7 @@ and the identity matrix <span class="math notranslate nohighlight">\(\boldsymbol
 <p>Its contribution to the overall expectaction value is thus given by the constant <span class="math notranslate nohighlight">\(a\)</span>.</p>
 </div>
 <div class="section" id="the-pauli-matrices">
-<h2><span class="section-number">2.61. </span>The Pauli matrices<a class="headerlink" href="#the-pauli-matrices" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.61. </span>The Pauli matrices<a class="headerlink" href="#the-pauli-matrices" title="Permalink to this headline">¶</a></h2>
 <p>For rest of the Pauli operators, we should make the following remark:
 every one qubit quantum state <span class="math notranslate nohighlight">\(\left| \psi \right\rangle\)</span> can be
 represented via different sets of basis vectors:</p>
@@ -2408,7 +2413,7 @@ represented via different sets of basis vectors:</p>
 \]</div>
 </div>
 <div class="section" id="in-more-detail">
-<h2><span class="section-number">2.62. </span>In more detail<a class="headerlink" href="#in-more-detail" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.62. </span>In more detail<a class="headerlink" href="#in-more-detail" title="Permalink to this headline">¶</a></h2>
 <p>We have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -2426,7 +2431,7 @@ represented via different sets of basis vectors:</p>
 \end{split}\]</div>
 </div>
 <div class="section" id="for-the-other-two-matrices">
-<h2><span class="section-number">2.63. </span>For the other two matrices<a class="headerlink" href="#for-the-other-two-matrices" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.63. </span>For the other two matrices<a class="headerlink" href="#for-the-other-two-matrices" title="Permalink to this headline">¶</a></h2>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align*}
@@ -2453,7 +2458,7 @@ i
 \end{split}\]</div>
 </div>
 <div class="section" id="analyzing-these-equations">
-<h2><span class="section-number">2.64. </span>Analyzing these equations<a class="headerlink" href="#analyzing-these-equations" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.64. </span>Analyzing these equations<a class="headerlink" href="#analyzing-these-equations" title="Permalink to this headline">¶</a></h2>
 <p>The first presented eigenvectors for each Pauli has an eigenvalue equal to <span class="math notranslate nohighlight">\(+1\)</span>: <span class="math notranslate nohighlight">\(Z \left\vert 0 \right\rangle = +1\left\vert 0 \right\rangle\)</span>, <span class="math notranslate nohighlight">\(X \left\vert + \right\rangle = +1\left\vert + \right\rangle\)</span>, <span class="math notranslate nohighlight">\(Y \left\vert +i \right\rangle = +1\left\vert +i \right\rangle\)</span>. And the second presented eigenvectors for each Pauli has an eigenvalue equal to <span class="math notranslate nohighlight">\(-1\)</span>: <span class="math notranslate nohighlight">\(Z \left\vert 1 \right\rangle = -1\left\vert 1 \right\rangle\)</span>, <span class="math notranslate nohighlight">\(X \left\vert - \right\rangle = -1\left\vert - \right\rangle\)</span>, <span class="math notranslate nohighlight">\(Y \left\vert -i \right\rangle = -1\left\vert -i \right\rangle\)</span>. Now, let’s calculate the expectation values of these Pauli operators:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -2467,7 +2472,7 @@ i
 \end{split}\]</div>
 </div>
 <div class="section" id="using-the-inner-products">
-<h2><span class="section-number">2.65. </span>Using the inner products<a class="headerlink" href="#using-the-inner-products" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.65. </span>Using the inner products<a class="headerlink" href="#using-the-inner-products" title="Permalink to this headline">¶</a></h2>
 <p>Here we have taken into account that the inner product of orthonormal vectors is 0 (e.g. <span class="math notranslate nohighlight">\(\left\langle 0 \right\vert  \left\vert 1 \right\rangle = 0\)</span>, <span class="math notranslate nohighlight">\(\left\langle + \right\vert  \left\vert - \right\rangle = 0\)</span>, <span class="math notranslate nohighlight">\(\left\langle +i \right\vert  \left\vert -i \right\rangle = 0\)</span>).</p>
 <p>But what are these <span class="math notranslate nohighlight">\(\left\vert c \right\vert ^2\)</span>s? The <span class="math notranslate nohighlight">\({\left\vert c_1^z
 \right\vert }^2\)</span> and <span class="math notranslate nohighlight">\({\left\vert c_2^z \right\vert }^2\)</span> are by definition the
@@ -2477,7 +2482,7 @@ probabilities that after Z basis measurement (measuring is it <span class="math 
 <span class="math notranslate nohighlight">\(\left\vert 1 \right\rangle\)</span> respectively.</p>
 </div>
 <div class="section" id="rethinking-the-basis">
-<h2><span class="section-number">2.66. </span>Rethinking the basis<a class="headerlink" href="#rethinking-the-basis" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.66. </span>Rethinking the basis<a class="headerlink" href="#rethinking-the-basis" title="Permalink to this headline">¶</a></h2>
 <p>In order to find that value, we should run our program with our trial
 <span class="math notranslate nohighlight">\(\left\vert \psi \right\rangle\)</span> wavefunction and do <span class="math notranslate nohighlight">\(Z\)</span> measurement on the
 qubit <span class="math notranslate nohighlight">\(N\)</span> times (it is  named <em>shots</em> in the code).</p>
@@ -2491,7 +2496,7 @@ measurments.</p>
 <p>Thus, the final expectation value will be <span class="math notranslate nohighlight">\(\left\langle Z\right\rangle = \frac{n_0 - n_1}{N}\)</span>.</p>
 </div>
 <div class="section" id="measurements">
-<h2><span class="section-number">2.67. </span>Measurements<a class="headerlink" href="#measurements" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.67. </span>Measurements<a class="headerlink" href="#measurements" title="Permalink to this headline">¶</a></h2>
 <p>For <span class="math notranslate nohighlight">\(\left\langle X \right\rangle = \frac{n_+ - n_-}{N}\)</span> and
 <span class="math notranslate nohighlight">\(\left\langle Y \right\rangle = \frac{n_{+i} - n_{-i}}{N}\)</span> the
 expectation value estimation procedure stays the same.</p>
@@ -2502,7 +2507,7 @@ measurements in <span class="math notranslate nohighlight">\(Y\)</span> basis th
 \right\rangle\)</span> or <span class="math notranslate nohighlight">\(\left\vert -i \right\rangle\)</span> outcomes respectively.</p>
 </div>
 <div class="section" id="computational-basis">
-<h2><span class="section-number">2.68. </span>Computational basis<a class="headerlink" href="#computational-basis" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.68. </span>Computational basis<a class="headerlink" href="#computational-basis" title="Permalink to this headline">¶</a></h2>
 <p>The difficulty comes from the fact that one may have the possibility
 to measure only in the <span class="math notranslate nohighlight">\(Z\)</span> basis. To solve this difficulty we still do
 a <span class="math notranslate nohighlight">\(Z\)</span> basis measurement, but, before that, we apply specific operators
@@ -2515,7 +2520,7 @@ operator that after measuring the probability of <span class="math notranslate n
 the probability of <span class="math notranslate nohighlight">\(\left\vert - \right\rangle\)</span> <span class="math notranslate nohighlight">\(\left( \left\vert -i \right\rangle \right)\)</span> outcome.</p>
 </div>
 <div class="section" id="unitary-transformation-of-boldsymbol-x">
-<h2><span class="section-number">2.69. </span>Unitary transformation of <span class="math notranslate nohighlight">\(\boldsymbol{X}\)</span><a class="headerlink" href="#unitary-transformation-of-boldsymbol-x" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.69. </span>Unitary transformation of <span class="math notranslate nohighlight">\(\boldsymbol{X}\)</span><a class="headerlink" href="#unitary-transformation-of-boldsymbol-x" title="Permalink to this headline">¶</a></h2>
 <p>If we use the Hadamard gate</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -2532,7 +2537,7 @@ the probability of <span class="math notranslate nohighlight">\(\left\vert - \ri
 <p>The Hadamard gate/matrix is a unitary matrix with the property that <span class="math notranslate nohighlight">\(\boldsymbol{H}^2=\boldsymbol{I}\)</span>.</p>
 </div>
 <div class="section" id="generalizing">
-<h2><span class="section-number">2.70. </span>Generalizing<a class="headerlink" href="#generalizing" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.70. </span>Generalizing<a class="headerlink" href="#generalizing" title="Permalink to this headline">¶</a></h2>
 <p>For the one-qubit Hamiltonian we have toyed with till now, we can thus
 rewrite in an easy way the Hamiltonian so that we can perform
 measurements using our favorite computational basis.</p>
@@ -2549,7 +2554,7 @@ represents the gate/matrix which performs the measurements, often
 represented by a Pauli <span class="math notranslate nohighlight">\(\boldsymbol{Z}\)</span> gate/matrix.</p>
 </div>
 <div class="section" id="id4">
-<h2><span class="section-number">2.71. </span>Implementing the VQE<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.71. </span>Implementing the VQE<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>For a one-qubit system we can reach every point on the Bloch sphere
 (as discussed earlier) with a rotation about the <span class="math notranslate nohighlight">\(x\)</span>-axis and the
 <span class="math notranslate nohighlight">\(y\)</span>-axis.</p>
@@ -2560,7 +2565,7 @@ represented by a Pauli <span class="math notranslate nohighlight">\(\boldsymbol{
 \]</div>
 </div>
 <div class="section" id="multiple-ansatzes">
-<h2><span class="section-number">2.72. </span>Multiple ansatzes<a class="headerlink" href="#multiple-ansatzes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.72. </span>Multiple ansatzes<a class="headerlink" href="#multiple-ansatzes" title="Permalink to this headline">¶</a></h2>
 <p>We can produce multiple ansatzes for the new state in terms of the
 angles <span class="math notranslate nohighlight">\(\theta\)</span> and <span class="math notranslate nohighlight">\(\phi\)</span>.  With these ansatzes we can in turn
 calculate the expectation value of the above Hamiltonian, now
@@ -2571,7 +2576,7 @@ rewritten in terms of various Pauli matrices (and thereby gates), that is comput
 \]</div>
 </div>
 <div class="section" id="id5">
-<h2><span class="section-number">2.73. </span>Rotations again<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.73. </span>Rotations again<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <p>We can now set up a series of ansatzes for <span class="math notranslate nohighlight">\(\vert \psi \rangle\)</span> as
 function of the angles <span class="math notranslate nohighlight">\(\theta\)</span> and <span class="math notranslate nohighlight">\(\phi\)</span> and find thereafter the
 variational minimum using for example a gradient descent method.</p>
@@ -2588,7 +2593,7 @@ R_y(\phi)=\cos{\frac{\phi}{2}}\boldsymbol{I}-\imath \sin{\frac{\phi}{2}}\boldsym
 \]</div>
 </div>
 <div class="section" id="simple-code">
-<h2><span class="section-number">2.74. </span>Simple code<a class="headerlink" href="#simple-code" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.74. </span>Simple code<a class="headerlink" href="#simple-code" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the rotation matrices</span>
@@ -2654,7 +2659,7 @@ find the minimum as function of the optimal angles <span class="math notranslate
 We will follow closely  <a class="reference external" href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.99.032331">https://journals.aps.org/pra/abstract/10.1103/PhysRevA.99.032331</a> in order to calculate gradients of the Hamiltonian.</p>
 </div>
 <div class="section" id="gradient-descent-and-calculations-of-gradients">
-<h2><span class="section-number">2.75. </span>Gradient descent and calculations of gradients<a class="headerlink" href="#gradient-descent-and-calculations-of-gradients" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.75. </span>Gradient descent and calculations of gradients<a class="headerlink" href="#gradient-descent-and-calculations-of-gradients" title="Permalink to this headline">¶</a></h2>
 <p>In order to optimize the VQE ansatz, we need to compute derivatives
 with respect to the variational parameters.  Here we develop first a
 simpler approach tailored to the one-qubit case. For this particular
@@ -2662,7 +2667,7 @@ case, we have defined an ansatz in terms of the Pauli rotation
 matrices.</p>
 </div>
 <div class="section" id="setting-up-gradients">
-<h2><span class="section-number">2.76. </span>Setting up gradients<a class="headerlink" href="#setting-up-gradients" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.76. </span>Setting up gradients<a class="headerlink" href="#setting-up-gradients" title="Permalink to this headline">¶</a></h2>
 <p>These define an arbitrary one-qubit state on the Bloch
 sphere through the expression</p>
 <div class="math notranslate nohighlight">
@@ -2677,7 +2682,7 @@ R_{i}(\gamma)=\exp{-(\imath\frac{\gamma}{2}\sigma_i)}=\cos{(\frac{\gamma}{2})}\b
 <p>where <span class="math notranslate nohighlight">\(\sigma_i\)</span> is one of the Pauli matrices <span class="math notranslate nohighlight">\(\sigma_{x,y,z}\)</span>.</p>
 </div>
 <div class="section" id="derivatives">
-<h2><span class="section-number">2.77. </span>Derivatives<a class="headerlink" href="#derivatives" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.77. </span>Derivatives<a class="headerlink" href="#derivatives" title="Permalink to this headline">¶</a></h2>
 <p>It is easy to see that the derivative with respect to <span class="math notranslate nohighlight">\(\gamma\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[
@@ -2685,7 +2690,7 @@ R_{i}(\gamma)=\exp{-(\imath\frac{\gamma}{2}\sigma_i)}=\cos{(\frac{\gamma}{2})}\b
 \]</div>
 </div>
 <div class="section" id="derivatives-of-the-expectation-value-of-the-hamiltonian">
-<h2><span class="section-number">2.78. </span>Derivatives of the expectation value of the Hamiltonian<a class="headerlink" href="#derivatives-of-the-expectation-value-of-the-hamiltonian" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.78. </span>Derivatives of the expectation value of the Hamiltonian<a class="headerlink" href="#derivatives-of-the-expectation-value-of-the-hamiltonian" title="Permalink to this headline">¶</a></h2>
 <p>We can now calculate the derivative of the expectation value of the
 Hamiltonian in terms of the angles <span class="math notranslate nohighlight">\(\theta\)</span> and <span class="math notranslate nohighlight">\(\phi\)</span>. We have two
 derivatives</p>
@@ -2700,7 +2705,7 @@ derivatives</p>
 \]</div>
 </div>
 <div class="section" id="two-addtional-expectation-values">
-<h2><span class="section-number">2.79. </span>Two addtional expectation values<a class="headerlink" href="#two-addtional-expectation-values" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.79. </span>Two addtional expectation values<a class="headerlink" href="#two-addtional-expectation-values" title="Permalink to this headline">¶</a></h2>
 <p>This means that we have to calculate two additional expectation values
 in addition to the expectation value of the Hamiltonian itself.  If we
 stay with an ansatz for the single qubit states given by the above
@@ -2715,7 +2720,7 @@ can be written as (we focus only on a given angle <span class="math notranslate 
 \]</div>
 </div>
 <div class="section" id="rotations-again-and-again">
-<h2><span class="section-number">2.80. </span>Rotations again and again<a class="headerlink" href="#rotations-again-and-again" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.80. </span>Rotations again and again<a class="headerlink" href="#rotations-again-and-again" title="Permalink to this headline">¶</a></h2>
 <p>To see this, consider again the definition of the rotation operators.
 We can write these operators as</p>
 <div class="math notranslate nohighlight">
@@ -2732,7 +2737,7 @@ The derivative with respect to <span class="math notranslate nohighlight">\(\phi
 \]</div>
 </div>
 <div class="section" id="bloch-sphere-math">
-<h2><span class="section-number">2.81. </span>Bloch sphere math<a class="headerlink" href="#bloch-sphere-math" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.81. </span>Bloch sphere math<a class="headerlink" href="#bloch-sphere-math" title="Permalink to this headline">¶</a></h2>
 <p>Our ansatz for a general one-qubit state on the Bloch sphere contains the product of a rotation around the <span class="math notranslate nohighlight">\(x\)</span>-axis and the <span class="math notranslate nohighlight">\(y\)</span>-axis. In the derivation here we focus only on one angle however. Our ansatz is then given by</p>
 <div class="math notranslate nohighlight">
 \[
@@ -2745,7 +2750,7 @@ The derivative with respect to <span class="math notranslate nohighlight">\(\phi
 \]</div>
 </div>
 <div class="section" id="id6">
-<h2><span class="section-number">2.82. </span>Derivatives<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.82. </span>Derivatives<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <p>Our derivative with respect to the angle <span class="math notranslate nohighlight">\(\phi\)</span> has a similar structure, that is</p>
 <div class="math notranslate nohighlight">
 \[
@@ -2753,7 +2758,7 @@ The derivative with respect to <span class="math notranslate nohighlight">\(\phi
 \]</div>
 </div>
 <div class="section" id="rewriting">
-<h2><span class="section-number">2.83. </span>Rewriting<a class="headerlink" href="#rewriting" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.83. </span>Rewriting<a class="headerlink" href="#rewriting" title="Permalink to this headline">¶</a></h2>
 <p>In order to rewrite the equation of the derivative,
 the following relation is useful</p>
 <div class="math notranslate nohighlight">
@@ -2765,7 +2770,7 @@ the following relation is useful</p>
 operators.</p>
 </div>
 <div class="section" id="final-manipulations">
-<h2><span class="section-number">2.84. </span>Final manipulations<a class="headerlink" href="#final-manipulations" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.84. </span>Final manipulations<a class="headerlink" href="#final-manipulations" title="Permalink to this headline">¶</a></h2>
 <p>If we identify these operators as <span class="math notranslate nohighlight">\(\hat{A}=\boldsymbol{I}\)</span>, with
 <span class="math notranslate nohighlight">\(\boldsymbol{I}\)</span> being the unit operator, <span class="math notranslate nohighlight">\(\hat{B}=\hat{H}\)</span> our Hamiltonian,
 and <span class="math notranslate nohighlight">\(\hat{C}=-\imath \boldsymbol{\sigma}_i/2\)</span>, we obtain the following
@@ -2777,7 +2782,7 @@ expression for the expectation value of the derivative (excluding the hermitian 
 \]</div>
 </div>
 <div class="section" id="the-expressions-to-implement">
-<h2><span class="section-number">2.85. </span>The expressions to implement<a class="headerlink" href="#the-expressions-to-implement" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.85. </span>The expressions to implement<a class="headerlink" href="#the-expressions-to-implement" title="Permalink to this headline">¶</a></h2>
 <p>If we then use that the rotation matrices can be rewritten as</p>
 <div class="math notranslate nohighlight">
 \[
@@ -2790,7 +2795,7 @@ R_{i}(\frac{\pi}{2})=\cos{(\frac{\pi}{4})}\boldsymbol{I}-\imath\sin{(\frac{\pi}{
 \]</div>
 </div>
 <div class="section" id="final-expression">
-<h2><span class="section-number">2.86. </span>Final expression<a class="headerlink" href="#final-expression" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.86. </span>Final expression<a class="headerlink" href="#final-expression" title="Permalink to this headline">¶</a></h2>
 <p>This means that we can write</p>
 <div class="math notranslate nohighlight">
 \[
@@ -2799,14 +2804,14 @@ R_{i}(\frac{\pi}{2})=\cos{(\frac{\pi}{4})}\boldsymbol{I}-\imath\sin{(\frac{\pi}{
 \]</div>
 </div>
 <div class="section" id="basics-of-gradient-descent-and-stochastic-gradient-descent">
-<h2><span class="section-number">2.87. </span>Basics of gradient descent and stochastic gradient descent<a class="headerlink" href="#basics-of-gradient-descent-and-stochastic-gradient-descent" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.87. </span>Basics of gradient descent and stochastic gradient descent<a class="headerlink" href="#basics-of-gradient-descent-and-stochastic-gradient-descent" title="Permalink to this headline">¶</a></h2>
 <p>In order to implement the above equations, we need to remind the
 reader about basic elements of various optimization approaches. Our
 main focus here will be various gradient descent approaches and quasi-Newton methods like Broyden’s algorithm and variations thereof.</p>
 <p>This material is covered by the lectures from <a class="reference external" href="https://github.com/CompPhysics/ComputationalPhysics2/blob/gh-pages/doc/pub/week6/ipynb/week6.ipynb">FYS4411 on gradient optimization</a></p>
 </div>
 <div class="section" id="computing-quantum-gradients">
-<h2><span class="section-number">2.88. </span>Computing quantum gradients<a class="headerlink" href="#computing-quantum-gradients" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.88. </span>Computing quantum gradients<a class="headerlink" href="#computing-quantum-gradients" title="Permalink to this headline">¶</a></h2>
 <p>Let us implement
 efficient implementations of gradient methods to the derivatives of
 the Hamiltonian expectation values.</p>
@@ -2894,7 +2899,7 @@ the Hamiltonian expectation values.</p>
 </div>
 </div>
 <div class="section" id="id7">
-<h2><span class="section-number">2.89. </span>A smarter way of doing this<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.89. </span>A smarter way of doing this<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
 <p>The above approach means that we are setting up several matrix-matrix
 and matrix-vector multiplications. Although straight forward it is not
 the most efficient way of doing this, in particular in case the
@@ -2908,7 +2913,7 @@ to measure along the bases of the Pauli matrices and reconstruct the
 eigenvalues from these measurements.</p>
 </div>
 <div class="section" id="the-code-for-the-one-qubit-case-code-developed-by-august-gude-2023">
-<h2><span class="section-number">2.90. </span>The code for the one qubit case (code developed by August Gude, 2023)<a class="headerlink" href="#the-code-for-the-one-qubit-case-code-developed-by-august-gude-2023" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.90. </span>The code for the one qubit case (code developed by August Gude, 2023)<a class="headerlink" href="#the-code-for-the-one-qubit-case-code-developed-by-august-gude-2023" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -3098,7 +3103,7 @@ eigenvalues from these measurements.</p>
 </div>
 </div>
 <div class="section" id="lipkin-model">
-<h2><span class="section-number">2.91. </span>Lipkin model<a class="headerlink" href="#lipkin-model" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.91. </span>Lipkin model<a class="headerlink" href="#lipkin-model" title="Permalink to this headline">¶</a></h2>
 <p>We will study a schematic model (the Lipkin model, see Nuclear
 Physics <strong>62</strong> (1965) 188), for the interaction among  <span class="math notranslate nohighlight">\(2\)</span> and more
 fermions that can occupy two different energy levels.</p>
@@ -3418,7 +3423,7 @@ J_+ [J_-,J_\pm] + [J_+,J_\pm] J_- + J_z [J_z,J_\pm] + [J_z,J_\pm] J_z - [J_z,J_\
 <p>which are the standard commutation relations for angular (or orbital) momentum <span class="math notranslate nohighlight">\(L_\pm\)</span>, <span class="math notranslate nohighlight">\(L_z\)</span> og <span class="math notranslate nohighlight">\(L^2\)</span>.</p>
 </div>
 <div class="section" id="id8">
-<h2><span class="section-number">2.92. </span>Rewriting the Hamiltonian<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.92. </span>Rewriting the Hamiltonian<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
 <p>We wrote the above Hamiltonian as</p>
 <div class="math notranslate nohighlight">
 \[
@@ -3544,7 +3549,7 @@ H_2 = \frac{1}{2} W \left( -N + J_+ J_- + J_- J_+ \right).
 Below, we will show how we can rewrite these expressions in terms of Pauli <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(Y\)</span> and <span class="math notranslate nohighlight">\(Z\)</span> matrices.</p>
 </div>
 <div class="section" id="commutation-relations-for-the-hamiltonian">
-<h2><span class="section-number">2.93. </span>Commutation relations for the Hamiltonian<a class="headerlink" href="#commutation-relations-for-the-hamiltonian" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.93. </span>Commutation relations for the Hamiltonian<a class="headerlink" href="#commutation-relations-for-the-hamiltonian" title="Permalink to this headline">¶</a></h2>
 <p>The above expressions can in turn be used to show that the Hamiltonian
 commutes with the various quasi-spin operators. This leads to quantum
 numbers which are conserved.  Let us first show that <span class="math notranslate nohighlight">\([H,J^2]=0\)</span>,
@@ -3634,7 +3639,7 @@ a_{p\sigma} a_{p'\pm}^\dagger \right) a_{p'\mp} -
 <p>and <span class="math notranslate nohighlight">\(J\)</span> is a good quantum number.</p>
 </div>
 <div class="section" id="constructing-the-hamiltonian-matrix-for-j-2">
-<h2><span class="section-number">2.94. </span>Constructing the Hamiltonian matrix for <span class="math notranslate nohighlight">\(J=2\)</span><a class="headerlink" href="#constructing-the-hamiltonian-matrix-for-j-2" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.94. </span>Constructing the Hamiltonian matrix for <span class="math notranslate nohighlight">\(J=2\)</span><a class="headerlink" href="#constructing-the-hamiltonian-matrix-for-j-2" title="Permalink to this headline">¶</a></h2>
 <p>We start with the state (unique) where all spins point down</p>
 <!-- Equation labels as ordinary links -->
 <div id="eq:2,-2"></div>
@@ -3843,7 +3848,7 @@ states, again as expected due to the ratio of the interaction matrix
 elements and the single-particle energies.</p>
 </div>
 <div class="section" id="reminder-from-last-week-on-expectation-values">
-<h2><span class="section-number">2.95. </span>Reminder from last week on Expectation values<a class="headerlink" href="#reminder-from-last-week-on-expectation-values" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.95. </span>Reminder from last week on Expectation values<a class="headerlink" href="#reminder-from-last-week-on-expectation-values" title="Permalink to this headline">¶</a></h2>
 <p>To execute the second step of VQE, we need to understand how
 expectation values of operators can be estimated via quantum computers
 by post-processing measurements of quantum circuits in different
@@ -4032,7 +4037,7 @@ E_\psi\left(\sum_{m}\lambda_mP_m\right) = \sum_m\lambda_mE_\psi(P_m),
 <p>one can estimate any observable that can be written as a linear combination of Pauli-string terms.</p>
 </div>
 <div class="section" id="id9">
-<h2><span class="section-number">2.96. </span>Measurement<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.96. </span>Measurement<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
 <p>To estimate the probability <span class="math notranslate nohighlight">\(P(\vert \phi\rangle\to \vert x\rangle)\)</span> from the
 formalism above, one prepares the state <span class="math notranslate nohighlight">\(\vert \phi\rangle\)</span> on a quantum
 computer and measures it, and then we repeat this process (prepare and
@@ -4069,7 +4074,7 @@ estimation subroutine within VQE requires <span class="math notranslate nohighli
 samples from circuits with depth <span class="math notranslate nohighlight">\(\mathcal{O}(1)\)</span>.</p>
 </div>
 <div class="section" id="quantum-computing-and-solving-the-eigenvalue-problem-for-the-lipkin-model">
-<h2><span class="section-number">2.97. </span>Quantum computing and solving  the eigenvalue problem for the Lipkin model<a class="headerlink" href="#quantum-computing-and-solving-the-eigenvalue-problem-for-the-lipkin-model" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.97. </span>Quantum computing and solving  the eigenvalue problem for the Lipkin model<a class="headerlink" href="#quantum-computing-and-solving-the-eigenvalue-problem-for-the-lipkin-model" title="Permalink to this headline">¶</a></h2>
 <p>We turn now to a simpler variant of the Lipkin model without the <span class="math notranslate nohighlight">\(W\)</span>-term and a total spin of <span class="math notranslate nohighlight">\(J=1\)</span> only as maximum value of the spin.
 This corresponds to a system with <span class="math notranslate nohighlight">\(N=2\)</span> particles (fermions in our case).
 Our Hamiltonian is given by the quasispin operators (see below)</p>
@@ -4237,7 +4242,7 @@ definitions we can calculate the exact solution to the Lipkin model.</p>
 </div>
 </div>
 <div class="section" id="quantum-circuit-rewriting-the-lipkin-model-in-terms-of-pauli-matrices">
-<h2><span class="section-number">2.98. </span>Quantum Circuit, rewriting the Lipkin model in terms of Pauli matrices<a class="headerlink" href="#quantum-circuit-rewriting-the-lipkin-model-in-terms-of-pauli-matrices" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.98. </span>Quantum Circuit, rewriting the Lipkin model in terms of Pauli matrices<a class="headerlink" href="#quantum-circuit-rewriting-the-lipkin-model-in-terms-of-pauli-matrices" title="Permalink to this headline">¶</a></h2>
 <p>To solve the Lipkin model on a quantum computer we have to solve
 Schrodinger’s equation. To achieve this, we will use the Variational
 Quantum Eigensolver (VQE) discussed earlier.</p>
@@ -4606,11 +4611,11 @@ U^n_k\vert 1\rangle^{\otimes k}\vert 0\rangle^{\otimes n-k}=\vert D^n_k\rangle.
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="day1.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="day2.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">1. </span>Basic notion of quantum computing</p>
+            <p class="prev-next-title"><span class="section-number">2. </span>Quantum Fourier Transforms and the Quantum Phase Estimation algorithm</p>
         </div>
     </a>
 </div>

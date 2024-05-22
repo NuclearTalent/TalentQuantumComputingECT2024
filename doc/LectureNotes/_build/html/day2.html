@@ -1,0 +1,2885 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. Quantum Fourier Transforms and the Quantum Phase Estimation algorithm &#8212; Nuclear TALENT course on Quantum Computing</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3. Variational Quantum Eigensolver and the Lipkin model" href="day4.html" />
+    <link rel="prev" title="1. Basic notion of quantum computing" href="day1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Nuclear TALENT course on Quantum Computing</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Nuclear TALENT course on Quantum Computing
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  About the course
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="schedule.html">
+   Teaching schedule with links to material
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="teachers.html">
+   Instructors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="textbooks.html">
+   Textbooks
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  First week, quantum computing elements and simulating simple Hamiltonians
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="day1.html">
+   1. Basic notion of quantum computing
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Quantum Fourier Transforms and the Quantum Phase Estimation algorithm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="day4.html">
+   3. Variational Quantum Eigensolver and the Lipkin model
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/day2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overarching-motivation">
+   2.1. Overarching motivation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-familiar-case">
+   2.2. A familiar case
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#several-driving-forces">
+   2.3. Several driving forces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#periodicity">
+   2.4. Periodicity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simple-code-example">
+   2.5. Simple Code Example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#continuous-fourier-transforms-and-the-principle-of-superposition">
+   2.6. Continuous Fourier transforms and the principle of Superposition
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rewriting-in-terms-of-sines-and-cosines">
+   2.7. Rewriting in terms of sines and cosines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exponential-expression">
+   2.8. Exponential expression
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#determining-c-k">
+   2.9. Determining
+   <span class="math notranslate nohighlight">
+    \(c_k\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integrating-both-sides">
+   2.10. Integrating both sides
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#independence-of-interval-length">
+   2.11. Independence of interval length
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#writing-out-the-various-terms">
+   2.12. Writing out the various terms
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#changing-period">
+   2.13. Changing period
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#harmonics">
+   2.14. Harmonics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#typical-interval">
+   2.15. Typical interval
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sinusoidal-example">
+   2.16. Sinusoidal example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#square-well-example">
+   2.17. Square well example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-coefficients">
+   2.18. The coefficients
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code-for-the-fourier-transforms">
+   2.19. Code for the  Fourier Transforms
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fourier-transforms-and-convolution">
+     2.19.1. Fourier transforms and convolution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inverse-fourier-transform">
+   2.20. Inverse Fourier transform
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rewriting">
+   2.21. Rewriting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transforming-to-discrete-variables">
+   2.22. Transforming to discrete variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#discrete-fourier-transform">
+   2.23. Discrete Fourier transform
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simple-example">
+   2.24. Simple example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#discrete-fourier-transformations">
+   2.25. Discrete Fourier Transformations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-details-on-discrete-fourier-transforms">
+   2.26. More details on Discrete Fourier transforms
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inverse-dft">
+   2.27. Inverse DFT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#orthonormality">
+   2.28. Orthonormality
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inverse-transform">
+   2.29. Inverse transform
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#discrete-fourier-transforms">
+   2.30. Discrete Fourier transforms
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fast-fourier-transform-fft">
+   2.31. Fast Fourier transform (FFT)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-discrete-fourier-transform-dft">
+   2.32. The discrete Fourier transform (DFT)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#output-vector">
+   2.33. Output vector
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   2.34. Simple example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   2.35. Discrete Fourier Transformations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   2.36. More details on Discrete Fourier transforms
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   2.37. Inverse DFT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   2.38. Orthonormality
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   2.39. Inverse transform
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fast-fourier-transform-and-polynomial-multiplication">
+   2.40. Fast Fourier transform and polynomial multiplication
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#from-dft-to-qft">
+   2.41. From DFT to QFT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-terms-of-arbitrary-states">
+   2.42. In terms of arbitrary states
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#unitarity">
+   2.43. Unitarity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#binary-representation">
+   2.44. Binary representation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rewriting-the-qft">
+   2.45. Rewriting the QFT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#short-hand-notation">
+   2.46. Short hand notation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#two-qubit-system">
+   2.47. Two-qubit system
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#four-qubit-system">
+   2.48. Four qubit system
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#qft-acts-as-follows">
+   2.49. QFT acts as follows
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantum-circuits">
+   2.50. Quantum circuits
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rotation-gates">
+   2.51. Rotation gates
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantum-fourier-transform-more-material">
+   2.52. Quantum Fourier transform, more material
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#orthonormal-basis">
+   2.53. Orthonormal basis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-computational-basis">
+   2.54. Using computational basis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#components">
+   2.55. Components
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-the-hadamard-gate">
+   2.56. Using the Hadamard gate
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algorithm">
+   2.57. Algorithm
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#binary-fraction">
+   2.58. Binary fraction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#controlled-rotation-gate">
+   2.59. Controlled rotation gate
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#applying-to-all-qubits">
+   2.60. Applying to all qubits
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantum-fourier-transform">
+   2.61. Quantum Fourier transform
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#qft-for-n-2">
+   2.62. QFT for
+   <span class="math notranslate nohighlight">
+    \(N=2\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#full-qft">
+   2.63. Full QFT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#explicit-transform">
+   2.64. Explicit transform
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   2.65. Unitarity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importance-of-qft">
+   2.66. Importance of QFT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#circuit-qft">
+   2.67. Circuit QFT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#expanding-the-exponential">
+   2.68. Expanding the exponential
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rearranging">
+   2.69. Rearranging
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notation-for-binary-fraction">
+   2.70. Notation for binary fraction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-notations">
+   2.71. More notations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deriving-a-circuit">
+   2.72. Deriving a circuit
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rotation-gate">
+   2.73. Rotation gate
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#proceeding">
+   2.74. Proceeding
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#qft">
+   2.75. QFT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id8">
+   2.76. In terms of arbitrary states
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id9">
+   2.77. Unitarity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id10">
+   2.78. Binary representation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id11">
+   2.79. Rewriting the QFT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id12">
+   2.80. Short hand notation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id13">
+   2.81. Four qubit system
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id14">
+   2.82. QFT acts as follows
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id15">
+   2.83. Quantum circuits
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id16">
+   2.84. Rotation gates
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id17">
+   2.85. Using the Hadamard gate
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id18">
+   2.86. Algorithm
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id19">
+   2.87. Binary fraction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id20">
+   2.88. Controlled rotation gate
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id21">
+   2.89. Applying to all qubits
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id22">
+   2.90. QFT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id23">
+   2.91. In terms of arbitrary states
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id24">
+   2.92. Unitarity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id25">
+   2.93. Binary representation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id26">
+   2.94. Rewriting the QFT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id27">
+   2.95. Short hand notation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id28">
+   2.96. Four qubit system
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id29">
+   2.97. QFT acts as follows
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id30">
+   2.98. Quantum circuits
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id31">
+   2.99. Rotation gates
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id32">
+   2.100. Using the Hadamard gate
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id33">
+   2.101. Algorithm
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id34">
+   2.102. Binary fraction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id35">
+   2.103. Controlled rotation gate
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id36">
+   2.104. Applying to all qubits
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Quantum Fourier Transforms and the Quantum Phase Estimation algorithm</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overarching-motivation">
+   2.1. Overarching motivation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-familiar-case">
+   2.2. A familiar case
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#several-driving-forces">
+   2.3. Several driving forces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#periodicity">
+   2.4. Periodicity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simple-code-example">
+   2.5. Simple Code Example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#continuous-fourier-transforms-and-the-principle-of-superposition">
+   2.6. Continuous Fourier transforms and the principle of Superposition
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rewriting-in-terms-of-sines-and-cosines">
+   2.7. Rewriting in terms of sines and cosines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exponential-expression">
+   2.8. Exponential expression
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#determining-c-k">
+   2.9. Determining
+   <span class="math notranslate nohighlight">
+    \(c_k\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integrating-both-sides">
+   2.10. Integrating both sides
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#independence-of-interval-length">
+   2.11. Independence of interval length
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#writing-out-the-various-terms">
+   2.12. Writing out the various terms
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#changing-period">
+   2.13. Changing period
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#harmonics">
+   2.14. Harmonics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#typical-interval">
+   2.15. Typical interval
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sinusoidal-example">
+   2.16. Sinusoidal example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#square-well-example">
+   2.17. Square well example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-coefficients">
+   2.18. The coefficients
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code-for-the-fourier-transforms">
+   2.19. Code for the  Fourier Transforms
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fourier-transforms-and-convolution">
+     2.19.1. Fourier transforms and convolution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inverse-fourier-transform">
+   2.20. Inverse Fourier transform
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rewriting">
+   2.21. Rewriting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transforming-to-discrete-variables">
+   2.22. Transforming to discrete variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#discrete-fourier-transform">
+   2.23. Discrete Fourier transform
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simple-example">
+   2.24. Simple example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#discrete-fourier-transformations">
+   2.25. Discrete Fourier Transformations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-details-on-discrete-fourier-transforms">
+   2.26. More details on Discrete Fourier transforms
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inverse-dft">
+   2.27. Inverse DFT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#orthonormality">
+   2.28. Orthonormality
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inverse-transform">
+   2.29. Inverse transform
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#discrete-fourier-transforms">
+   2.30. Discrete Fourier transforms
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fast-fourier-transform-fft">
+   2.31. Fast Fourier transform (FFT)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-discrete-fourier-transform-dft">
+   2.32. The discrete Fourier transform (DFT)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#output-vector">
+   2.33. Output vector
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   2.34. Simple example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   2.35. Discrete Fourier Transformations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   2.36. More details on Discrete Fourier transforms
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   2.37. Inverse DFT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   2.38. Orthonormality
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   2.39. Inverse transform
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fast-fourier-transform-and-polynomial-multiplication">
+   2.40. Fast Fourier transform and polynomial multiplication
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#from-dft-to-qft">
+   2.41. From DFT to QFT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-terms-of-arbitrary-states">
+   2.42. In terms of arbitrary states
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#unitarity">
+   2.43. Unitarity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#binary-representation">
+   2.44. Binary representation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rewriting-the-qft">
+   2.45. Rewriting the QFT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#short-hand-notation">
+   2.46. Short hand notation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#two-qubit-system">
+   2.47. Two-qubit system
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#four-qubit-system">
+   2.48. Four qubit system
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#qft-acts-as-follows">
+   2.49. QFT acts as follows
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantum-circuits">
+   2.50. Quantum circuits
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rotation-gates">
+   2.51. Rotation gates
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantum-fourier-transform-more-material">
+   2.52. Quantum Fourier transform, more material
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#orthonormal-basis">
+   2.53. Orthonormal basis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-computational-basis">
+   2.54. Using computational basis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#components">
+   2.55. Components
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-the-hadamard-gate">
+   2.56. Using the Hadamard gate
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algorithm">
+   2.57. Algorithm
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#binary-fraction">
+   2.58. Binary fraction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#controlled-rotation-gate">
+   2.59. Controlled rotation gate
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#applying-to-all-qubits">
+   2.60. Applying to all qubits
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantum-fourier-transform">
+   2.61. Quantum Fourier transform
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#qft-for-n-2">
+   2.62. QFT for
+   <span class="math notranslate nohighlight">
+    \(N=2\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#full-qft">
+   2.63. Full QFT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#explicit-transform">
+   2.64. Explicit transform
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   2.65. Unitarity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importance-of-qft">
+   2.66. Importance of QFT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#circuit-qft">
+   2.67. Circuit QFT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#expanding-the-exponential">
+   2.68. Expanding the exponential
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rearranging">
+   2.69. Rearranging
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notation-for-binary-fraction">
+   2.70. Notation for binary fraction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-notations">
+   2.71. More notations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deriving-a-circuit">
+   2.72. Deriving a circuit
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rotation-gate">
+   2.73. Rotation gate
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#proceeding">
+   2.74. Proceeding
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#qft">
+   2.75. QFT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id8">
+   2.76. In terms of arbitrary states
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id9">
+   2.77. Unitarity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id10">
+   2.78. Binary representation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id11">
+   2.79. Rewriting the QFT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id12">
+   2.80. Short hand notation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id13">
+   2.81. Four qubit system
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id14">
+   2.82. QFT acts as follows
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id15">
+   2.83. Quantum circuits
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id16">
+   2.84. Rotation gates
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id17">
+   2.85. Using the Hadamard gate
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id18">
+   2.86. Algorithm
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id19">
+   2.87. Binary fraction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id20">
+   2.88. Controlled rotation gate
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id21">
+   2.89. Applying to all qubits
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id22">
+   2.90. QFT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id23">
+   2.91. In terms of arbitrary states
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id24">
+   2.92. Unitarity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id25">
+   2.93. Binary representation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id26">
+   2.94. Rewriting the QFT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id27">
+   2.95. Short hand notation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id28">
+   2.96. Four qubit system
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id29">
+   2.97. QFT acts as follows
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id30">
+   2.98. Quantum circuits
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id31">
+   2.99. Rotation gates
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id32">
+   2.100. Using the Hadamard gate
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id33">
+   2.101. Algorithm
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id34">
+   2.102. Binary fraction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id35">
+   2.103. Controlled rotation gate
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id36">
+   2.104. Applying to all qubits
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <!-- HTML file automatically generated from DocOnce source (https://github.com/doconce/doconce/)
+doconce format html day2.do.txt  -->
+<!-- dom:TITLE: Quantum Fourier Transforms and the Quantum Phase Estimation algorithm --><div class="tex2jax_ignore mathjax_ignore section" id="quantum-fourier-transforms-and-the-quantum-phase-estimation-algorithm">
+<h1><span class="section-number">2. </span>Quantum Fourier Transforms and the Quantum Phase Estimation algorithm<a class="headerlink" href="#quantum-fourier-transforms-and-the-quantum-phase-estimation-algorithm" title="Permalink to this headline">¶</a></h1>
+<p><strong>Nuclear Talent course</strong></p>
+<p>Date: <strong>May 22, 2024</strong></p>
+<div class="section" id="overarching-motivation">
+<h2><span class="section-number">2.1. </span>Overarching motivation<a class="headerlink" href="#overarching-motivation" title="Permalink to this headline">¶</a></h2>
+<p>We will start with discrete Fourier transforms (DFT).  There are many
+motivations for the DFT. For those of you familiar with signal
+processing, harmonic oscillations, and many other areas of
+applications, Fourier transforms are almost standard kitchen
+items. For those of you who have studied quantum theory, you have
+probably met Fourier transforms when studying Heisenberg’s uncertainty
+relation between momentum and position.</p>
+</div>
+<div class="section" id="a-familiar-case">
+<h2><span class="section-number">2.2. </span>A familiar case<a class="headerlink" href="#a-familiar-case" title="Permalink to this headline">¶</a></h2>
+<p>For problems with so-called harmonic oscillations, given by for example the following differential equation</p>
+<div class="math notranslate nohighlight">
+\[
+m\frac{d^2x}{dt^2}+\eta\frac{dx}{dt}+x(t)=f(t),
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(f(t)\)</span> is an applied external force acting on the system (often
+called a driving force), one can use the theory of Fourier
+transformations to find the solutions of this type of equations.</p>
+</div>
+<div class="section" id="several-driving-forces">
+<h2><span class="section-number">2.3. </span>Several driving forces<a class="headerlink" href="#several-driving-forces" title="Permalink to this headline">¶</a></h2>
+<p>If one has several driving forces, <span class="math notranslate nohighlight">\(f(t)=\sum_n f_n(t)\)</span>, one can find
+the particular solution <span class="math notranslate nohighlight">\(x_{pn}(t)\)</span> to the above differential equation for each <span class="math notranslate nohighlight">\(f_n\)</span>. The particular
+solution for the entire driving force is then given by a series like</p>
+<div class="math notranslate nohighlight">
+\[
+x_p(t)=\sum_nx_{pn}(t).
+\]</div>
+<p>This is known as the principle of superposition. It only applies when
+the homogenous equation is linear.
+Superposition is especially useful when <span class="math notranslate nohighlight">\(f(t)\)</span> can be written
+as a sum of sinusoidal terms, because the solutions for each
+sinusoidal (sine or cosine)  term is analytic.</p>
+</div>
+<div class="section" id="periodicity">
+<h2><span class="section-number">2.4. </span>Periodicity<a class="headerlink" href="#periodicity" title="Permalink to this headline">¶</a></h2>
+<p>Driving forces are often periodic, even when they are not
+sinusoidal. Periodicity implies that for some time <span class="math notranslate nohighlight">\(t\)</span> our function repeats itself periodically after a period <span class="math notranslate nohighlight">\(T\)</span>, that is</p>
+<div class="math notranslate nohighlight">
+\[
+f(t+\tau)=f(t).
+\]</div>
+<p>One example of a non-sinusoidal periodic force is a square wave. Many
+components in electric circuits are non-linear, for example diodes. This
+makes many wave forms non-sinusoidal even when the circuits are being
+driven by purely sinusoidal sources.</p>
+</div>
+<div class="section" id="simple-code-example">
+<h2><span class="section-number">2.5. </span>Simple Code Example<a class="headerlink" href="#simple-code-example" title="Permalink to this headline">¶</a></h2>
+<p>The code here shows a typical example of such a square wave generated
+using the functionality included in the <strong>scipy</strong> Python package. We
+have used a period of <span class="math notranslate nohighlight">\(\tau=0.2\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">signal</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># number of points                                                                                       </span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="c1"># start and final times                                                                                  </span>
+<span class="n">t0</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">tn</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="c1"># Period                                                                                                 </span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">tn</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">SqrSignal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">SqrSignal</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">+</span><span class="n">signal</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mi">5</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">SqrSignal</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/day2_13_0.png" src="_images/day2_13_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="continuous-fourier-transforms-and-the-principle-of-superposition">
+<h2><span class="section-number">2.6. </span>Continuous Fourier transforms and the principle of Superposition<a class="headerlink" href="#continuous-fourier-transforms-and-the-principle-of-superposition" title="Permalink to this headline">¶</a></h2>
+<p>It was Fourier’s idea to expand a continuous and periodic function <span class="math notranslate nohighlight">\(f(t)\)</span> in terms of sums sinus and cosinus ordered functions (we will use exponentials however)
+as</p>
+<div class="math notranslate nohighlight">
+\[
+f(t) = \sum_{k=1}^{n}a_k\sin{(2\pi kt+\phi_n)},
+\]</div>
+<p>with <span class="math notranslate nohighlight">\(\phi_n\)</span> being a constant phase. The function <span class="math notranslate nohighlight">\(f\)</span> is assumed to be bounded in order to be able to define properly the error in truncating the sum
+over <span class="math notranslate nohighlight">\(n\)</span>, that is</p>
+<div class="math notranslate nohighlight">
+\[
+\int_a^b dt \vert f(t)\vert^2 \le M &lt; \infty.
+\]</div>
+<p>Below we discuss how to find the coefficients <span class="math notranslate nohighlight">\(a_n\)</span>.</p>
+</div>
+<div class="section" id="rewriting-in-terms-of-sines-and-cosines">
+<h2><span class="section-number">2.7. </span>Rewriting in terms of sines and cosines<a class="headerlink" href="#rewriting-in-terms-of-sines-and-cosines" title="Permalink to this headline">¶</a></h2>
+<p>It is common to rewrite the above sum in terms of sines and cosines and to add a complex constant <span class="math notranslate nohighlight">\(a_0\)</span>. This gives us</p>
+<div class="math notranslate nohighlight">
+\[
+f(t) = \frac{a_0}{2}+ \sum_{k=1}^{n}\left(a_k\cos{(2\pi kt)}+b_n\sin{(2\pi kt)}\right).
+\]</div>
+<p>Using the standard trigonometric relations</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+\cos{t} = \frac{\exp{\imath t}+\exp{-\imath t}}{2} &amp; \hspace{0.5cm} \sin{t} = \frac{\exp{\imath t}-\exp{-\imath t}}{2\imath}.
+\end{align*}
+\]</div>
+</div>
+<div class="section" id="exponential-expression">
+<h2><span class="section-number">2.8. </span>Exponential expression<a class="headerlink" href="#exponential-expression" title="Permalink to this headline">¶</a></h2>
+<p>We can rewrite the Fourier expansion as</p>
+<div class="math notranslate nohighlight">
+\[
+f(t) =\sum_{k=-n}^{n}c_{k}\exp{(2\pi\imath kt)},
+\]</div>
+<p>with <span class="math notranslate nohighlight">\(c_0=a_0/2\)</span>. The coefficients <span class="math notranslate nohighlight">\(c_k\)</span> are complex and satisfy <span class="math notranslate nohighlight">\(c_{-k}=c_k^*\)</span>.
+The constant <span class="math notranslate nohighlight">\(c_{0}=c_0^*\)</span> is a real number.</p>
+<p>The above sum can also be rewritten in terms of the real part of the exponetials as</p>
+<div class="math notranslate nohighlight">
+\[
+f(t) =2\mathrm{Re}\left(\sum_{k=0}^{n}c_{k}\exp{(2\pi\imath kt} \right),
+\]</div>
+<p>where we used that <span class="math notranslate nohighlight">\(c_{-k}=c_k^*\)</span>. We leave it as an exercise to the reader to show the latter expression.</p>
+<p>How do we determine the coefficients <span class="math notranslate nohighlight">\(c_k\)</span>?</p>
+</div>
+<div class="section" id="determining-c-k">
+<h2><span class="section-number">2.9. </span>Determining <span class="math notranslate nohighlight">\(c_k\)</span><a class="headerlink" href="#determining-c-k" title="Permalink to this headline">¶</a></h2>
+<p>Let us assume that we have a periodic function <span class="math notranslate nohighlight">\(f(t)\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+f(t) =\sum_{k=-n}^{n}c_{k}\exp{(2\pi\imath kt)},
+\]</div>
+<p>and we select the coefficient <span class="math notranslate nohighlight">\(c_l\)</span>, and multiply the l.h.s and r.h.s. with <span class="math notranslate nohighlight">\(\exp{(-2\pi\imath lt)}\)</span>, and isolate the <span class="math notranslate nohighlight">\(c_l\)</span> terms</p>
+<div class="math notranslate nohighlight">
+\[
+c_l=f(t)\exp{(-2\pi\imath lt)}-\sum_{k=-n, k\ne l}^{n}c_{k}\exp{(2\pi\imath (k-l)t)}.
+\]</div>
+</div>
+<div class="section" id="integrating-both-sides">
+<h2><span class="section-number">2.10. </span>Integrating both sides<a class="headerlink" href="#integrating-both-sides" title="Permalink to this headline">¶</a></h2>
+<p>Then we integrate both sides (note we have assumed a period of one) from <span class="math notranslate nohighlight">\(0\)</span> to <span class="math notranslate nohighlight">\(1\)</span>. This gives</p>
+<div class="math notranslate nohighlight">
+\[
+c_l=\int_0^1 dtf(t)\exp{(-2\pi\imath lt)},
+\]</div>
+<p>since the terms with the sum is zero.  We leave again this derivation as an exercise to the dedicated reader.
+If the function <span class="math notranslate nohighlight">\(f\)</span> is real (<span class="math notranslate nohighlight">\(t\)</span> nd <span class="math notranslate nohighlight">\(dt\)</span> are real), then <span class="math notranslate nohighlight">\(c_l^*=c_{-l}\)</span>.
+The coefficients <span class="math notranslate nohighlight">\(c_n\)</span> are normally called the Fourier coefficients and it is common to relabel them in terms of the function <span class="math notranslate nohighlight">\(f\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{f}(k)=\int_0^1 dt f(t)\exp{(-2\pi\imath kt)}.
+\]</div>
+</div>
+<div class="section" id="independence-of-interval-length">
+<h2><span class="section-number">2.11. </span>Independence of interval length<a class="headerlink" href="#independence-of-interval-length" title="Permalink to this headline">¶</a></h2>
+<p>In the discussions and equations above, we have assumed that the
+integration interval has a length of one, that is a period of length one. It is easy to change this
+length and as we show below, if we integrate from say <span class="math notranslate nohighlight">\(a\)</span> to <span class="math notranslate nohighlight">\(a+1\)</span>, this is the same as integrating over an interval of length <span class="math notranslate nohighlight">\(1\)</span>.</p>
+<p>To show this, we need also to recall that our function <span class="math notranslate nohighlight">\(f(t)\)</span> is assumed to be periodic, that is we need to satisfy</p>
+<div class="math notranslate nohighlight">
+\[
+f(a+1)=f(a).
+\]</div>
+<p>Later we will generalize this to a period of arbitrary length.</p>
+<p>Assume that <span class="math notranslate nohighlight">\(a\)</span> is any number and taking the derivative of the integral with respect to <span class="math notranslate nohighlight">\(a\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d}{da}\left[\int_a^{a+1} dt f(t)\exp{(-2\pi\imath kt)}\right].
+\]</div>
+</div>
+<div class="section" id="writing-out-the-various-terms">
+<h2><span class="section-number">2.12. </span>Writing out the various terms<a class="headerlink" href="#writing-out-the-various-terms" title="Permalink to this headline">¶</a></h2>
+<p>From the last equation we have then</p>
+<div class="math notranslate nohighlight">
+\[
+\exp{(-2\pi\imath ka)}\exp{(-2\pi\imath k)}f(a+1)-\exp{(-2\pi\imath ka)}f(a)=0,
+\]</div>
+<p>where we used the periodicity  <span class="math notranslate nohighlight">\(f(a+1)=f(a)\)</span> and that <span class="math notranslate nohighlight">\(\exp{(-2\pi\imath k)}=1\)</span> since <span class="math notranslate nohighlight">\(k\)</span> is an integer.
+This shows that the expression for <span class="math notranslate nohighlight">\(\hat{f}\)</span> is independent of <span class="math notranslate nohighlight">\(a\)</span>. A common instance is</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{f}(k)=\int_{-\frac{1}{2}}^{\frac{1}{2}} dt f(t)\exp{(-2\pi\imath kt)}.
+\]</div>
+</div>
+<div class="section" id="changing-period">
+<h2><span class="section-number">2.13. </span>Changing period<a class="headerlink" href="#changing-period" title="Permalink to this headline">¶</a></h2>
+<p>What if the period is not equal to one? Assume we are working with a
+function <span class="math notranslate nohighlight">\(f(t)\)</span> whose period is <span class="math notranslate nohighlight">\(T\)</span>. We can then define a function
+<span class="math notranslate nohighlight">\(g(t)\)</span> with period one as</p>
+<div class="math notranslate nohighlight">
+\[
+g(t) = f(Tt),
+\]</div>
+<p>that is</p>
+<div class="math notranslate nohighlight">
+\[
+g(t) =\sum_{k=-n}^{n}c_{n}\exp{(2\pi\imath kt)},
+\]</div>
+<p>and introducing the variable <span class="math notranslate nohighlight">\(s=Tt\)</span> we have <span class="math notranslate nohighlight">\(g(t)=f(s)\)</span> we have</p>
+<div class="math notranslate nohighlight">
+\[
+f(s) = g(t)=\sum_{k=-n}^{n}c_{n}\exp{(2\pi\imath kt)}=\sum_{k=-n}^{n}c_{k}\exp{(2\pi\imath ks/T)}.
+\]</div>
+</div>
+<div class="section" id="harmonics">
+<h2><span class="section-number">2.14. </span>Harmonics<a class="headerlink" href="#harmonics" title="Permalink to this headline">¶</a></h2>
+<p>The so-called harmonics are now defined as <span class="math notranslate nohighlight">\(\exp{(2\pi\imath ks/T)}\)</span>.
+We have</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{g}(k)=\int_0^1 dt g(t)\exp{(-2\pi\imath kt)},
+\]</div>
+<p>and using <span class="math notranslate nohighlight">\(s=Tt\)</span> we have</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{g}(k)=\int_0^1 dt g(t)\exp{(-2\pi\imath kt)}=\frac{1}{T}\int_0^T ds f(s)\exp{(-2\pi\imath ks/T)}.
+\]</div>
+<p>For a period <span class="math notranslate nohighlight">\(T\)</span> we have thus the general expression for the Fourier transform</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{f}(k)=c_k=\frac{1}{T}\int_0^T dt f(t)\exp{(-2\pi\imath kt/T)}.
+\]</div>
+</div>
+<div class="section" id="typical-interval">
+<h2><span class="section-number">2.15. </span>Typical interval<a class="headerlink" href="#typical-interval" title="Permalink to this headline">¶</a></h2>
+<p>An often used choice of interval is</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{f}(k)=c_k=\frac{1}{T}\int_{-T/2}^{T/2} dt f(t)\exp{(-2\pi\imath kt/T)},
+\]</div>
+<p>and a common choice for the harmonics is <span class="math notranslate nohighlight">\((1/\sqrt{T})\exp{(2\pi\imath kt/T)}\)</span>.</p>
+<p>As a small addendum, if the signal (function) <span class="math notranslate nohighlight">\(f(t)\)</span> is real and even one has <span class="math notranslate nohighlight">\(f(-t)=f(t)\)</span>. If <span class="math notranslate nohighlight">\(f\)</span> is an even function, then <span class="math notranslate nohighlight">\(\hat{f}\)</span> is also an even function which leads to <span class="math notranslate nohighlight">\(\hat{f}(-k)=\hat{f}(k)\)</span>.</p>
+</div>
+<div class="section" id="sinusoidal-example">
+<h2><span class="section-number">2.16. </span>Sinusoidal example<a class="headerlink" href="#sinusoidal-example" title="Permalink to this headline">¶</a></h2>
+<p>For the sinusoidal example the
+period is <span class="math notranslate nohighlight">\(T=2\pi/\omega\)</span>. However, higher harmonics can also
+satisfy the periodicity requirement. In general, any force that
+satisfies the periodicity requirement can be expressed as a sum over
+harmonics,</p>
+<div class="math notranslate nohighlight">
+\[
+f(t)=\frac{a_0}{2}+\sum_{n&gt;0} a_n\cos(2n\pi t/T)+b_n\sin(2n\pi t/T).
+\]</div>
+</div>
+<div class="section" id="square-well-example">
+<h2><span class="section-number">2.17. </span>Square well example<a class="headerlink" href="#square-well-example" title="Permalink to this headline">¶</a></h2>
+<p>In the code discussed earlier, we used a square well as a our
+example. If we assume our period has length <span class="math notranslate nohighlight">\(1\)</span>, we can define the
+square well function <span class="math notranslate nohighlight">\(f(t)\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f(t)=\left\{\begin{array}{cc} 1 &amp; 0 \le t \le \frac{1}{2} \\
+                              -1 &amp; \frac{1}{2} &lt; t \le 1\end{array}\right.
+\end{split}\]</div>
+<p>The zeroth coefficient <span class="math notranslate nohighlight">\(a_0\)</span> is zero since it is the average of the function <span class="math notranslate nohighlight">\(f(t)\)</span> over the intergration domain <span class="math notranslate nohighlight">\(t\in [0,1]\)</span>.</p>
+</div>
+<div class="section" id="the-coefficients">
+<h2><span class="section-number">2.18. </span>The coefficients<a class="headerlink" href="#the-coefficients" title="Permalink to this headline">¶</a></h2>
+<p>We find that the other coefficients are</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{f}(n)=c_n=\int_0^1 dt f(t)\exp{(-2\pi\imath nt)}=\frac{1}{\imath\pi n}\left(1-\exp{-\imath\pi n}\right).
+\]</div>
+<p>We note that <span class="math notranslate nohighlight">\((1-\exp{-\imath\pi n})\)</span> is zero when <span class="math notranslate nohighlight">\(n\)</span> is an even
+number and <span class="math notranslate nohighlight">\(2\)</span> when <span class="math notranslate nohighlight">\(n\)</span> is an odd number. We can then combine the
+positive and negative values of <span class="math notranslate nohighlight">\(n\)</span> using</p>
+<div class="math notranslate nohighlight">
+\[
+\exp{(2\pi\imath nt)}-\exp{(-2\pi\imath nt)}=2\imath \sin{(2\pi nt)},
+\]</div>
+<p>and we have</p>
+<div class="math notranslate nohighlight">
+\[
+f(t)=\frac{4}{\pi}\sum_{k=0}^{\infty}\frac{1}{2k+1}\sin{(2\pi(2k+1)t)}.
+\]</div>
+</div>
+<div class="section" id="code-for-the-fourier-transforms">
+<h2><span class="section-number">2.19. </span>Code for the  Fourier Transforms<a class="headerlink" href="#code-for-the-fourier-transforms" title="Permalink to this headline">¶</a></h2>
+<p>The code here uses the Fourier series applied to a
+square wave signal. The code here
+visualizes the various approximations given by Fourier series compared
+with a square wave with period <span class="math notranslate nohighlight">\(T=0.2\)</span> (dimensionless time), width <span class="math notranslate nohighlight">\(0.1\)</span> and max value of the force <span class="math notranslate nohighlight">\(F=2\)</span>. We
+see that when we increase the number of components in the Fourier
+series, the Fourier series approximation gets closer and closer to the
+square wave signal.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">signal</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># number of points                                                                                       </span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="c1"># start and final times                                                                                  </span>
+<span class="n">t0</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">tn</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="c1"># Period                                                                                                 </span>
+<span class="n">T</span> <span class="o">=</span><span class="mf">0.2</span>
+<span class="c1"># Max value of square signal                                                                             </span>
+<span class="n">Fmax</span><span class="o">=</span> <span class="mf">2.0</span>
+<span class="c1"># Width of signal   </span>
+<span class="n">Width</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">tn</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">SqrSignal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">FourierSeriesSignal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">SqrSignal</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">+</span><span class="n">signal</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mi">5</span><span class="o">*</span><span class="n">t</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">Width</span><span class="o">/</span><span class="n">T</span><span class="p">)</span>
+<span class="n">a0</span> <span class="o">=</span> <span class="n">Fmax</span><span class="o">*</span><span class="n">Width</span><span class="o">/</span><span class="n">T</span>
+<span class="n">FourierSeriesSignal</span> <span class="o">=</span> <span class="n">a0</span>
+<span class="n">Factor</span> <span class="o">=</span> <span class="mf">2.0</span><span class="o">*</span><span class="n">Fmax</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">500</span><span class="p">):</span>
+    <span class="n">FourierSeriesSignal</span> <span class="o">+=</span> <span class="n">Factor</span><span class="o">/</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">i</span><span class="o">*</span><span class="n">Width</span><span class="o">/</span><span class="n">T</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="n">t</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">T</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">SqrSignal</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">FourierSeriesSignal</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/day2_71_0.png" src="_images/day2_71_0.png" />
+</div>
+</div>
+<div class="section" id="fourier-transforms-and-convolution">
+<h3><span class="section-number">2.19.1. </span>Fourier transforms and convolution<a class="headerlink" href="#fourier-transforms-and-convolution" title="Permalink to this headline">¶</a></h3>
+<p>We can use Fourier transforms in our studies of convolution as
+well. To see this, assume we have two functions <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> and their
+corresponding Fourier transforms <span class="math notranslate nohighlight">\(\hat{f}\)</span> and <span class="math notranslate nohighlight">\(\hat{g}\)</span>. We remind
+the reader that the Fourier transform reads (say for the function <span class="math notranslate nohighlight">\(f\)</span>)</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{f}(y)=\boldsymbol{F}[f(y)]=\frac{1}{2\pi}\int_{-\infty}^{\infty} d\omega \exp{-i\omega y} f(\omega),
+\]</div>
+<p>and similarly we have</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{g}(y)=\boldsymbol{F}[g(y)]=\frac{1}{2\pi}\int_{-\infty}^{\infty} d\omega \exp{-i\omega y} g(\omega).
+\]</div>
+</div>
+</div>
+<div class="section" id="inverse-fourier-transform">
+<h2><span class="section-number">2.20. </span>Inverse Fourier transform<a class="headerlink" href="#inverse-fourier-transform" title="Permalink to this headline">¶</a></h2>
+<p>The inverse Fourier transform is given by</p>
+<div class="math notranslate nohighlight">
+\[
+\boldsymbol{F}^{-1}[g(y)]=\frac{1}{2\pi}\int_{-\infty}^{\infty} d\omega \exp{i\omega y} g(\omega).
+\]</div>
+<p>The inverse Fourier transform of the product of the two functions <span class="math notranslate nohighlight">\(\hat{f}\hat{g}\)</span> can be written as</p>
+<div class="math notranslate nohighlight">
+\[
+\boldsymbol{F}^{-1}[(\hat{f}\hat{g})(x)]=\frac{1}{2\pi}\int_{-\infty}^{\infty} d\omega \exp{i\omega x} \hat{f}(\omega)\hat{g}(\omega).
+\]</div>
+</div>
+<div class="section" id="rewriting">
+<h2><span class="section-number">2.21. </span>Rewriting<a class="headerlink" href="#rewriting" title="Permalink to this headline">¶</a></h2>
+<p>We can rewrite the latter as</p>
+<div class="math notranslate nohighlight">
+\[
+\boldsymbol{F}^{-1}[(\hat{f}\hat{g})(x)]=\int_{-\infty}^{\infty} d\omega \exp{i\omega x} \hat{f}(\omega)\left[\frac{1}{2\pi}\int_{-\infty}^{\infty}g(y)dy \exp{-i\omega y}\right]=\frac{1}{2\pi}\int_{-\infty}^{\infty}dy g(y)\int_{-\infty}^{\infty} d\omega \hat{f}(\omega) \exp{i\omega(x- y)},
+\]</div>
+<p>which is simply</p>
+<div class="math notranslate nohighlight">
+\[
+\boldsymbol{F}^{-1}[(\hat{f}\hat{g})(x)]=\int_{-\infty}^{\infty}dy g(y)f(x-y)=(f*g)(x),
+\]</div>
+<p>the convolution of the functions <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span>.</p>
+</div>
+<div class="section" id="transforming-to-discrete-variables">
+<h2><span class="section-number">2.22. </span>Transforming to discrete variables<a class="headerlink" href="#transforming-to-discrete-variables" title="Permalink to this headline">¶</a></h2>
+<p>In the Fourier transform <span class="math notranslate nohighlight">\(c_n\)</span> is transformed from a dicrete variable
+to a continuous one as <span class="math notranslate nohighlight">\(T \rightarrow \infty\)</span>. We then replace <span class="math notranslate nohighlight">\(c_n\)</span> with
+<span class="math notranslate nohighlight">\(f(k)dk\)</span> and let <span class="math notranslate nohighlight">\(n/T \rightarrow k\)</span>, and the sum is changed to an
+integral. This gives</p>
+<div class="math notranslate nohighlight">
+\[
+f(x) = \int_{-\infty}^{\infty}dkF(k) \exp{i(2\pi kx)}
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+F(k) = \int_{-\infty}^{\infty}dxf(x) \exp{-i(2\pi kx)}
+\]</div>
+<p>One way to interpret the Fourier transform is then as a transformation from one basis to another.</p>
+</div>
+<div class="section" id="discrete-fourier-transform">
+<h2><span class="section-number">2.23. </span>Discrete Fourier transform<a class="headerlink" href="#discrete-fourier-transform" title="Permalink to this headline">¶</a></h2>
+<p>We change notation by replacing <span class="math notranslate nohighlight">\(t\)</span> with <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>Next we make another generalization by having a discrete function,
+that is <span class="math notranslate nohighlight">\(f(x) \rightarrow f(x_k)\)</span> with <span class="math notranslate nohighlight">\(x_k = k\Delta x\)</span> for <span class="math notranslate nohighlight">\(k=0,\dots, N-1\)</span>. This leads to the sums</p>
+<div class="math notranslate nohighlight">
+\[
+f_x = \frac{1}{n} \sum_{k=0}^{n-1}F_k \exp{i(2\pi kx)/n},
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+F_k = \sum_{x=0}^{n-1}f_x \exp{-i(2\pi kx)/n}.
+\]</div>
+<p>Although we have used functions here, this could also be a set of
+numbers.</p>
+</div>
+<div class="section" id="simple-example">
+<h2><span class="section-number">2.24. </span>Simple example<a class="headerlink" href="#simple-example" title="Permalink to this headline">¶</a></h2>
+<p>As an example we can have a set of complex numbers
+<span class="math notranslate nohighlight">\(\{x_0,\dots,x_{n-1}\}\)</span> with fixed length <span class="math notranslate nohighlight">\(n\)</span>, we can Fourier
+transform this as</p>
+<div class="math notranslate nohighlight">
+\[
+y_k = \frac{1}{\sqrt{n}} \sum_{j=0}^{n-1} x_j \exp{i(2\pi jk)/n},
+\]</div>
+<p>leading to a new set of complex numbers <span class="math notranslate nohighlight">\(\{ y_0,\dots,y_{n-1}\}\)</span>.</p>
+</div>
+<div class="section" id="discrete-fourier-transformations">
+<h2><span class="section-number">2.25. </span>Discrete Fourier Transformations<a class="headerlink" href="#discrete-fourier-transformations" title="Permalink to this headline">¶</a></h2>
+<p>Consider two sets of complex numbers <span class="math notranslate nohighlight">\(x_k\)</span> and <span class="math notranslate nohighlight">\(y_k\)</span> with
+<span class="math notranslate nohighlight">\(k=0,1,\dots,n-1\)</span> entries. The discrete Fourier transform is defined
+as</p>
+<div class="math notranslate nohighlight">
+\[
+y_k = \frac{1}{\sqrt{n}} \sum_{j=0}^{n-1} \exp{(\frac{2\pi\imath jk}{n})} x_j.
+\]</div>
+<p>As an example, assume <span class="math notranslate nohighlight">\(x_0=1\)</span> and <span class="math notranslate nohighlight">\(x_1=1\)</span>. We can then use the above expression to find <span class="math notranslate nohighlight">\(y_0\)</span> and <span class="math notranslate nohighlight">\(y_1\)</span>.</p>
+<p>With the above formula we get then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+y_0 &amp;= \frac{1}{\sqrt{2}} \left( \exp{(\frac{2\pi\imath 0\times 1}{2})} \times 1+\exp{(\frac{2\pi\imath 0\times 1}{2})}\times 2\right)\\
+&amp; =\frac{1}{\sqrt{2}}(1+2)=\frac{3}{\sqrt{2}},
+\end{align*}
+\end{split}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+y_1 &amp;= \frac{1}{\sqrt{2}} \left( \exp{(\frac{2\pi\imath 0\times 1}{2})} \times 1+\exp{(\frac{2\pi\imath 1\times 1}{2})}\times 2\right)=\\
+&amp; =\frac{1}{\sqrt{2}}(1+2\exp{(\pi\imath)})=-\frac{1}{\sqrt{2}}.
+\end{align*}
+\end{split}\]</div>
+</div>
+<div class="section" id="more-details-on-discrete-fourier-transforms">
+<h2><span class="section-number">2.26. </span>More details on Discrete Fourier transforms<a class="headerlink" href="#more-details-on-discrete-fourier-transforms" title="Permalink to this headline">¶</a></h2>
+<p>Suppose that we have a vector <span class="math notranslate nohighlight">\(f\)</span> of <span class="math notranslate nohighlight">\(n\)</span> complex numbers, <span class="math notranslate nohighlight">\(f_{k}, k
+\in\{0,1, \ldots, n-1\}\)</span>. Then the discrete Fourier transform (DFT) is
+a map from these <span class="math notranslate nohighlight">\(n\)</span> complex numbers to <span class="math notranslate nohighlight">\(n\)</span> complex numbers, the
+Fourier transformed coefficients <span class="math notranslate nohighlight">\(\tilde{f}_{j}\)</span>, given by</p>
+<div class="math notranslate nohighlight">
+\[
+\tilde{f}_{j}=\frac{1}{\sqrt{n}} \sum_{k=0}^{n-1} \omega^{-j k} f_{k}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\omega=\exp \left(\frac{2 \pi i}{N}\right)\)</span>.</p>
+</div>
+<div class="section" id="inverse-dft">
+<h2><span class="section-number">2.27. </span>Inverse DFT<a class="headerlink" href="#inverse-dft" title="Permalink to this headline">¶</a></h2>
+<p>The inverse DFT is given by</p>
+<div class="math notranslate nohighlight">
+\[
+f_{j}=\frac{1}{\sqrt{n}} \sum_{k=0}^{n-1} \omega^{j k} \tilde{f}_{k}
+\]</div>
+<p>To see this consider how the basis vectors transform. If <span class="math notranslate nohighlight">\(f_{k}^{l}=\delta_{k, l}\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[
+\tilde{f}_{j}^{l}=\frac{1}{\sqrt{n}} \sum_{k=0}^{n-1} \omega^{-j k} \delta_{k, l}=\frac{1}{\sqrt{n}} \omega^{-j l}
+\]</div>
+</div>
+<div class="section" id="orthonormality">
+<h2><span class="section-number">2.28. </span>Orthonormality<a class="headerlink" href="#orthonormality" title="Permalink to this headline">¶</a></h2>
+<p>These DFT vectors are orthonormal, that is</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{j=0}^{n-1} \tilde{f}^{l}{ }_{j}^{*} \tilde{f}_{j}^{m}=\frac{1}{n} \sum_{j=0}^{n-1} \omega^{j l} \omega^{-j m}=\frac{1}{N} \sum_{j=0}^{n-1} \omega^{j(l-m)}
+\]</div>
+<p>This last sum can be evaluated as a geometric series, but beware of the <span class="math notranslate nohighlight">\((l-m)=0\)</span> term, and yields</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{j=0}^{n-1} \tilde{f}^{l}{ }_{j}^{*} \tilde{f}_{j}^{m}=\delta_{l, m}
+\]</div>
+</div>
+<div class="section" id="inverse-transform">
+<h2><span class="section-number">2.29. </span>Inverse transform<a class="headerlink" href="#inverse-transform" title="Permalink to this headline">¶</a></h2>
+<p>From this we can check that the inverse DFT does indeed perform the inverse transform:</p>
+<div class="math notranslate nohighlight">
+\[
+f_{j}=\frac{1}{\sqrt{n}} \sum_{k=0}^{n-1} \omega^{j k} \tilde{f}_{k}=\frac{1}{\sqrt{n}} \sum_{k=0}^{n-1} \omega^{j k} \frac{1}{\sqrt{n}} \sum_{l=0}^{n-1} \omega^{-l k} f_{l}=\frac{1}{n} \sum_{k, l=0}^{n-1} \omega^{(j-l) k} f_{l}=\sum_{l=0}^{n-1} \delta_{j, l} f_{l}=f_{j}
+\]</div>
+</div>
+<div class="section" id="discrete-fourier-transforms">
+<h2><span class="section-number">2.30. </span>Discrete Fourier transforms<a class="headerlink" href="#discrete-fourier-transforms" title="Permalink to this headline">¶</a></h2>
+<p>The Discrete Fourier Transform is a tool used in many different fields
+and finds applications in for example signal processing.  It has many
+many applications (in Speech Recognition, Data Processing, Optics,
+Acoustics). It is used in any application which performs Digital
+Signal Processing.</p>
+<p>There
+is an efficient algorithm, called the Fast Fourier Transform (FFT),
+which uses the special relationship amongst the roots of unity to
+compute the entire DFT in <span class="math notranslate nohighlight">\(O(n \log{n})\)</span> time. Moreover, it is possible to take the DFT and recover the original
+polynomial in its coefficient form in <span class="math notranslate nohighlight">\(O(n \log{n})\)</span> time, by using the
+FFT to compute the inverse DFT.</p>
+</div>
+<div class="section" id="fast-fourier-transform-fft">
+<h2><span class="section-number">2.31. </span>Fast Fourier transform (FFT)<a class="headerlink" href="#fast-fourier-transform-fft" title="Permalink to this headline">¶</a></h2>
+<p>Because of the many important applications of DFT, the Fast Fourier
+Transform is ranked among the top ten  algorithms in the 20th century.
+It came to light as a tool for Signal processing in 1965, when
+Cooley (of IBM) and Tukey (of Princeton) wrote a paper presenting the
+algorithm. However the basics of the algorithm were known long before
+that, for example, it was known to Gauss back in 1805.
+To read more about Fast Fourier transforms and similar topics, see for example <a class="reference external" href="https://link.springer.com/book/10.1007/978-1-4020-6629-0">Fast Fourier Transform - Algorithms and Applications</a>. See also <a class="reference external" href="https://github.com/CompPhysics/QuantumComputingMachineLearning/blob/gh-pages/doc/Textbooks/fastfourier.pdf">https://github.com/CompPhysics/QuantumComputingMachineLearning/blob/gh-pages/doc/Textbooks/fastfourier.pdf</a></p>
+<p>Our emphasis is on the link between discrete Fourier transforms and quantum Fourier transforms. We will not discuss FFT in this course.</p>
+</div>
+<div class="section" id="the-discrete-fourier-transform-dft">
+<h2><span class="section-number">2.32. </span>The discrete Fourier transform (DFT)<a class="headerlink" href="#the-discrete-fourier-transform-dft" title="Permalink to this headline">¶</a></h2>
+<p>The discrete Fourier transform takes as input a complex vector</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\boldsymbol{x} =\vert\boldsymbol{x}\rangle= 
+\begin{bmatrix}
+x_0 \\ 
+x_1 \\ 
+x_2 \\
+\vdots \\ 
+x_{n-2} \\
+x_{n-1}
+\end{bmatrix}.
+\end{align*}
+\end{split}\]</div>
+<p>Each entry of the output vector <span class="math notranslate nohighlight">\(\vert \boldsymbol{y}\rangle\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+y_k = \frac{1}{\sqrt{N}} \sum_{j=0}^{N-1} x_je^{2 \pi ijk/N}.
+\end{align*}
+\]</div>
+</div>
+<div class="section" id="output-vector">
+<h2><span class="section-number">2.33. </span>Output vector<a class="headerlink" href="#output-vector" title="Permalink to this headline">¶</a></h2>
+<p>The output is a complex vector</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\vert \boldsymbol{y}\rangle = 
+\frac{1}{\sqrt{n}}
+\begin{bmatrix}
+\sum_{j=0}^{n-1} x_je^{2\pi ij0/n} \\
+\sum_{j=0}^{n-1} x_je^{2\pi ij1/n} \\
+\sum_{j=0}^{n-1} x_je^{2\pi ij2/n} \\
+\vdots \\
+\sum_{j=0}^{n-1} x_je^{2\pi ij(n-2)/n} \\
+\sum_{j=0}^{n-1} x_je^{2\pi ij(n-1)/n}
+\end{bmatrix}
+\end{align*}
+\end{split}\]</div>
+</div>
+<div class="section" id="id1">
+<h2><span class="section-number">2.34. </span>Simple example<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>As an example we can have a set of complex numbers
+<span class="math notranslate nohighlight">\(\{x_0,\dots,x_{n-1}\}\)</span> with fixed length <span class="math notranslate nohighlight">\(n\)</span>, we can Fourier
+transform this as</p>
+<div class="math notranslate nohighlight">
+\[
+y_k = \frac{1}{\sqrt{n}} \sum_{j=0}^{n-1} x_j \exp{i(2\pi jk)/n},
+\]</div>
+<p>leading to a new set of complex numbers <span class="math notranslate nohighlight">\(\{ y_0,\dots,y_{n-1}\}\)</span>.</p>
+</div>
+<div class="section" id="id2">
+<h2><span class="section-number">2.35. </span>Discrete Fourier Transformations<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Consider two sets of complex numbers <span class="math notranslate nohighlight">\(x_k\)</span> and <span class="math notranslate nohighlight">\(y_k\)</span> with
+<span class="math notranslate nohighlight">\(k=0,1,\dots,n-1\)</span> entries. The discrete Fourier transform is defined
+as</p>
+<div class="math notranslate nohighlight">
+\[
+y_k = \frac{1}{\sqrt{n}} \sum_{j=0}^{n-1} \exp{(\frac{2\pi\imath jk}{n})} x_j.
+\]</div>
+<p>As an example, assume <span class="math notranslate nohighlight">\(x_0=1\)</span> and <span class="math notranslate nohighlight">\(x_1=1\)</span>. We can then use the above expression to find <span class="math notranslate nohighlight">\(y_0\)</span> and <span class="math notranslate nohighlight">\(y_1\)</span>.</p>
+<p>With the above formula we get then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+y_0 &amp;= \frac{1}{\sqrt{2}} \left( \exp{(\frac{2\pi\imath 0\times 1}{2})} \times 1+\exp{(\frac{2\pi\imath 0\times 1}{2})}\times 2\right)\\
+&amp; =\frac{1}{\sqrt{2}}(1+2)=\frac{3}{\sqrt{2}},
+\end{align*}
+\end{split}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+y_1 &amp;= \frac{1}{\sqrt{2}} \left( \exp{(\frac{2\pi\imath 0\times 1}{2})} \times 1+\exp{(\frac{2\pi\imath 1\times 1}{2})}\times 2\right)=\\
+&amp; =\frac{1}{\sqrt{2}}(1+2\exp{(\pi\imath)})=-\frac{1}{\sqrt{2}}.
+\end{align*}
+\end{split}\]</div>
+</div>
+<div class="section" id="id3">
+<h2><span class="section-number">2.36. </span>More details on Discrete Fourier transforms<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Suppose that we have a vector <span class="math notranslate nohighlight">\(f\)</span> of <span class="math notranslate nohighlight">\(n\)</span> complex numbers, <span class="math notranslate nohighlight">\(f_{k}, k
+\in\{0,1, \ldots, n-1\}\)</span>. Then the discrete Fourier transform (DFT) is
+a map from these <span class="math notranslate nohighlight">\(n\)</span> complex numbers to <span class="math notranslate nohighlight">\(n\)</span> complex numbers, the
+Fourier transformed coefficients <span class="math notranslate nohighlight">\(\tilde{f}_{j}\)</span>, given by</p>
+<div class="math notranslate nohighlight">
+\[
+\tilde{f}_{j}=\frac{1}{\sqrt{n}} \sum_{k=0}^{n-1} \omega^{-j k} f_{k}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\omega=\exp \left(\frac{2 \pi i}{N}\right)\)</span>.</p>
+</div>
+<div class="section" id="id4">
+<h2><span class="section-number">2.37. </span>Inverse DFT<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>The inverse DFT is given by</p>
+<div class="math notranslate nohighlight">
+\[
+f_{j}=\frac{1}{\sqrt{n}} \sum_{k=0}^{n-1} \omega^{j k} \tilde{f}_{k}
+\]</div>
+<p>To see this consider how the basis vectors transform. If <span class="math notranslate nohighlight">\(f_{k}^{l}=\delta_{k, l}\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[
+\tilde{f}_{j}^{l}=\frac{1}{\sqrt{n}} \sum_{k=0}^{n-1} \omega^{-j k} \delta_{k, l}=\frac{1}{\sqrt{n}} \omega^{-j l}
+\]</div>
+</div>
+<div class="section" id="id5">
+<h2><span class="section-number">2.38. </span>Orthonormality<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>These DFT vectors are orthonormal, that is</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{j=0}^{n-1} \tilde{f}^{l}{ }_{j}^{*} \tilde{f}_{j}^{m}=\frac{1}{n} \sum_{j=0}^{n-1} \omega^{j l} \omega^{-j m}=\frac{1}{N} \sum_{j=0}^{n-1} \omega^{j(l-m)}
+\]</div>
+<p>This last sum can be evaluated as a geometric series, but beware of the <span class="math notranslate nohighlight">\((l-m)=0\)</span> term, and yields</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{j=0}^{n-1} \tilde{f}^{l}{ }_{j}^{*} \tilde{f}_{j}^{m}=\delta_{l, m}
+\]</div>
+</div>
+<div class="section" id="id6">
+<h2><span class="section-number">2.39. </span>Inverse transform<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>From this we can check that the inverse DFT does indeed perform the inverse transform:</p>
+<div class="math notranslate nohighlight">
+\[
+f_{j}=\frac{1}{\sqrt{n}} \sum_{k=0}^{n-1} \omega^{j k} \tilde{f}_{k}=\frac{1}{\sqrt{n}} \sum_{k=0}^{n-1} \omega^{j k} \frac{1}{\sqrt{n}} \sum_{l=0}^{n-1} \omega^{-l k} f_{l}=\frac{1}{n} \sum_{k, l=0}^{n-1} \omega^{(j-l) k} f_{l}=\sum_{l=0}^{n-1} \delta_{j, l} f_{l}=f_{j}
+\]</div>
+</div>
+<div class="section" id="fast-fourier-transform-and-polynomial-multiplication">
+<h2><span class="section-number">2.40. </span>Fast Fourier transform and polynomial multiplication<a class="headerlink" href="#fast-fourier-transform-and-polynomial-multiplication" title="Permalink to this headline">¶</a></h2>
+<p>The FFT algorithm is an <span class="math notranslate nohighlight">\(O(n\log{n})\)</span> divide and conquer algorithm for DFT, used by
+Gauss circa 1805, and popularized by Cooley and Turkey and 1965. Gauss used the
+algorithm to determine periodic asteroid orbits, while Cooley and Turkey used it to
+detect Soviet nuclear tests from oﬀshore readings.
+A practical implementation of FFT is FFTW, which was described by Frigo and
+Johnson at MIT. The algorithm is often implemented directly in hardware, for fixed <span class="math notranslate nohighlight">\(n\)</span>.</p>
+</div>
+<div class="section" id="from-dft-to-qft">
+<h2><span class="section-number">2.41. </span>From DFT to QFT<a class="headerlink" href="#from-dft-to-qft" title="Permalink to this headline">¶</a></h2>
+<p>The Quantum Fourier Transform (QFT) has mathematically the same equation as starting point
+but the notation is generally different. We generally compute the
+quantum Fourier transform on a set of orthonormal basis state vectors
+(|0\rangle, |1\rangle, …, |N-1\rangle). The linear operator defining
+the transform is given by the action on basis states</p>
+<div class="math notranslate nohighlight">
+\[
+|j\rangle \mapsto \frac{1}{\sqrt{N}} \sum_{k=0}^{N-1} e^{2\pi ijk/N}|k\rangle.
+\]</div>
+</div>
+<div class="section" id="in-terms-of-arbitrary-states">
+<h2><span class="section-number">2.42. </span>In terms of arbitrary states<a class="headerlink" href="#in-terms-of-arbitrary-states" title="Permalink to this headline">¶</a></h2>
+<p>This can be written on arbitrary states,</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{j=0}^{N-1}x_j|j\rangle \mapsto \sum_{k=0}^{N-1} y_k|k\rangle
+\]</div>
+<p>where each amplitude (y_k) is the discrete Fourier transform of
+(x_j).</p>
+</div>
+<div class="section" id="unitarity">
+<h2><span class="section-number">2.43. </span>Unitarity<a class="headerlink" href="#unitarity" title="Permalink to this headline">¶</a></h2>
+<p>The quantum Fourier transform is unitary. Taking (N = 2^n),
+for (n) qubits gives us the orthonormal (computational) basis</p>
+<div class="math notranslate nohighlight">
+\[
+|0\rangle, |1\rangle, ..., |2^{n}-1\rangle.
+\]</div>
+</div>
+<div class="section" id="binary-representation">
+<h2><span class="section-number">2.44. </span>Binary representation<a class="headerlink" href="#binary-representation" title="Permalink to this headline">¶</a></h2>
+<p>Each of the computational basis states can be represented in binary</p>
+<div class="math notranslate nohighlight">
+\[
+j = j_1j_2 \cdots j_n
+\]</div>
+<p>where each (j_k) is either (0) or (1), and the corresponding
+binary vector is (|j_1j_2 \cdots j_n\rangle).</p>
+</div>
+<div class="section" id="rewriting-the-qft">
+<h2><span class="section-number">2.45. </span>Rewriting the QFT<a class="headerlink" href="#rewriting-the-qft" title="Permalink to this headline">¶</a></h2>
+<p>The quantum Fourier
+transform on one of these (n)-qubit vectors can be written as,</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+|j_1j_2 \cdots j_n \rangle = \frac{\left(|0\rangle +e^{2\pi i0.j_n}|1\rangle\right) \otimes \left(|0\rangle +e^{2\pi i0.j_{n-1}j_n}|1\rangle\right) \otimes \cdots \otimes \left(|0\rangle +e^{2\pi i0.j_1j_2 \cdots j_n}|1\rangle\right)}{2^{n/2}}
+\end{align*}
+\]</div>
+</div>
+<div class="section" id="short-hand-notation">
+<h2><span class="section-number">2.46. </span>Short hand notation<a class="headerlink" href="#short-hand-notation" title="Permalink to this headline">¶</a></h2>
+<p>In the above, we use the notation</p>
+<div class="math notranslate nohighlight">
+\[
+0.j_lj_{l+1} \cdots j_n = \frac{j+l}{2} + \frac{j_{l+1}}{2^2} + \cdots + \frac{j_n}{2^{m-l+1}}
+\]</div>
+</div>
+<div class="section" id="two-qubit-system">
+<h2><span class="section-number">2.47. </span>Two-qubit system<a class="headerlink" href="#two-qubit-system" title="Permalink to this headline">¶</a></h2>
+<p>First a two qubit system. See whiteboard notes.</p>
+</div>
+<div class="section" id="four-qubit-system">
+<h2><span class="section-number">2.48. </span>Four qubit system<a class="headerlink" href="#four-qubit-system" title="Permalink to this headline">¶</a></h2>
+<p>Let us then move to  a four qubit system. The basis states are,</p>
+<div class="math notranslate nohighlight">
+\[
+|j_1j_2j_3j_4 \rangle
+\]</div>
+<p>where (j_k) is either (0) or (1). We have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+0.j_3 &amp;= \frac{j_3}{2} \\
+0.j_2j_3 &amp;= \frac{j_2}{2} + \frac{j_3}{4} \\
+0.j_1j_2j_3 &amp;= \frac{j_1}{2} + \frac{j_2}{4} + \frac{j_3}{8} \\
+0.j_0j_1j_2j_3 &amp;= \frac{j_0}{2} + \frac{j_1}{4} + \frac{j_2}{8} + \frac{j_3}{16} \\
+\end{align*}
+\end{split}\]</div>
+</div>
+<div class="section" id="qft-acts-as-follows">
+<h2><span class="section-number">2.49. </span>QFT acts as follows<a class="headerlink" href="#qft-acts-as-follows" title="Permalink to this headline">¶</a></h2>
+<p>The quantum Fourier transform acts as follows:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+|j_1j_2j_3j_4 \rangle \mapsto \frac{1}{\sqrt{2^{4/2}}}
+\left(|0\rangle + e^{2 \pi i 0.j4}|1\rangle \right) \otimes 
+\left(|0\rangle + e^{2 \pi i 0.j_3j4}|1\rangle \right) \otimes 
+\left(|0\rangle + e^{2 \pi i 0.j_2j_3j4}|1\rangle \right) \otimes 
+\left(|0\rangle + e^{2 \pi i 0.j_1j_2j_3j4}|1\rangle \right) 
+\end{align*}
+\]</div>
+</div>
+<div class="section" id="quantum-circuits">
+<h2><span class="section-number">2.50. </span>Quantum circuits<a class="headerlink" href="#quantum-circuits" title="Permalink to this headline">¶</a></h2>
+<p>To compose a quantum circuit that calculates the quantum Fourier
+transform we use the operators</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+R_k = 
+\begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; e^{2\pi i/2^k}
+\end{bmatrix}.
+\end{align*}
+\end{split}\]</div>
+<p>For the circuit computing the QFT on four qubits, see whiteboard notes again.</p>
+</div>
+<div class="section" id="rotation-gates">
+<h2><span class="section-number">2.51. </span>Rotation gates<a class="headerlink" href="#rotation-gates" title="Permalink to this headline">¶</a></h2>
+<p>In this example, the (R_k) gates are:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+R_1 = \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; e^{2 \pi i /2^0}
+\end{bmatrix} = 
+\begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{bmatrix}, \quad 
+R_2 = \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; e^{2 \pi i /2^2}
+\end{bmatrix}, \quad 
+R_3 = \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; e^{2 \pi i /2^3}
+\end{bmatrix}, \quad 
+R_4 = \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; e^{2 \pi i /2^4}
+\end{bmatrix}.
+\end{align*}
+\end{split}\]</div>
+</div>
+<div class="section" id="quantum-fourier-transform-more-material">
+<h2><span class="section-number">2.52. </span>Quantum Fourier transform, more material<a class="headerlink" href="#quantum-fourier-transform-more-material" title="Permalink to this headline">¶</a></h2>
+<p>We have defined the QFT in terms of
+the unitary operation</p>
+<div class="math notranslate nohighlight">
+\[
+\vert \psi'\rangle \leftarrow \hat{F}\vert \psi\rangle, \quad \hat{F}^\dagger \hat{F} = I
+\]</div>
+</div>
+<div class="section" id="orthonormal-basis">
+<h2><span class="section-number">2.53. </span>Orthonormal basis<a class="headerlink" href="#orthonormal-basis" title="Permalink to this headline">¶</a></h2>
+<p>In terms of an orthonormal basis <span class="math notranslate nohighlight">\(\vert 0 \rangle,\vert 1\rangle,\dots,\vert 0 \rangle\)</span> this linear operator has the following action</p>
+<div class="math notranslate nohighlight">
+\[
+\vert j \rangle \rightarrow \sum_{k=0}^{N-1} \exp{i(2\pi jk/N)}\vert k
+\]</div>
+<p>or on an arbitrary state</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{j=0}^{N-1} x_j \vert j \rangle \rightarrow \sum_{k=0}^{N-1} y_k\vert k \rangle
+\]</div>
+<p>equivalent to the equation for discrete Fourier transform on a set of complex numbers.</p>
+</div>
+<div class="section" id="using-computational-basis">
+<h2><span class="section-number">2.54. </span>Using computational basis<a class="headerlink" href="#using-computational-basis" title="Permalink to this headline">¶</a></h2>
+<p>Next we assume an <span class="math notranslate nohighlight">\(n\)</span>-qubit system, where we take <span class="math notranslate nohighlight">\(N=s^n\)</span> in the computational basis</p>
+<div class="math notranslate nohighlight">
+\[
+\vert 0 \rangle,\dots,\vert 2^n -1\rangle.
+\]</div>
+<p>We make use of the binary representation <span class="math notranslate nohighlight">\(j = j_1 2^{n-1} + j_2
+2^{n-2} + \dots + j_n 2^0\)</span> , and take note of the notation <span class="math notranslate nohighlight">\(0.j_l
+j_{l+1} \dots j_m\)</span> representing the binary fraction <span class="math notranslate nohighlight">\(\frac{j_l}{2^1} +
+\frac{j_{l+1}}{2^{2}} + \dots + \frac{j_m}{2^{m-l+1}}\)</span>. With this we
+define the product representation of the quantum Fourier transform</p>
+<div class="math notranslate nohighlight">
+\[
+\vert j_1,\dots,j_n\rangle  \rightarrow 
+\frac{
+\left(\vert 0 \rangle + \exp{i(2\pi 0.j_n)}\right)
+\left(\vert 0 \rangle + \exp{i(2\pi 0.j_{j-1}j_n)}\right)
+\dots
+\left(\vert 0 \rangle + \exp{i(2\pi 0.j_1j_2\dots j_n)}\right)
+}{2^{n/2}}
+\]</div>
+</div>
+<div class="section" id="components">
+<h2><span class="section-number">2.55. </span>Components<a class="headerlink" href="#components" title="Permalink to this headline">¶</a></h2>
+<p>From the product representation we can derive a circuit for the
+quantum Fourier transform. This will make use of the following two
+single-qubit gates</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+H = \frac{1}{\sqrt{2}}
+    \begin{bmatrix}
+        1 &amp; 1 \\
+        1 &amp; -1
+    \end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+R_k =
+    \begin{bmatrix}
+        1 &amp; 0 \\
+        0 &amp; e^{2\pi i/2^{k}}
+    \end{bmatrix}
+\end{split}\]</div>
+</div>
+<div class="section" id="using-the-hadamard-gate">
+<h2><span class="section-number">2.56. </span>Using the Hadamard gate<a class="headerlink" href="#using-the-hadamard-gate" title="Permalink to this headline">¶</a></h2>
+<p>The Hadamard
+gate on a single qubit creates an equal superposition of its basis
+states, assuming it is not already in a superposition, such that</p>
+<div class="math notranslate nohighlight">
+\[
+H\vert 0 \rangle = \frac{1}{\sqrt{2}} \left(\vert 0 \rangle + \vert 1\rangle\right), \quad H\vert 1\rangle = \frac{1}{\sqrt{2}} \left(\vert 0 \rangle - \vert 1\rangle\right)
+\]</div>
+<p>The <span class="math notranslate nohighlight">\(R_k\)</span> gate simply adds a phase if the qubit it acts on is in the state <span class="math notranslate nohighlight">\(\vert 1\rangle\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+R_k\vert 0 \rangle = \vert 0 \rangle, \quad R_k\vert 1\rangle = e^{2\pi i/2^{k}}\vert 1\rangle
+\]</div>
+<p>Since all this gates are unitary, the quantum Fourier transfrom is also unitary.</p>
+</div>
+<div class="section" id="algorithm">
+<h2><span class="section-number">2.57. </span>Algorithm<a class="headerlink" href="#algorithm" title="Permalink to this headline">¶</a></h2>
+<p>Assume we have a quantum register of <span class="math notranslate nohighlight">\(n\)</span> qubits in the state <span class="math notranslate nohighlight">\(\vert j_1 j_2 \dots j_n\rangle\)</span>.
+Applying the Hadamard gate to the first qubit
+produces the state</p>
+<div class="math notranslate nohighlight">
+\[
+H\vert j_1 j_2 \dots j_n\rangle = \frac{\left(\vert 0 \rangle + e^{2\pi i 0.j_1}\vert 1\rangle\right)}{2^{1/2}} \vert j_2 \dots j_n\rangle.
+\]</div>
+</div>
+<div class="section" id="binary-fraction">
+<h2><span class="section-number">2.58. </span>Binary fraction<a class="headerlink" href="#binary-fraction" title="Permalink to this headline">¶</a></h2>
+<p>Here we have made use of the binary fraction to represent the action of the Hadamard gate</p>
+<div class="math notranslate nohighlight">
+\[
+\exp{2\pi i 0.j_1} = -1,
+\]</div>
+<p>if <span class="math notranslate nohighlight">\(j_1 = 1\)</span> and <span class="math notranslate nohighlight">\(+1\)</span> if <span class="math notranslate nohighlight">\(j_1 = 0\)</span>.</p>
+</div>
+<div class="section" id="controlled-rotation-gate">
+<h2><span class="section-number">2.59. </span>Controlled rotation gate<a class="headerlink" href="#controlled-rotation-gate" title="Permalink to this headline">¶</a></h2>
+<p>Furthermore we can apply the controlled-<span class="math notranslate nohighlight">\(R_k\)</span> gate, with all the other qubits <span class="math notranslate nohighlight">\(j_k\)</span> for <span class="math notranslate nohighlight">\(k&gt;1\)</span> as control qubits to produce the state</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\left(\vert 0 \rangle + e^{2\pi i 0.j_1j_2\dots j_n}\vert 1\rangle\right)}{2^{1/2}} \vert j_2 \dots j_n\rangle
+\]</div>
+<p>Next we do the same procedure on qubit <span class="math notranslate nohighlight">\(2\)</span> producing the state</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\left(\vert 0 \rangle + e^{2\pi i 0.j_1j_2\dots j_n}\vert 1\rangle\right)\left(\vert 0 \rangle + e^{2\pi i 0.j_2\dots j_n}\vert 1\rangle\right)}{2^{2/2}} \vert j_2 \dots j_n\rangle
+\]</div>
+</div>
+<div class="section" id="applying-to-all-qubits">
+<h2><span class="section-number">2.60. </span>Applying to all qubits<a class="headerlink" href="#applying-to-all-qubits" title="Permalink to this headline">¶</a></h2>
+<p>Doing this for all <span class="math notranslate nohighlight">\(n\)</span> qubits yields state</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\left(\vert 0 \rangle + e^{2\pi i 0.j_1j_2\dots j_n}\vert 1\rangle\right)\left(\vert 0 \rangle + e^{2\pi i 0.j_2\dots j_n}\vert 1\rangle\right)\dots \left(\vert 0 \rangle + e^{2\pi i 0.j_n}\vert 1\rangle\right)}{2^{n/2}} \vert j_2 \dots j_n\rangle
+\]</div>
+<p>At the end we use swap gates to reverse the order of the qubits</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\left(\vert 0 \rangle + e^{2\pi i 0.j_n}\vert 1\rangle\right)\left(\vert 0 \rangle + e^{2\pi i 0.j_{n-1}j_n}\vert 1\rangle\right)\dots\left(\vert 0 \rangle + e^{2\pi i 0.j_1j_2\dots j_n}\vert 1\rangle\right) }{2^{n/2}} \vert j_2 \dots j_n\rangle
+\]</div>
+<p>This is just the product representation from earlier, obviously our desired output.</p>
+</div>
+<div class="section" id="quantum-fourier-transform">
+<h2><span class="section-number">2.61. </span>Quantum Fourier transform<a class="headerlink" href="#quantum-fourier-transform" title="Permalink to this headline">¶</a></h2>
+<p>Now lets turn to the Quantum Fourier transform (QFT). We’ve already
+seen the QFT for <span class="math notranslate nohighlight">\(N=2\)</span>. It is the Hadamard transform:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+H=\frac{1}{\sqrt{2}}\left[\begin{array}{cc}
+1 &amp; 1  \\
+1 &amp; -1
+\end{array}\right]
+\end{split}\]</div>
+</div>
+<div class="section" id="qft-for-n-2">
+<h2><span class="section-number">2.62. </span>QFT for <span class="math notranslate nohighlight">\(N=2\)</span><a class="headerlink" href="#qft-for-n-2" title="Permalink to this headline">¶</a></h2>
+<p>Why is this the QFT for <span class="math notranslate nohighlight">\(N=2\)</span> ? Well suppose have the single qubit
+state <span class="math notranslate nohighlight">\(a_{0}|0\rangle+a_{1}|1\rangle\)</span>. If we apply the Hadamard
+operation to this state we obtain the new state</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{\sqrt{2}}\left(a_{0}+a_{1}\right)|0\rangle+\frac{1}{\sqrt{2}}\left(a_{0}-a_{1}\right)|1\rangle=\tilde{a}_{0}|0\rangle+\tilde{a}_{1}|1\rangle .
+\]</div>
+<p>In other words the Hadamard gate performs the DFT for <span class="math notranslate nohighlight">\(N=2\)</span> on the
+amplitudes of the state! Notice that this is very different that
+computing the DFT for <span class="math notranslate nohighlight">\(N=2\)</span> : remember the amplitudes are not numbers
+which are accessible to us mere mortals, they just represent our
+description of the quantum system.</p>
+</div>
+<div class="section" id="full-qft">
+<h2><span class="section-number">2.63. </span>Full QFT<a class="headerlink" href="#full-qft" title="Permalink to this headline">¶</a></h2>
+<p>So what is the full quantum Fourier transform? It is the transform
+which takes the amplitudes of a <span class="math notranslate nohighlight">\(N\)</span> dimensional state and computes the
+Fourier transform on these amplitudes (which are then the new
+amplitudes in the computational basis.) In other words, the QFT enacts
+the transform</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{x=0}^{N-1} a_{x}|x\rangle \rightarrow \sum_{x=0}^{N-1} \tilde{a}_{x}|x\rangle=\sum_{x=0}^{N-1} \frac{1}{\sqrt{N}} \sum_{y=0}^{N-1} \omega_{N}^{-x y} a_{y}|x\rangle
+\]</div>
+</div>
+<div class="section" id="explicit-transform">
+<h2><span class="section-number">2.64. </span>Explicit transform<a class="headerlink" href="#explicit-transform" title="Permalink to this headline">¶</a></h2>
+<p>It is easy to see that this implies that the QFT performs the following transform on basis states:</p>
+<div class="math notranslate nohighlight">
+\[
+|x\rangle \rightarrow \frac{1}{\sqrt{N}} \sum_{y=0}^{N-1} \omega_{N}^{-x y}|y\rangle
+\]</div>
+<p>Thus the QFT is given by the matrix</p>
+<div class="math notranslate nohighlight">
+\[
+U_{Q F T}=\frac{1}{\sqrt{N}} \sum_{x=0}^{N-1} \sum_{y=0}^{N-1} \omega_{N}^{-y x}|y\rangle\langle x|
+\]</div>
+</div>
+<div class="section" id="id7">
+<h2><span class="section-number">2.65. </span>Unitarity<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>The last  matrix is unitary. Let’s check this:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+U_{Q F T} U_{Q F T}^{\dagger} &amp; =\frac{1}{N} \sum_{x=0}^{N-1} \sum_{y=0}^{N-1} \omega_{N}^{y x}|x\rangle\left\langle y\left|\sum_{x^{\prime}=0}^{N-1} \sum_{y^{\prime}=0}^{N-1} \omega_{N}^{-y^{\prime} x^{\prime}}\right| y^{\prime}\right\rangle\left\langle x^{\prime}\right| \\
+&amp; =\frac{1}{N} \sum_{x, y, x^{\prime}, y^{\prime}=0}^{N-1} \omega_{N}^{y x-y^{\prime} x^{\prime}} \delta_{y, y^{\prime}}|x\rangle\left\langle x^{\prime}\left|=\frac{1}{N} \sum_{x, y, x^{\prime}=0}^{N-1} \omega_{N}^{y\left(x-x^{\prime}\right)}\right| x\right\rangle\left\langle x^{\prime}\right| \\
+&amp; =\sum_{x, x^{\prime}=0}^{N-1} \delta_{x, x^{\prime}}|x\rangle\left\langle x^{\prime}\right|=I 
+\end{align*}
+\end{split}\]</div>
+</div>
+<div class="section" id="importance-of-qft">
+<h2><span class="section-number">2.66. </span>Importance of QFT<a class="headerlink" href="#importance-of-qft" title="Permalink to this headline">¶</a></h2>
+<p>The QFT is a very important transform in quantum computing. It can be
+used for all sorts of cool tasks, including, as we shall see in Shor’s
+algorithm. But before we can use it for quantum computing tasks, we
+should try to see if we can efficiently implement the QFT with a
+quantum circuit. Indeed we can and the reason we can is intimately
+related to the fast Fourier transform.</p>
+</div>
+<div class="section" id="circuit-qft">
+<h2><span class="section-number">2.67. </span>Circuit QFT<a class="headerlink" href="#circuit-qft" title="Permalink to this headline">¶</a></h2>
+<p>Let’s derive a circuit for the QFT when <span class="math notranslate nohighlight">\(N=2^{n}\)</span>. The QFT performs the transform</p>
+<div class="math notranslate nohighlight">
+\[
+|x\rangle \rightarrow \frac{1}{\sqrt{2^{n}}} \sum_{y=0}^{2^{n}-1} \omega_{N}^{-x y}|y\rangle
+\]</div>
+<p>Then we can expand out this sum</p>
+<div class="math notranslate nohighlight">
+\[
+|x\rangle \rightarrow \frac{1}{\sqrt{2^{n}}} \sum_{y_{1}, y_{2}, \ldots, y_{n} \in\{0,1\}} \omega_{N}^{-x \sum_{k=1}^{n} 2^{n-k} y_{k}}\left|y_{1}, y_{2}, \ldots, y_{n}\right\rangle
+\]</div>
+</div>
+<div class="section" id="expanding-the-exponential">
+<h2><span class="section-number">2.68. </span>Expanding the exponential<a class="headerlink" href="#expanding-the-exponential" title="Permalink to this headline">¶</a></h2>
+<p>Expanding the exponential of a sum to a product of exponentials and
+collecting these terms in from the appropriate terms we can express
+this as</p>
+<div class="math notranslate nohighlight">
+\[
+|x\rangle \rightarrow \frac{1}{\sqrt{2^{n}}} \sum_{y_{1}, y_{2}, \ldots, y_{n} \in\{0,1\}} \bigotimes_{k=1}^{n} \omega_{N}^{-x 2^{n-k} y_{k}}\left|y_{k}\right\rangle
+\]</div>
+</div>
+<div class="section" id="rearranging">
+<h2><span class="section-number">2.69. </span>Rearranging<a class="headerlink" href="#rearranging" title="Permalink to this headline">¶</a></h2>
+<p>We can rearrange the sum and products as</p>
+<div class="math notranslate nohighlight">
+\[
+|x\rangle \rightarrow \frac{1}{\sqrt{2^{n}}} \bigotimes_{k=1}^{n}\left[\sum_{y_{k} \in\{0,1\}} \omega_{N}^{-x 2^{n-k} y_{k}}\left|y_{k}\right\rangle\right]
+\]</div>
+<p>Expanding this sum yields</p>
+<div class="math notranslate nohighlight">
+\[
+|x\rangle \rightarrow \frac{1}{\sqrt{2^{n}}} \bigotimes_{k=1}^{n}\left[|0\rangle+\omega_{N}^{-x 2^{n-k}}|1\rangle\right]
+\]</div>
+</div>
+<div class="section" id="notation-for-binary-fraction">
+<h2><span class="section-number">2.70. </span>Notation for binary fraction<a class="headerlink" href="#notation-for-binary-fraction" title="Permalink to this headline">¶</a></h2>
+<p>But now notice that <span class="math notranslate nohighlight">\(\omega_{N}^{-x 2^{n-k}}\)</span> is not dependent on the
+higer order bits of <span class="math notranslate nohighlight">\(x\)</span>. It is convenient to adopt the following
+expression for a binary fraction:</p>
+<div class="math notranslate nohighlight">
+\[
+0 . x_{l} x_{l+1} \ldots x_{n}=\frac{x_{l}}{2}+\frac{x_{l+1}}{4}+\cdots+\frac{x_{n}}{2^{n-l+1}}
+\]</div>
+</div>
+<div class="section" id="more-notations">
+<h2><span class="section-number">2.71. </span>More notations<a class="headerlink" href="#more-notations" title="Permalink to this headline">¶</a></h2>
+<p>Then we can see that</p>
+<div class="math notranslate nohighlight">
+\[
+|x\rangle \rightarrow \frac{1}{\sqrt{2^{n}}}\left[|0\rangle+e^{-2 \pi i 0 . x_{n}}|1\rangle\right] \otimes\left[|0\rangle+e^{-2 \pi i 0 . x_{n-1} x_{n}}|1\rangle\right] \otimes \cdots \otimes\left[|0\rangle+e^{-2 \pi i 0 . x_{1} x_{2} \cdots x_{n}}|1\rangle\right]
+\]</div>
+<p>This is a very useful form of the QFT for <span class="math notranslate nohighlight">\(N=2^{n}\)</span>. Why? Because we
+see that only the last qubit depends on the the values of all the
+other input qubits and each further bit depends less and less on the
+input qubits. Further we note that <span class="math notranslate nohighlight">\(e^{-2 \pi i 0 . a}\)</span> is either +1
+or -1 , which reminds us of the Hadamard transform.</p>
+</div>
+<div class="section" id="deriving-a-circuit">
+<h2><span class="section-number">2.72. </span>Deriving a circuit<a class="headerlink" href="#deriving-a-circuit" title="Permalink to this headline">¶</a></h2>
+<p>So how do we use this to derive a circuit for the QFT over <span class="math notranslate nohighlight">\(N=2^{n}\)</span> ?</p>
+<p>Take the first qubit of <span class="math notranslate nohighlight">\(\left|x_{1}, \ldots, x_{n}\right\rangle\)</span> and
+apply a Hadamard transform. This produces the transform</p>
+<div class="math notranslate nohighlight">
+\[
+|x\rangle \rightarrow \frac{1}{\sqrt{2}}\left[|0\rangle+e^{-2 \pi i 0 \cdot x_{1}}|1\rangle\right] \otimes\left|x_{2}, x_{3}, \ldots, x_{n}\right\rangle
+\]</div>
+</div>
+<div class="section" id="rotation-gate">
+<h2><span class="section-number">2.73. </span>Rotation gate<a class="headerlink" href="#rotation-gate" title="Permalink to this headline">¶</a></h2>
+<p>Now define the rotation gate</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+R_{k}=\left[\begin{array}{cc}
+1 &amp; 0  \tag{30}\\
+0 &amp; \exp \left(\frac{-2 \pi i}{2^{k}}\right)
+\end{array}\right]
+\end{split}\]</div>
+<p>If we now apply controlled <span class="math notranslate nohighlight">\(R_{2}, R_{3}\)</span>, etc. gates controlled on
+the appropriate bits this enacts the transform</p>
+<div class="math notranslate nohighlight">
+\[
+|x\rangle \rightarrow \frac{1}{\sqrt{2}}\left[|0\rangle+e^{-2 \pi i 0 . x_{1} x_{2} \ldots x_{n}}|1\rangle\right] \otimes\left|x_{2}, x_{3}, \ldots, x_{n}\right\rangle
+\]</div>
+</div>
+<div class="section" id="proceeding">
+<h2><span class="section-number">2.74. </span>Proceeding<a class="headerlink" href="#proceeding" title="Permalink to this headline">¶</a></h2>
+<p>Thus we have reproduced the last term in the QFTed state. Of course
+now we can proceed to the second qubit, perform a Hadamard, and the
+appropriate controlled <span class="math notranslate nohighlight">\(R_{k}\)</span> gates and get the second to last
+qubit. Thus when we are finished we will have the transform</p>
+<div class="math notranslate nohighlight">
+\[
+|x\rangle \rightarrow \frac{1}{\sqrt{2^{n}}}\left[|0\rangle+e^{-2 \pi i 0 . x_{1} x_{2} \cdots x_{n}}|1\rangle\right] \otimes\left[|0\rangle+e^{-2 \pi i 0 . x_{1} x_{2} \cdots x_{n-1}}|1\rangle\right] \otimes \cdots \otimes\left[|0\rangle+e^{-2 \pi i 0 . x_{n}}|1\rangle\right]
+\]</div>
+<p>Reversing the order of these qubits will then produce the QFT!</p>
+<!-- The circuit we have constructed on $n$ qubits is -->
+<!-- \includegraphics[max width=\textwidth]{2024_03_18_c1d427fa6b85efa365f1g-5} --></div>
+<div class="section" id="qft">
+<h2><span class="section-number">2.75. </span>QFT<a class="headerlink" href="#qft" title="Permalink to this headline">¶</a></h2>
+<p>The Quantum Fourier Transform (QFT) has mathematically the same equation as starting point
+but the notation is generally different. We generally compute the
+quantum Fourier transform on a set of orthonormal basis state vectors
+(|0\rangle, |1\rangle, …, |N-1\rangle). The linear operator defining
+the transform is given by the action on basis states</p>
+<div class="math notranslate nohighlight">
+\[
+|j\rangle \mapsto \frac{1}{\sqrt{N}} \sum_{k=0}^{N-1} e^{2\pi ijk/N}|k\rangle.
+\]</div>
+</div>
+<div class="section" id="id8">
+<h2><span class="section-number">2.76. </span>In terms of arbitrary states<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>This can be written on arbitrary states,</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{j=0}^{N-1}x_j|j\rangle \mapsto \sum_{k=0}^{N-1} y_k|k\rangle
+\]</div>
+<p>where each amplitude (y_k) is the discrete Fourier transform of
+(x_j).</p>
+</div>
+<div class="section" id="id9">
+<h2><span class="section-number">2.77. </span>Unitarity<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>The quantum Fourier transform is unitary. Taking (N = 2^n),
+for (n) qubits gives us the orthonormal (computational) basis</p>
+<div class="math notranslate nohighlight">
+\[
+|0\rangle, |1\rangle, ..., |2^{n}-1\rangle.
+\]</div>
+</div>
+<div class="section" id="id10">
+<h2><span class="section-number">2.78. </span>Binary representation<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<p>Each of the computational basis states can be represented in binary</p>
+<div class="math notranslate nohighlight">
+\[
+j = j_1j_2 \cdots j_n
+\]</div>
+<p>where each (j_k) is either (0) or (1), and the corresponding
+binary vector is (|j_1j_2 \cdots j_n\rangle).</p>
+</div>
+<div class="section" id="id11">
+<h2><span class="section-number">2.79. </span>Rewriting the QFT<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<p>The quantum Fourier
+transform on one of these (n)-qubit vectors can be written as,</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+|j_1j_2 \cdots j_n \rangle = \frac{\left(|0\rangle +e^{2\pi i0.j_n}|1\rangle\right) \otimes \left(|0\rangle +e^{2\pi i0.j_{n-1}j_n}|1\rangle\right) \otimes \cdots \otimes \left(|0\rangle +e^{2\pi i0.j_1j_2 \cdots j_n}|1\rangle\right)}{2^{n/2}}
+\end{align*}
+\]</div>
+</div>
+<div class="section" id="id12">
+<h2><span class="section-number">2.80. </span>Short hand notation<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<p>In the above, we use the notation</p>
+<div class="math notranslate nohighlight">
+\[
+0.j_lj_{l+1} \cdots j_n = \frac{j_l}{2} + \frac{j_{l+1}}{2^2} + \cdots + \frac{j_n}{2^{n-l+1}}
+\]</div>
+<p>If we start counting from zero, that is we have instead</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+|j_0j_1 \cdots j_{n-1} \rangle = \frac{\left(|0\rangle +e^{2\pi i0.j_{n-1}}|1\rangle\right) \otimes \left(|0\rangle +e^{2\pi i0.j_{n-2}j_n}|1\rangle\right) \otimes \cdots \otimes \left(|0\rangle +e^{2\pi i0.j_0j_1 \cdots j_{n-1}}|1\rangle\right)}{2^{n/2}},
+\end{align*}
+\]</div>
+<p>we get</p>
+<div class="math notranslate nohighlight">
+\[
+0.j_lj_{l+1} \cdots j_{n-1} = \frac{j_l}{2} + \frac{j_{l+1}}{2^2} + \cdots + \frac{j_{n-1}}{2^{n-l}}
+\]</div>
+</div>
+<div class="section" id="id13">
+<h2><span class="section-number">2.81. </span>Four qubit system<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<p>The basis states are</p>
+<div class="math notranslate nohighlight">
+\[
+|j_1j_2j_3j_4 \rangle
+\]</div>
+<p>where (j_k) is either (0) or (1). We have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+0.j_3 &amp;= \frac{j_3}{2} \\
+0.j_2j_3 &amp;= \frac{j_2}{2} + \frac{j_3}{4} \\
+0.j_1j_2j_3 &amp;= \frac{j_1}{2} + \frac{j_2}{4} + \frac{j_3}{8} \\
+0.j_0j_1j_2j_3 &amp;= \frac{j_0}{2} + \frac{j_1}{4} + \frac{j_2}{8} + \frac{j_3}{16} \\
+\end{align*}
+\end{split}\]</div>
+</div>
+<div class="section" id="id14">
+<h2><span class="section-number">2.82. </span>QFT acts as follows<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<p>The quantum Fourier transform acts as follows:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+|j_1j_2j_3j_4 \rangle \mapsto \frac{1}{\sqrt{2^{4/2}}}
+\left(|0\rangle + e^{2 \pi i 0.j4}|1\rangle \right) \otimes 
+\left(|0\rangle + e^{2 \pi i 0.j_3j4}|1\rangle \right) \otimes 
+\left(|0\rangle + e^{2 \pi i 0.j_2j_3j4}|1\rangle \right) \otimes 
+\left(|0\rangle + e^{2 \pi i 0.j_1j_2j_3j4}|1\rangle \right) 
+\end{align*}
+\]</div>
+</div>
+<div class="section" id="id15">
+<h2><span class="section-number">2.83. </span>Quantum circuits<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<p>To compose a quantum circuit that calculates the quantum Fourier
+transform we use the operators</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+R_k = 
+\begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; e^{2\pi i/2^k}
+\end{bmatrix}.
+\end{align*}
+\end{split}\]</div>
+</div>
+<div class="section" id="id16">
+<h2><span class="section-number">2.84. </span>Rotation gates<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
+<p>In this example, the (R_k) gates are:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+R_1 = \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; e^{2 \pi i /2^0}
+\end{bmatrix} = 
+\begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{bmatrix}, \quad 
+R_2 = \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; e^{2 \pi i /2^2}
+\end{bmatrix}, \quad 
+R_3 = \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; e^{2 \pi i /2^3}
+\end{bmatrix}, \quad 
+R_4 = \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; e^{2 \pi i /2^4}
+\end{bmatrix}.
+\end{align*}
+\end{split}\]</div>
+</div>
+<div class="section" id="id17">
+<h2><span class="section-number">2.85. </span>Using the Hadamard gate<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
+<p>The Hadamard
+gate on a single qubit creates an equal superposition of its basis
+states, assuming it is not already in a superposition, such that</p>
+<div class="math notranslate nohighlight">
+\[
+H\vert 0 \rangle = \frac{1}{\sqrt{2}} \left(\vert 0 \rangle + \vert 1\rangle\right), \quad H\vert 1\rangle = \frac{1}{\sqrt{2}} \left(\vert 0 \rangle - \vert 1\rangle\right)
+\]</div>
+<p>The <span class="math notranslate nohighlight">\(R_k\)</span> gate simply adds a phase if the qubit it acts on is in the state <span class="math notranslate nohighlight">\(\vert 1\rangle\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+R_k\vert 0 \rangle = \vert 0 \rangle, \quad R_k\vert 1\rangle = e^{2\pi i/2^{k}}\vert 1\rangle
+\]</div>
+<p>Since all this gates are unitary, the quantum Fourier transfrom is also unitary.</p>
+</div>
+<div class="section" id="id18">
+<h2><span class="section-number">2.86. </span>Algorithm<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
+<p>Assume we have a quantum register of <span class="math notranslate nohighlight">\(n\)</span> qubits in the state <span class="math notranslate nohighlight">\(\vert j_1 j_2 \dots j_n\rangle\)</span>.
+Applying the Hadamard gate to the first qubit
+produces the state</p>
+<div class="math notranslate nohighlight">
+\[
+H\vert j_1 j_2 \dots j_n\rangle = \frac{\left(\vert 0 \rangle + e^{2\pi i 0.j_1}\vert 1\rangle\right)}{2^{1/2}} \vert j_2 \dots j_n\rangle.
+\]</div>
+</div>
+<div class="section" id="id19">
+<h2><span class="section-number">2.87. </span>Binary fraction<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
+<p>Here we have made use of the binary fraction to represent the action of the Hadamard gate</p>
+<div class="math notranslate nohighlight">
+\[
+\exp{2\pi i 0.j_1} = -1,
+\]</div>
+<p>if <span class="math notranslate nohighlight">\(j_1 = 1\)</span> and <span class="math notranslate nohighlight">\(+1\)</span> if <span class="math notranslate nohighlight">\(j_1 = 0\)</span>.</p>
+</div>
+<div class="section" id="id20">
+<h2><span class="section-number">2.88. </span>Controlled rotation gate<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
+<p>Furthermore we can apply the controlled-<span class="math notranslate nohighlight">\(R_k\)</span> gate, with all the other qubits <span class="math notranslate nohighlight">\(j_k\)</span> for <span class="math notranslate nohighlight">\(k&gt;1\)</span> as control qubits to produce the state</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\left(\vert 0 \rangle + e^{2\pi i 0.j_1j_2\dots j_n}\vert 1\rangle\right)}{2^{1/2}} \vert j_2 \dots j_n\rangle
+\]</div>
+<p>Next we do the same procedure on qubit <span class="math notranslate nohighlight">\(2\)</span> producing the state</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\left(\vert 0 \rangle + e^{2\pi i 0.j_1j_2\dots j_n}\vert 1\rangle\right)\left(\vert 0 \rangle + e^{2\pi i 0.j_2\dots j_n}\vert 1\rangle\right)}{2^{2/2}} \vert j_2 \dots j_n\rangle
+\]</div>
+</div>
+<div class="section" id="id21">
+<h2><span class="section-number">2.89. </span>Applying to all qubits<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h2>
+<p>Doing this for all <span class="math notranslate nohighlight">\(n\)</span> qubits yields state</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\left(\vert 0 \rangle + e^{2\pi i 0.j_1j_2\dots j_n}\vert 1\rangle\right)\left(\vert 0 \rangle + e^{2\pi i 0.j_2\dots j_n}\vert 1\rangle\right)\dots \left(\vert 0 \rangle + e^{2\pi i 0.j_n}\vert 1\rangle\right)}{2^{n/2}} \vert j_2 \dots j_n\rangle
+\]</div>
+<p>At the end we use swap gates to reverse the order of the qubits</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\left(\vert 0 \rangle + e^{2\pi i 0.j_n}\vert 1\rangle\right)\left(\vert 0 \rangle + e^{2\pi i 0.j_{n-1}j_n}\vert 1\rangle\right)\dots\left(\vert 0 \rangle + e^{2\pi i 0.j_1j_2\dots j_n}\vert 1\rangle\right) }{2^{n/2}} \vert j_2 \dots j_n\rangle
+\]</div>
+<p>This is just the product representation from earlier, obviously our desired output.</p>
+</div>
+<div class="section" id="id22">
+<h2><span class="section-number">2.90. </span>QFT<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
+<p>The Quantum Fourier Transform (QFT) has mathematically the same equation as starting point
+but the notation is generally different. We generally compute the
+quantum Fourier transform on a set of orthonormal basis state vectors
+(|0\rangle, |1\rangle, …, |N-1\rangle). The linear operator defining
+the transform is given by the action on basis states</p>
+<div class="math notranslate nohighlight">
+\[
+|j\rangle \mapsto \frac{1}{\sqrt{N}} \sum_{k=0}^{N-1} e^{2\pi ijk/N}|k\rangle.
+\]</div>
+</div>
+<div class="section" id="id23">
+<h2><span class="section-number">2.91. </span>In terms of arbitrary states<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h2>
+<p>This can be written on arbitrary states,</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{j=0}^{N-1}x_j|j\rangle \mapsto \sum_{k=0}^{N-1} y_k|k\rangle
+\]</div>
+<p>where each amplitude (y_k) is the discrete Fourier transform of
+(x_j).</p>
+</div>
+<div class="section" id="id24">
+<h2><span class="section-number">2.92. </span>Unitarity<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h2>
+<p>The quantum Fourier transform is unitary. Taking (N = 2^n),
+for (n) qubits gives us the orthonormal (computational) basis</p>
+<div class="math notranslate nohighlight">
+\[
+|0\rangle, |1\rangle, ..., |2^{n}-1\rangle.
+\]</div>
+</div>
+<div class="section" id="id25">
+<h2><span class="section-number">2.93. </span>Binary representation<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h2>
+<p>Each of the computational basis states can be represented in binary</p>
+<div class="math notranslate nohighlight">
+\[
+j = j_1j_2 \cdots j_n
+\]</div>
+<p>where each (j_k) is either (0) or (1), and the corresponding
+binary vector is (|j_1j_2 \cdots j_n\rangle).</p>
+</div>
+<div class="section" id="id26">
+<h2><span class="section-number">2.94. </span>Rewriting the QFT<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h2>
+<p>The quantum Fourier
+transform on one of these (n)-qubit vectors can be written as,</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+|j_1j_2 \cdots j_n \rangle = \frac{\left(|0\rangle +e^{2\pi i0.j_n}|1\rangle\right) \otimes \left(|0\rangle +e^{2\pi i0.j_{n-1}j_n}|1\rangle\right) \otimes \cdots \otimes \left(|0\rangle +e^{2\pi i0.j_1j_2 \cdots j_n}|1\rangle\right)}{2^{n/2}}
+\end{align*}
+\]</div>
+</div>
+<div class="section" id="id27">
+<h2><span class="section-number">2.95. </span>Short hand notation<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h2>
+<p>In the above, we use the notation</p>
+<div class="math notranslate nohighlight">
+\[
+0.j_lj_{l+1} \cdots j_n = \frac{j+l}{2} + \frac{j_{l+1}}{2^2} + \cdots + \frac{j_n}{2^{m-l+1}}
+\]</div>
+</div>
+<div class="section" id="id28">
+<h2><span class="section-number">2.96. </span>Four qubit system<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h2>
+<p>The basis states are</p>
+<div class="math notranslate nohighlight">
+\[
+|j_1j_2j_3j_4 \rangle
+\]</div>
+<p>where (j_k) is either (0) or (1). We have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+0.j_3 &amp;= \frac{j_3}{2} \\
+0.j_2j_3 &amp;= \frac{j_2}{2} + \frac{j_3}{4} \\
+0.j_1j_2j_3 &amp;= \frac{j_1}{2} + \frac{j_2}{4} + \frac{j_3}{8} \\
+0.j_0j_1j_2j_3 &amp;= \frac{j_0}{2} + \frac{j_1}{4} + \frac{j_2}{8} + \frac{j_3}{16} \\
+\end{align*}
+\end{split}\]</div>
+</div>
+<div class="section" id="id29">
+<h2><span class="section-number">2.97. </span>QFT acts as follows<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h2>
+<p>The quantum Fourier transform acts as follows:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+|j_1j_2j_3j_4 \rangle \mapsto \frac{1}{\sqrt{2^{4/2}}}
+\left(|0\rangle + e^{2 \pi i 0.j4}|1\rangle \right) \otimes 
+\left(|0\rangle + e^{2 \pi i 0.j_3j4}|1\rangle \right) \otimes 
+\left(|0\rangle + e^{2 \pi i 0.j_2j_3j4}|1\rangle \right) \otimes 
+\left(|0\rangle + e^{2 \pi i 0.j_1j_2j_3j4}|1\rangle \right) 
+\end{align*}
+\]</div>
+</div>
+<div class="section" id="id30">
+<h2><span class="section-number">2.98. </span>Quantum circuits<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h2>
+<p>To compose a quantum circuit that calculates the quantum Fourier
+transform we use the operators</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+R_k = 
+\begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; e^{2\pi i/2^k}
+\end{bmatrix}.
+\end{align*}
+\end{split}\]</div>
+</div>
+<div class="section" id="id31">
+<h2><span class="section-number">2.99. </span>Rotation gates<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h2>
+<p>In this example, the (R_k) gates are:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+R_1 = \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; e^{2 \pi i /2^0}
+\end{bmatrix} = 
+\begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{bmatrix}, \quad 
+R_2 = \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; e^{2 \pi i /2^2}
+\end{bmatrix}, \quad 
+R_3 = \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; e^{2 \pi i /2^3}
+\end{bmatrix}, \quad 
+R_4 = \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; e^{2 \pi i /2^4}
+\end{bmatrix}.
+\end{align*}
+\end{split}\]</div>
+</div>
+<div class="section" id="id32">
+<h2><span class="section-number">2.100. </span>Using the Hadamard gate<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h2>
+<p>The Hadamard
+gate on a single qubit creates an equal superposition of its basis
+states, assuming it is not already in a superposition, such that</p>
+<div class="math notranslate nohighlight">
+\[
+H\vert 0 \rangle = \frac{1}{\sqrt{2}} \left(\vert 0 \rangle + \vert 1\rangle\right), \quad H\vert 1\rangle = \frac{1}{\sqrt{2}} \left(\vert 0 \rangle - \vert 1\rangle\right)
+\]</div>
+<p>The <span class="math notranslate nohighlight">\(R_k\)</span> gate simply adds a phase if the qubit it acts on is in the state <span class="math notranslate nohighlight">\(\vert 1\rangle\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+R_k\vert 0 \rangle = \vert 0 \rangle, \quad R_k\vert 1\rangle = e^{2\pi i/2^{k}}\vert 1\rangle
+\]</div>
+<p>Since all this gates are unitary, the quantum Fourier transfrom is also unitary.</p>
+</div>
+<div class="section" id="id33">
+<h2><span class="section-number">2.101. </span>Algorithm<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h2>
+<p>Assume we have a quantum register of <span class="math notranslate nohighlight">\(n\)</span> qubits in the state <span class="math notranslate nohighlight">\(\vert j_1 j_2 \dots j_n\rangle\)</span>.
+Applying the Hadamard gate to the first qubit
+produces the state</p>
+<div class="math notranslate nohighlight">
+\[
+H\vert j_1 j_2 \dots j_n\rangle = \frac{\left(\vert 0 \rangle + e^{2\pi i 0.j_1}\vert 1\rangle\right)}{2^{1/2}} \vert j_2 \dots j_n\rangle.
+\]</div>
+</div>
+<div class="section" id="id34">
+<h2><span class="section-number">2.102. </span>Binary fraction<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h2>
+<p>Here we have made use of the binary fraction to represent the action of the Hadamard gate</p>
+<div class="math notranslate nohighlight">
+\[
+\exp{2\pi i 0.j_1} = -1,
+\]</div>
+<p>if <span class="math notranslate nohighlight">\(j_1 = 1\)</span> and <span class="math notranslate nohighlight">\(+1\)</span> if <span class="math notranslate nohighlight">\(j_1 = 0\)</span>.</p>
+</div>
+<div class="section" id="id35">
+<h2><span class="section-number">2.103. </span>Controlled rotation gate<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h2>
+<p>Furthermore we can apply the controlled-<span class="math notranslate nohighlight">\(R_k\)</span> gate, with all the other qubits <span class="math notranslate nohighlight">\(j_k\)</span> for <span class="math notranslate nohighlight">\(k&gt;1\)</span> as control qubits to produce the state</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\left(\vert 0 \rangle + e^{2\pi i 0.j_1j_2\dots j_n}\vert 1\rangle\right)}{2^{1/2}} \vert j_2 \dots j_n\rangle
+\]</div>
+<p>Next we do the same procedure on qubit <span class="math notranslate nohighlight">\(2\)</span> producing the state</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\left(\vert 0 \rangle + e^{2\pi i 0.j_1j_2\dots j_n}\vert 1\rangle\right)\left(\vert 0 \rangle + e^{2\pi i 0.j_2\dots j_n}\vert 1\rangle\right)}{2^{2/2}} \vert j_2 \dots j_n\rangle
+\]</div>
+</div>
+<div class="section" id="id36">
+<h2><span class="section-number">2.104. </span>Applying to all qubits<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h2>
+<p>Doing this for all <span class="math notranslate nohighlight">\(n\)</span> qubits yields state</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\left(\vert 0 \rangle + e^{2\pi i 0.j_1j_2\dots j_n}\vert 1\rangle\right)\left(\vert 0 \rangle + e^{2\pi i 0.j_2\dots j_n}\vert 1\rangle\right)\dots \left(\vert 0 \rangle + e^{2\pi i 0.j_n}\vert 1\rangle\right)}{2^{n/2}} \vert j_2 \dots j_n\rangle
+\]</div>
+<p>At the end we use swap gates to reverse the order of the qubits</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\left(\vert 0 \rangle + e^{2\pi i 0.j_n}\vert 1\rangle\right)\left(\vert 0 \rangle + e^{2\pi i 0.j_{n-1}j_n}\vert 1\rangle\right)\dots\left(\vert 0 \rangle + e^{2\pi i 0.j_1j_2\dots j_n}\vert 1\rangle\right) }{2^{n/2}} \vert j_2 \dots j_n\rangle
+\]</div>
+<p>This is just the product representation from earlier, obviously our desired output.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="day1.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Basic notion of quantum computing</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="day4.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Variational Quantum Eigensolver and the Lipkin model</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Alexei Bazavov, Zohreh Davoudi, Morten Hjorth-Jensen, Dean Lee, Ryan LaRose, and Alessandro Roggero<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
