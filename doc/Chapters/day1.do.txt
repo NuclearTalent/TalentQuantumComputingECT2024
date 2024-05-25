@@ -2,7 +2,7 @@ TITLE: Basic notion of quantum computing
 AUTHOR: Nuclear TALENT course on quantum computing
 DATE: today
 
-
+# To do: add more material on linear algebra, add simple codes
 
 !split
 ===== Overview of first day, Basic Notions of Quantum Mechanics =====
