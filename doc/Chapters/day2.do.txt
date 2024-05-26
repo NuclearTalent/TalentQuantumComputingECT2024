@@ -2,6 +2,8 @@ TITLE: Quantum Fourier Transforms and the Quantum Phase Estimation algorithm
 AUTHOR: Nuclear Talent course
 DATE: today
 
+# To do: clean properly and add own code examples
+
 !split
 ===== Overarching motivation =====
 
