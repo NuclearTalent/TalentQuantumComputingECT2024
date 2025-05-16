@@ -142,100 +142,40 @@ The Nuclear Talent course is scheduled to start June 16 and end July 4 of 2025. 
 
 ###  Tuesday July 1
 
-- 915am-10am: 
+- 915am-10am: Quantum simulation of scattering in scala field theory, part 1
 - 10am-1015am: Break
-- 1015am-11: 
+- 1015am-11: Quantum simulation of scattering in scala field theory, part 2
 - 11am-1130am: Coffee break
-- 1130am-1215pm: 
+- 1130am-1215pm: Quantum simulation of scattering in scala field theory, part 3
 - 1215pm-230pm: Lunch
 - 230pm-6pm: Exercises and discussions of computational projects
 
 ###  Wednesday July 2
 
-- 915am-10am: 
+- 915am-10am: Hamiltonian formulations of gauge theories (abelian)
 - 10am-1015am: Break
-- 1015am-11: 
+- 1015am-11: Hamiltonian formulations of gauge theories (non-abelian), part 1
 - 11am-1130am: Coffee break
-- 1130am-1215pm: 
+- 1130am-1215pm: Hamiltonian formulations of gauge theories (non-abelian), part 2
 - 1215pm-230pm: Lunch
 - 230pm-6pm: Exercises and discussions of computational projects
 
 ###  Thursday July 3
 
-- 915am-10am: 
+- 915am-10am: Time evolution in gauge theories
 - 10am-1015am: Break
-- 1015am-11: 
+- 1015am-11:  Time evolution in gauge theories
 - 11am-1130am: Coffee break
-- 1130am-1215pm: 
+- 1130am-1215pm: Applications to Quantum Field Theory  (QFT)
 - 1215pm-230pm: Lunch
 - 230pm-6pm: Exercises and discussions of computational projects
 
 ###  Friday July 4
-- 915am-10am: 
+- 915am-10am: Applications to (QFT)
 - 10am-1015am: Break
-- 1015am-11: 
+- 1015am-11: Summary of course and discussion of projects
 - 11am-1130am: Coffee break
-- 1130am-1215pm: 
+- 1130am-1215pm: Discussion of projects
 - 1215pm-230pm: Lunch
 - 230pm-6pm: Exercises and discussions of computational projects
 
-
-
-  Wednesday  & 
-  Thursday & Variational Quantum & Simple Hamiltonians & Implementing QPE & \\
-            & Eigensolver (VQE) & & Work  on VQE & \\
-  Friday  & Nuclear physics  & Lipkin model & VQE implementation & \\
-           & Hamiltonians     & and Rodeo algorithm  & of the Lipkin model & \\ \hline
-
-
-The second week starts with a discussion of product formulae such as
-the Lie-Trotter-Suzuki approximation and how to simulate Hamiltonian
-dynamics.  Thereafter we discuss in detail how to encode fermionic and
-bosonic systems through for example the so-called Jordan-Wigner
-transformation. This will allow us to study more general Hamiltonians
-such as a pionless EFT based Hamiltonian and nuclear response function
-and neutrino dynamics.  Entanglement in nuclear many-body systems will
-also be discussed before we wrap up the week with a discussion of
-noise mitigation and quantum error correction algorithms.
-
-Given the more general Hamiltonians, the codes developed during the
-first week can be extended to include more Hamiltonians and systems of
-relevance for nuclear physics.
-
-
-
-\begin{table}[hbtp]
-\begin{tabular}{|l|l|l|l|l|} \hline
-& First session  & Second session  & Exercises and project work & Student presentations \\ \hline
-
-  Wednesday &     & of pionless EFT, part 2 & of pionless EFT & \\
-  Thursday & Nuclear response & Neutrino dynamics  & Exercises and & \\
-           & functions  &  in dense environments & project work & \\
-  Friday & Noise mitigation and & Quantum error correction   & Exercises and project work & \\
-  & NISQ computing & fault tolerance  &  & \\ \hline
-
-
-
-\begin{table}[hbtp]
-\begin{tabular}{|l|l|l|l|l|} \hline
-    & First session  & Second session  & Exercises and project work & Student presentations \\ \hline
-  Monday & Quantum simulation of   & Quantum simulation of   & Exercises & \\
-         & scattering in scalar field theory, I & scattering in scalar field theory, II & and project work & \\
-  Tuesday & Hamiltonian formulations of & Hamiltonian formulations of & Exercises & \\
-          & gauge theories (Abelian)    & gauge theories (non-Abelian) & and project work & \\
-  Wednesday & Time evolution  & Time evolution & Exercises  & \\
-            & in gauge theories & in gauge theories & and project work \\
-  Thursday & Applications to QFT & Applications to QFT& Project work & \\
-  Friday & Summary of course & Discussion of projects  & Project work & \\ \hline
-\end{tabular}
-\caption{Teaching schedule third  week}
-\end{table}
-
-Depending on our progress during the first two weeks, the schedule of
-the last week may be subject to changes. The tentative plan for the
-final week is to dedicate it a discussion of quantum computing for
-quantum (gauge) field theories. Here the learning outcomes will focus
-on quantum simulations of scattering in scalar field theory,
-Hamiltonian formulations of gauge theories and time evolution in gauge
-theories, Abelian and non-Abelian, with final applications. The course
-ends with a summary and discussions of the projects.
