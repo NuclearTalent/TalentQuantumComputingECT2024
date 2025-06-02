@@ -12,69 +12,51 @@ The Nuclear Talent course is scheduled to start June 16 and end July 4 of 2025. 
 ## Week 1, June 16-20
 
 ###  Monday June 16
-- 8am-9am: Registration 
-- 9am-915am: Welcome by ECT* director Bira van Kolck
-- 915am-10am: Basic elements of quantum computing and brief review of relevant quantum mechanical properties
-- 10am-1015am: Break
-- 1015am-11: Qubits, density matrices, and entanglement
-- 11am-1130am: Coffee break
-- 1130am-1215pm: quantum gates and quantum circuits
-- 1215pm-230pm: Lunch
-- 230pm-6pm: Exercises and discussions of computational projects
 
-**- 8:00am-9:00am: Registration 
-- 9am-915am: Welcome by ECT* director Bira van Kolck
-- 915am-10:30am: Basic elements of quantum computing and brief review of relevant quantum-mechanical properties
+- 8:00am-9:00am: Registration 
+- 9:00am-9:15am: Welcome by ECT* director Bira van Kolck
+- 9:15am-10:30am: Basic quantum computing I
 - 10:30am-11:00am: Coffee Break
 - 11:00am-12:15pm: Hamiltonian formulation of lattice gauge theories I
 - 12:15pm-2:30pm: Lunch
-- 2:30pm-6:00pm: Exercises and discussions of computational projects**
+- 2:30pm-6:00pm: Exercises and discussions of computational projects
 
 
 ###  Tuesday June 17
 
-- 915am-10am: Repetition from Monday and start discussion of Quantum Fourier transforms
-- 10am-1015am: Break
-- 1015am-11: Quantum Fourier Transforms (QFTs)
-- 11am-1130am: Coffee break
-- 1130am-1215pm: Quantum Fourier Transforms and circuits for QFTs
-- 1215pm-230pm: Lunch
-- 230pm-6pm: Exercises and discussions of computational projects
+- 915am-10:30am: Basic quantum computing II
+- 10:30am-11:00am: Coffee Break
+- 11:00am-12:15pm: Hamiltonian formulation of lattice gauge theories II
+- 12:15pm-2:30pm: Lunch
+- 2:30pm-6:00pm: Exercises and discussions of computational projects
 
 
 ###  Wednesday June 18
 
-- 915am-10am: Repetition of QFTs and Quantum Phase Estimation (QPE) algorithm
-- 10am-1015am: Break
-- 1015am-11: How to implement the QPE algorithm
-- 11am-1130am: Coffee break
-- 1130am-1215pm: Simple eigenvalue problems and the QPE
-- 1215pm-230pm: Lunch
-- 230pm-6pm: Exercises and discussions of computational projects
-
+- 915am-10:30am: Basic quantum computing III
+- 10:30am-11:00am: Coffee Break
+- 11:00am-12:15pm: Quantum computation of lattice gauge theories I
+- 12:15pm-2:30pm: Lunch
+- 2:30pm-6:00pm: Exercises and discussions of computational projects
 
 
 ###  Thursday June 19
 
-- 915am-10am: Hamiltonian dynamics
-- 10am-1015am: Break
-- 1015am-11: Lie-Trotter-Suzuki and formulas for simulations, part 1
-- 11am-1130am: Coffee break
-- 1130am-1215pm: Lie-Trotter-Suzuki and formulas for simulations, part 2
-- 1215pm-230pm: Lunch
-- 230pm-6pm: Exercises and discussions of computational projects
+- 915am-10:30am: Basic quantum computing IV
+- 10:30am-11:00am: Coffee Break
+- 11:00am-12:15pm: Quantum computation of lattice gauge theories II
+- 12:15pm-2:30pm: Lunch
+- 2:30pm-6:00pm: Exercises and discussions of computational projects
 
 
 ###  Friday June 20
 
-- 915am-10am:  Encoding (relativistic and nonrelativistic) fermions and bosons on quantum computers, first part
-- 10am-1015am: Break
-- 1015am-11: Encoding (relativistic and nonrelativistic) fermions and bosons on quantum computers, second part
-- 11am-1130am: Coffee break
-- 1130am-1215pm: Quantum simulation of pionless EFT
-- 1215pm-230pm: Lunch
-- 230pm-6pm: Exercises and discussions of computational projects
-
+- 915am-10:30am: Basic quantum computing V
+- 10:30am-11:00am: Coffee Break
+- 11:00am-12:15pm: Quantum computation of lattice gauge theories III
+- 12:15pm-2:30pm: Lunch
+- 2:30pm-6:00pm: Exercises and discussions of computational projects
+  
 
 ## Week 2, June 23-27
 
