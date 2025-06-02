@@ -24,7 +24,7 @@ The Nuclear Talent course is scheduled to start June 16 and end July 4 of 2025. 
 
 ###  Tuesday June 17
 
-- 915am-10:30am: Basic quantum computing II
+- 9:15am-10:30am: Basic quantum computing II
 - 10:30am-11:00am: Coffee Break
 - 11:00am-12:15pm: Hamiltonian formulation of lattice gauge theories II
 - 12:15pm-2:30pm: Lunch
@@ -33,7 +33,7 @@ The Nuclear Talent course is scheduled to start June 16 and end July 4 of 2025. 
 
 ###  Wednesday June 18
 
-- 915am-10:30am: Basic quantum computing III
+- 9:15am-10:30am: Basic quantum computing III
 - 10:30am-11:00am: Coffee Break
 - 11:00am-12:15pm: Quantum computation of lattice gauge theories I
 - 12:15pm-2:30pm: Lunch
@@ -42,7 +42,7 @@ The Nuclear Talent course is scheduled to start June 16 and end July 4 of 2025. 
 
 ###  Thursday June 19
 
-- 915am-10:30am: Basic quantum computing IV
+- 9:15am-10:30am: Basic quantum computing IV
 - 10:30am-11:00am: Coffee Break
 - 11:00am-12:15pm: Quantum computation of lattice gauge theories II
 - 12:15pm-2:30pm: Lunch
@@ -51,7 +51,7 @@ The Nuclear Talent course is scheduled to start June 16 and end July 4 of 2025. 
 
 ###  Friday June 20
 
-- 915am-10:30am: Basic quantum computing V
+- 9:15am-10:30am: Basic quantum computing V
 - 10:30am-11:00am: Coffee Break
 - 11:00am-12:15pm: Quantum computation of lattice gauge theories III
 - 12:15pm-2:30pm: Lunch
