@@ -22,6 +22,14 @@ The Nuclear Talent course is scheduled to start June 16 and end July 4 of 2025. 
 - 1215pm-230pm: Lunch
 - 230pm-6pm: Exercises and discussions of computational projects
 
+**- 8:00am-9:00am: Registration 
+- 9am-915am: Welcome by ECT* director Bira van Kolck
+- 915am-10:30am: Basic elements of quantum computing and brief review of relevant quantum-mechanical properties
+- 10:30am-11:00am: Coffee Break
+- 11:00am-12:15pm: Hamiltonian formulation of lattice gauge theories I
+- 12:15pm-2:30pm: Lunch
+- 2:30pm-6:00pm: Exercises and discussions of computational projects**
+
 
 ###  Tuesday June 17
 
