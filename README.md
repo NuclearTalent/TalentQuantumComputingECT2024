@@ -35,7 +35,7 @@ NOTES
 | :---- | :---- | :---- |
 |   8.00am-  9.00am | Registration |  |
 |   9.00am-  9.15am | Welcome by ECT\* director Bira van Kolck |  |
-|   9.15am-10.30am | Basic elements of quantum computing and brief review of relevant quantum mechanical properties. Qubits, density matrices, and entanglement. Short break included | Morten |
+|   9.15am-10.30am | Basic elements of quantum computing and brief review of relevant quantum mechanical properties. Qubits, density matrices, and entanglement. [website]: https://stackoverflow.com | Morten |
 | 10.30am-11.00am | Coffee break |  |
 | 11.00am-12.15pm | Quantum gates and quantum circuits | Morten |
 | 12.15pm-  2.30pm | Lunch |  |
