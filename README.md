@@ -87,11 +87,11 @@ NOTES
 
 | Time | Topic | Lecturers |
 | :---- | :---- | :---- |
-|   9.15am-10.00am | Introducing realistic nuclear physics Hamiltonians, the Lipkin model | Morten |
+|   9.15am-10.00am | Introducing realistic nuclear physics Hamiltonians, the Lipkin model [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/MondayJune23/) | Morten |
 | 10.00am-10.15am | Break |  |
-| 10.15am-11.00am | Variational quantum eigensolver (VQE), part 1 | Ryan, Morten, Alexei |
+| 10.15am-11.00am | Variational quantum eigensolver (VQE), part 1 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/MondayJune23/)| Ryan, Morten, Alexei |
 | 11.00am-11.30am | Coffee break |  |
-| 11.30am-12.15pm | Variational quantum eigensolver (VQE), part 2 | Ryan,Morten, Alexei |
+| 11.30am-12.15pm | Variational quantum eigensolver (VQE), part 2 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/MondayJune23/)| Ryan,Morten, Alexei |
 | 12.15pm-  2.30pm | Lunch |  |
 |   2.30pm-  6.00pm | Exercises on … |  |
 
@@ -99,11 +99,11 @@ NOTES
 
 | Time | Topic | Lecturers |
 | :---- | :---- | :---- |
-|   9.15am-10.00am | Nuclear Hamiltonians and the VQE | Morten |
+|   9.15am-10.00am | Nuclear Hamiltonians and the VQE [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJune24/)| Morten |
 | 10.00am-10.15am | Break |  |
-| 10.15am-11.00am | Noise mitigation and NISQ computing 1 | Ryan |
+| 10.15am-11.00am | Noise mitigation and NISQ computing 1 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJune24/)| Ryan |
 | 11.00am-11.30am | Coffee break |  |
-| 11.30am-12.15pm | Noise mitigation and NISQ computing 2 | Ryan |
+| 11.30am-12.15pm | Noise mitigation and NISQ computing 2 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJune24/)| Ryan |
 | 12.15pm-  2.30pm | Lunch |  |
 |   2.30pm-  6.00pm | Exercises on … |  |
 
@@ -111,11 +111,11 @@ NOTES
 
 | Time | Topic | Lecturers |
 | :---- | :---- | :---- |
-|   9.15am-10.00am |  Quantum Fourier Transforms (QFTs) | Alexei, Ryan |
+|   9.15am-10.00am |  Quantum Fourier Transforms (QFTs) [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/WednesdayJune25/) | Alexei, Ryan |
 | 10.00am-10.15am | Break |  |
-| 10.15am-11.00am | Quantum Fourier Transforms and circuits for QFTs | Alexei, Ryan |
+| 10.15am-11.00am | Quantum Fourier Transforms and circuits for QFTs [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/WednesdayJune25/)| Alexei, Ryan |
 | 11.00am-11.30am | Coffee break |  |
-| 11.30am-12.15pm | QFTs and Quantum Phase Estimation (QPE) algorithm | Alexei, Ryan |
+| 11.30am-12.15pm | QFTs and Quantum Phase Estimation (QPE) algorithm [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/WednesdayJune25/)| Alexei, Ryan |
 | 12.15pm-  2.30pm | Lunch |  |
 |   2.30pm-  6.00pm | Exercises on … |  |
 
@@ -127,11 +127,11 @@ Feste Vigiliane
 
 | Time | Topic | Lecturers |
 | :---- | :---- | :---- |
-|   9.15am-10.00am | How to implement the QPE algorithm and simple eigenvalue problems | Alexei |
+|   9.15am-10.00am | How to implement the QPE algorithm and simple eigenvalue problems [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/FridayJune27/)| Alexei |
 | 10.00am-10.15am | Break |  |
-| 10.15am-11.00am | Simple eigenvalue problems and the QPE | Alexei |
+| 10.15am-11.00am | Simple eigenvalue problems and the QPE [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/FridayJune27/) | Alexei |
 | 11.00am-11.30am | Coffee break |  |
-| 11.30am-12.15pm | Nuclear response functions | Alessandro |
+| 11.30am-12.15pm | Nuclear response functions [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/FridayJune27/) | Alessandro |
 | 12.15pm-  2.30pm | Lunch |  |
 |   2.30pm-  6.00pm | Exercises on … |  |
 
@@ -141,11 +141,11 @@ Feste Vigiliane
 
 | Time | Topic | Lecturers |
 | :---- | :---- | :---- |
-|   9.15am-10.00am | Rodeo algorithm for nuclear eigenvalue problems, part 1 | Dean |
+|   9.15am-10.00am | Rodeo algorithm for nuclear eigenvalue problems, part 1 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/MondayJune30/) | Dean |
 | 10.00am-10.15am | Break |  |
-| 10.15am-11.00am | Rodeo algorithm for nuclear eigenvalue problems, part 2 | Dean |
+| 10.15am-11.00am | Rodeo algorithm for nuclear eigenvalue problems, part 2 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/MondayJune30/) | Dean |
 | 11.00am-11.30am | Coffee break |  |
-| 11.30am-12.15pm | Implementing the Rodeo algorithm | Dean |
+| 11.30am-12.15pm | Implementing the Rodeo algorithm [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/MondayJune30/) | Dean |
 | 12.15pm-  2.30pm | Lunch |  |
 |   2.30pm-  6.00pm | Exercises on … |  |
 
@@ -153,11 +153,11 @@ Feste Vigiliane
 
 | Time | Topic | Lecturers |
 | :---- | :---- | :---- |
-|   9.15am-10.00am | Quantum error correction and fault tolerance, part 1  |  Alessandro, Dean |
+|   9.15am-10.00am | Quantum error correction and fault tolerance, part 1 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJuly1/)  |  Alessandro, Dean |
 | 10.00am-10.15am | Break |  |
-| 10.15am-11.00am | Quantum error correction and fault tolerance, part 2 | Alessandro, Dean |
+| 10.15am-11.00am | Quantum error correction and fault tolerance, part 2 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJuly1/) | Alessandro, Dean |
 | 11.00am-11.30am | Coffee break |  |
-| 11.30am-12.15pm | Grover/amplitude amplification/estimation | Alessandro, Dean |
+| 11.30am-12.15pm | Grover/amplitude amplification/estimation [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJuly1/) | Alessandro, Dean |
 | 12.15pm-  2.30pm | Lunch |  |
 |   2.30pm-  6.00pm | Exercises on … |  |
 
@@ -165,11 +165,11 @@ Feste Vigiliane
 
 | Time | Topic | Lecturers |
 | :---- | :---- | :---- |
-|   9.15am-10.00am | Modern techniques (LCU,QSP,QDRIFT), part 1  | Alessandro |
+|   9.15am-10.00am | Modern techniques (LCU,QSP,QDRIFT), part 1 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/WednesdayJuly2/) | Alessandro |
 | 10.00am-10.15am | Break |  |
-| 10.15am-11.00am | Modern techniques (LCU,QSP), part 2 | Alessandro |
+| 10.15am-11.00am | Modern techniques (LCU,QSP), part 2 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/WednesdayJuly2/) | Alessandro |
 | 11.00am-11.30am | Coffee break |  |
-| 11.30am-12.15pm | Randomized quantum algorithms | Alessandro |
+| 11.30am-12.15pm | Randomized quantum algorithms [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/WednesdayJuly2/) | Alessandro |
 | 12.15pm-  2.30pm | Lunch |  |
 |   2.30pm-  6.00pm | Exercises on … |  |
 
@@ -177,11 +177,11 @@ Feste Vigiliane
 
 | Time | Topic | Lecturers |
 | :---- | :---- | :---- |
-|   9.15am-10.00am | Encoding (relativistic and nonrelativistic) fermions and bosons on quantum computers, part 1 | Dean |
+|   9.15am-10.00am | Encoding (relativistic and nonrelativistic) fermions and bosons on quantum computers, part 1 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/ThursdayJuly3/) | Dean |
 | 10.00am-10.15am | Break |  |
-| 10.15am-11.00am | Encoding (relativistic and nonrelativistic) fermions and bosons on quantum computers, part 2 | Dea |
+| 10.15am-11.00am | Encoding (relativistic and nonrelativistic) fermions and bosons on quantum computers, part 2 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/ThursdayJuly3/) | Dea |
 | 11.00am-11.30am | Coffee break |  |
-| 11.30am-12.15pm | Adiabatic state preparation? | Dean |
+| 11.30am-12.15pm | Adiabatic state preparation [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/ThursdayJuly3/) | Dean |
 | 12.15pm-  2.30pm | Lunch |  |
 |   2.30pm-  6.00pm | Exercises on … |  |
 
