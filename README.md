@@ -3,7 +3,7 @@
 This site contains educational material and the pertinent proposal for
 a Nuclear Talent course on Quantum Computing for Nuclear Physics at
 the European Center for Theoretical Nuclear Physics, Trento, Italy, June 16-July 4, 2025
-The educational material is in the form of jupyter-notebooks, pdf files etc under the doc/pub folder above. There you will the teaching for each day. The links to the lecture notes, exercises and projects are also available in the program here (links will be update).
+The educational material is in the form of jupyter-notebooks, pdf files etc under the doc/pub folder above. There you will the teaching for each day. The links to the lecture notes, exercises and projects are also available in the program here (links will be updated).
 
 # Program
 
