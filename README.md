@@ -11,13 +11,7 @@ The educational material is in the form of jupyter-notebooks, pdf files etc unde
 
 NOTES
 
-* The first week the schedule is   
-  * 9.15-10.30 Lecture  (with short break)
-  * 10.30-11 Coffee break  
-  * 11.00-12.15 Lecture  (with short break)
-  * 12.15-2.30 Lunch  
-  * 2.30-6 Hands on  
-* The second and third weeks we will try the following schedule
+* We will try the following schedule
   * 9.15-10.00 Lecture  
   * 10.-0-10.15 Break  
   * 10.15-11.00 Lecture  
