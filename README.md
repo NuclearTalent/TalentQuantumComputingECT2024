@@ -3,7 +3,7 @@
 This site contains educational material and the pertinent proposal for
 a Nuclear Talent course on Quantum Computing for Nuclear Physics at
 the European Center for Theoretical Nuclear Physics, Trento, Italy, June 16-July 4, 2025
-The educational material is in the form of jupyter-notebooks, pdf files etc under the doc/pub folder above. There you will the teaching for each day. The links to the lecture notes, exercises and projects are also available in the program here (links will be updated).
+The educational material is in the form of jupyter-notebooks, pdf files etc under the doc/pub folder above. There you will the teaching material for each day. The links to the lecture notes, exercises and projects are also available in the program here (links will be updated).
 
 # Program
 
@@ -23,7 +23,7 @@ The educational material is in the form of jupyter-notebooks, pdf files etc unde
 | 11.00am-11.30am | Coffee break |  |
 | 11.30am-12.15pm | Quantum gates and quantum circuits [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/MondayJune16/Thirdlecture.ipynb)| Morten |
 | 12.15pm-  2.30pm | Lunch |  |
-|   2.30pm-  6.00pm | Exercises on basic use of qiskit, playing with gates and measurements single qubit rotations \+ Euler angles two qubit gates state (or gate) teleportation \[for the more experts T-injection\] simulated errors? | Alessandro, Morten, perhaps all of us? |
+|   2.30pm-  6.00pm | Exercises on basic use of qiskit, playing with gates and measurements single qubit rotations \+ Euler angles two qubit gates state (or gate) teleportation \[for the more experts T-injection\] and more [Exercises](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/Exercises)  |  |
 
 \#\#\#  Tuesday June 17
 
@@ -35,7 +35,7 @@ The educational material is in the form of jupyter-notebooks, pdf files etc unde
 | 11.00am-11.30am | Coffee break |  |
 | 11.30am-12.15am | Methods for Hamiltonian dynamics [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJune17/) | Alessandro and Ryan |
 | 12.15pm-  2.30pm | Lunch |  |
-|   2.30pm-  6.00pm | Exercises on basic implementation of time evolution and observables two site time evolution (e.g. Ising and/or Heisenberg model) measurement of some observable (on site particle density?) comparison with some exact evolution (with e.g. NumPy) \[for the more experts\] implement an Hadamard test | Alessandro, Morten, more? |
+|   2.30pm-  6.00pm | Exercises on basic implementation of time evolution and observables two site time evolution (e.g. Ising and/or Heisenberg model) measurement of some observable (on site particle density?) comparison with some exact evolution (with e.g. NumPy) \[for the more experts\] implement an Hadamard test [Exercises](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/Exercises)  |  |
 
 \#\#\#  Wednesday June 18
 
@@ -47,7 +47,7 @@ The educational material is in the form of jupyter-notebooks, pdf files etc unde
 | 11.00am-11.30am | Coffee break |  |
 | 11.30am-12.15pm | Hamiltonian formulation of lattice gauge theories III [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/WednesdayJune18/) | Zohreh |
 | 12.15pm-  2.30pm | Lunch |  |
-|   2.30pm-  6.00pm | Exercises on … Implement a 3 site Heisenberg evolution with PBC using a chain of 3 qubits  something on QFT? | Alessandro, Morten, more? |
+|   2.30pm-  6.00pm | Exercises on … Implement a 3 site Heisenberg evolution with PBC using a chain of 3 qubits  [Exercises](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/Exercises)  |  |
 
 \#\#\#  Thursday June 19
 
@@ -59,7 +59,7 @@ The educational material is in the form of jupyter-notebooks, pdf files etc unde
 | 11.00am-11.30am | Coffee break |  |
 | 11.30am-12.15pm | \[needs to be swapped with last on Friday or replaced\] Neutrino dynamics in dense environments (swap networks & qudits) [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/ThursdayJune19/) | Ale |
 | 12.15pm-  2.30pm | Lunch |  |
-|   2.30pm-  6.00pm | Exercises on … | \*\*\* |
+|   2.30pm-  6.00pm | Exercises [Exercises](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/Exercises)  | \*\*\* |
 
 \#\#\#  Friday June 20
 
@@ -71,7 +71,7 @@ The educational material is in the form of jupyter-notebooks, pdf files etc unde
 | 11.00am-11.30am | Coffee break |  |
 | 11.30am-12.15pm | Quantum computation of lattice gauge theories V [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/FridayJune20/) | Zohreh |
 | 12.15pm-  2.30pm | Lunch |  |
-|   2.30pm-  6.00pm | Exercises on … | \*\*\* |
+|   2.30pm-  6.00pm | [Exercises](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/Exercises)  | \*\*\* |
 
 # Week 2, June 23-27
 
