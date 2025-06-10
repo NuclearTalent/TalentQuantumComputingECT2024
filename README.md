@@ -1,7 +1,7 @@
 # Quantum Computing for Nuclear Physics
 
-This site contains educational material and the pertinent proposal for
-a Nuclear Talent course on Quantum Computing for Nuclear Physics at
+This site contains the educational material for
+the  Nuclear Talent course on Quantum Computing for Nuclear Physics at
 the European Center for Theoretical Nuclear Physics, Trento, Italy,
 June 16-July 4, 2025 The educational material is in the form of
 jupyter-notebooks, pdf files etc under the doc/pub folder above. There
