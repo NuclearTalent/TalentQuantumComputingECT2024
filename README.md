@@ -37,7 +37,7 @@ notes, exercises and projects are also available in the program here
 | 10.00am-10.15am | Break |  |
 | 10.15am-11.00am | Measuring observables (direct, Hadamard test), non unitary gates [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJune17/)| Alessandro and Ryan |
 | 11.00am-11.30am | Coffee break |  |
-| 11.30am-12.15am | Methods for Hamiltonian dynamics [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJune17/) | Alessandro and Ryan |
+| 11.30am-12.15am | Methods for Hamiltonian dynamics [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJune17/) | Alessandro |
 | 12.15pm-  2.30pm | Lunch |  |
 |   2.30pm-  6.00pm | Exercises on basic implementation of time evolution and observables two site time evolution (e.g. Ising and/or Heisenberg model) measurement of some observable (on site particle density?) comparison with some exact evolution (with e.g. NumPy) \[for the more experts\] implement an Hadamard test [Exercises](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/Exercises)  |  |
 
@@ -117,7 +117,7 @@ notes, exercises and projects are also available in the program here
 
 \#\#\#  Thursday June 26
 
-Feste Vigiliane
+Feste Vigiliane, ECT* is closed on Thursday
 
 \#\#\#  Friday June 27
 
