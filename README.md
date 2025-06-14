@@ -39,7 +39,12 @@ notes, exercises and projects are also available in the program here
 | 11.00am-11.30am | Coffee break |  |
 | 11.30am-12.15am | Methods for Hamiltonian dynamics [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJune17/) | Alessandro |
 | 12.15pm-  2.30pm | Lunch |  |
-|   2.30pm-  6.00pm | Exercises on basic implementation of time evolution and observables two site time evolution (e.g. Ising and/or Heisenberg model) measurement of some observable (on site particle density?) comparison with some exact evolution (with e.g. NumPy) \[for the more experts\] implement an Hadamard test [Exercises](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/Exercises)  |  |
+|   2.30pm-  4.00pm | Seminar by Justin Lietz, NVIDIA [Seminar by Justin Lietz, Nvidia; Quantum Computing at NVIDIA and Integrating Quantum Computing with HPC](Quantum Computing at NVIDIA
+-Integrating Quantum Computing with HPC)  |  |
+|   4pm-  6.00pm | Exercises on basic implementation of time evolution and observables two site time evolution (e.g. Ising and/or Heisenberg model) measurement of some observable (on site particle density?) comparison with some exact evolution (with e.g. NumPy) \[for the more experts\] implement an Hadamard test [Exercises](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/Exercises)  |  |
+
+
+
 
 \#\#\#  Wednesday June 18
 
