@@ -10,7 +10,7 @@ DATE: today
 !bblock Linear Algebra reminders, Hilbert Spaces, operators on Hilbert spaces, states, qubits and other definitions
   o Mathematical notation, Hilbert spaces and operators
   o Description of quantum systems and one-qubit systems 
-  o States in Hilbert space, pure and mixed states
+  o States in Hilbert space
   o Operators and simple gates
 _Reading recommendation_: "Scherer, Mathematics of Quantum Computations, chapter 2":"https://link.springer.com/book/10.1007/978-3-030-12358-1"
 !eblock
@@ -481,8 +481,6 @@ many-body physics, due to the exploding degrees of freedom, we
 normally search after effective ways by which we can reduce the
 involved dimensionalities to a number of degrees of freedom we can
 handle by a given many-body method.
-
-"See handwritten notes January 17 for more details":"https://github.com/CompPhysics/QuantumComputingMachineLearning/blob/gh-pages/doc/HandWrittenNotes/2024/NotesJanuary17.pdf"
 
 
 !split
