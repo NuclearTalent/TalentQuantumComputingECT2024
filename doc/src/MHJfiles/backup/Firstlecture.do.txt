@@ -2,7 +2,6 @@ TITLE: Basic elements of quantum computing
 AUTHOR: Nuclear TALENT course on quantum computing
 DATE: Monday June 16, 2025
 
-# To do: add more material on linear algebra, add simple codes
 
 !split
 ===== Overview of first day, Basic Notions of Quantum Mechanics =====
@@ -1132,7 +1131,7 @@ from which we conclude that
 This is the spectral decomposition of a hermitian and normal
 operator. It is true for any state and it is independent of the
 basis. The spectral decomposition can in turn be used to exhaustively
-specify a measurement, as we will see later this week.
+specify a measurement, as we will see later.
 
 
 !split
