@@ -38,7 +38,7 @@ Using the Bloch sphere representation of the qubit $\vert \psi \rangle
 !split
 ===== Bloch sphere exercise =====
 
-Determine the Bloch sphere angles $\theta$ and $\phi$ for the eigenstates of each Pauli matrix (see lectures from last week for the definition of Pauli matrices).
+Determine the Bloch sphere angles $\theta$ and $\phi$ for the eigenstates of each Pauli matrix. 
 
 
 
@@ -60,7 +60,7 @@ We assume now we can contruct a series of such orthogonal operators based on $\v
 !split
 ===== Qubit example =====
 
-As an example, consider the basis of two qubits $\vert 0\rangle$ and $\vert 1\rangle$ with the correspong sum
+As an example, consider the basis of two qubits $\vert 0\rangle$ and $\vert 1\rangle$ with the corresponding sum
 !bt
 \[
 \sum_{i=0}^{1}\bm{P}_i=\begin{bmatrix} 1 & 0 \\ 0 & 1\end{bmatrix}.
