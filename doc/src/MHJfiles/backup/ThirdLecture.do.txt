@@ -414,15 +414,12 @@ using only NumPy matrix operations, without relying on specialized
 quantum libraries like Qiskit or PennyLane. A quantum state of $n$
 qubits is represented as a length $2^n$ complex state vector, and each
 quantum gate corresponds to a unitary matrix that transforms this
-state vector. We support all standard one-qubit gates (including
-identity $I$, Pauli $X,Y,Z$, Hadamard $H$, phase gates $S,T$, and
-arbitrary rotations $R_x, R_y, R_z$) , as well as common two-qubit
-gates (controlled-NOT, controlled-Z, SWAP) . The simulator allows
+state vector. 
+
+The simulator allows
 composing circuits from these gates and visualizing results (either on
 the Bloch sphere for single qubits or as state-vector probabilities
-for multi-qubit states). All code is written with standard Python,
-using NumPy for linear algebra and Matplotlib for visualization.
-
+for multi-qubit states). 
 
 
 
@@ -432,33 +429,104 @@ using NumPy for linear algebra and Matplotlib for visualization.
 
 
 
-
-A single-qubit gate is represented by a $2\times 2$ unitary matrix
+As discussed above,
+a single-qubit gate is represented by a $2\times 2$ unitary matrix
 acting on the two-dimensional Hilbert space spanned by $|0\rangle$ and
-$|1\rangle$. For example, the Pauli-$X$ gate (quantum NOT) has matrix
-$X=\begin{pmatrix}0 & 1\ 1 & 0\end{pmatrix}$, which flips the
-amplitudes of $|0\rangle$ and $|1\rangle$ . Similarly,
-$Y=\begin{pmatrix}0 & -i\ i & 0\end{pmatrix}$ and $Z=\begin{pmatrix}1
-& 0\ 0 & -1\end{pmatrix}$ are 180° rotations about the $y$- and
+$|1\rangle$.
+
+
+For example, the Pauli-$X$ gate (quantum NOT) has matrix
+!bt
+\[
+X=\begin{pmatrix}0 & 1\\ 1 & 0\end{pmatrix},
+\]
+!et
+
+which flips the
+amplitudes of $|0\rangle$ and $|1\rangle.
+
+Similarly,
+!bt
+\[
+Y=\begin{pmatrix}0 & -i\\ i & 0\end{pmatrix}$,
+\]
+!et
+
+and
+!bt
+\[
+Z=\begin{pmatrix}1 & 0\\ 0 & -1\end{pmatrix},
+\]
+!et
+are 180° rotations about the $y$- and
 $z$-axes of the Bloch sphere , with $Z$ applying a phase flip to
-$|1\rangle$ (changing its sign). The Hadamard gate
-$H=\frac{1}{\sqrt{2}}\begin{pmatrix}1 & 1\ 1 & -1\end{pmatrix}$
-creates superposition: $H\vert 0\rangle =
-\frac{\vert 0\rangle+\vert 1\rangle}{\sqrt{2}}$ and $H\vert 1\rangle =
-\frac{\vert 0\rangle-\vert 1\rangle}{\sqrt{2}}$ . We also include the phase
-gates $S$ and $T$, which are quarter-turn $Z$-rotations: $S =
-\begin{pmatrix}1&0\0&i\end{pmatrix}$ (90° phase shift on $|1\rangle$)
-and $T = \begin{pmatrix}1&0\0&e^{i\pi/4}\end{pmatrix}$ (45° phase
-shift) . These satisfy $S^2 = Z$ and $T^2 = S$ . For arbitrary
+$|1\rangle$ (changing its sign).
+
+!split
+===== Hadamard and more =====
+
+The Hadamard gate
+!bt
+\[
+H=\frac{1}{\sqrt{2}}\begin{pmatrix}1 & 1\\ 1 & -1\end{pmatrix},
+\]
+!et
+creates superposition:
+!bt
+\[
+H\vert 0\rangle =\frac{\vert 0\rangle+\vert 1\rangle}{\sqrt{2}}$ and $H\vert 1\rangle =
+\frac{\vert 0\rangle-\vert 1\rangle}{\sqrt{2}}.
+\]
+!et
+
+
+We also include the phase
+gates $S$ and $T$, which are quarter-turn $Z$-rotations:
+!bt
+\[
+S =
+\begin{pmatrix}1&0\\ 0&i\end{pmatrix},
+\]
+!et
+(90° phase shift on $|1\rangle$)
+and
+!bt
+\[
+T = \begin{pmatrix}1&0\0&e^{i\pi/4}\end{pmatrix},
+\]
+!et
+a 45 degrees phase
+shift.
+
+These satisfy $S^2 = Z$ and $T^2 = S$ . For arbitrary
 rotations, we support parameterized gates $R_x(\theta), R_y(\theta),
 R_z(\theta)$, which rotate a qubit by angle $\theta$ about the $x$,
-$y$, or $z$ axis of the Bloch sphere . For instance, $R_x(\theta) =
+$y$, or $z$ axis of the Bloch sphere . For instance,
+!bt
+\[
+R_x(\theta) =
 e^{-i\theta X/2} = \begin{pmatrix}\cos(\theta/2) &
--i\sin(\theta/2)\[6pt] -i\sin(\theta/2) & \cos(\theta/2)\end{pmatrix}$
-and $R_z(\theta) = \begin{pmatrix}e^{-i\theta/2} & 0\ 0 &
-e^{i\theta/2}\end{pmatrix}$ . (The $R_y$ matrix is similarly
-$\begin{pmatrix}\cos(\theta/2) & -\sin(\theta/2)\ \sin(\theta/2) &
-\cos(\theta/2)\end{pmatrix}$.) An identity gate $I$ (doing nothing) is
+-i\sin(\theta/2)\\ -i\sin(\theta/2) & \cos(\theta/2)\end{pmatrix},
+\]
+!et
+and
+!bt
+\[
+R_z(\theta) = \begin{pmatrix}e^{-i\theta/2} & 0\ 0 &
+e^{i\theta/2}\end{pmatrix}.
+\]
+!et
+
+The $R_y$ matrix is similarly
+!bt
+\[
+\begin{pmatrix}\cos(\theta/2) & -\sin(\theta/2)\\ \sin(\theta/2) &
+\cos(\theta/2)\end{pmatrix}.
+\]
+!et
+
+
+Finally, the identity gate $I$ (doing nothing) is
 also provided for completeness.
 
 
@@ -568,7 +636,7 @@ class RZGate(Gate):
 ===== Two-Qubit Gates =====
 
 
-Two-qubit gates act on a $4$-dimensional joint state space of two
+The two-qubit gates act on a $4$-dimensional joint state space of two
 qubits (basis $\{\vert 00\rangle,\vert 01\rangle,\vert 10\rangle,\vert 11\rangle\}$). The
 most important two-qubit gate is the Controlled-NOT (CNOT), which
 flips a target qubit if and only if the control qubit is $|1\rangle$
@@ -579,14 +647,13 @@ second), CNOT is:
 !bt
 \[ \text{CNOT} = \begin{pmatrix}
 
-1 & 0 & 0 & 0\
+1 & 0 & 0 & 0\\
 
-0 & 1 & 0 & 0\
+0 & 1 & 0 & 0\\
 
-0 & 0 & 0 & 1\
+0 & 0 & 0 & 1\\
 
 0 & 0 & 1 & 0
-
 \end{pmatrix},
 \]
 !et
@@ -613,10 +680,12 @@ its matrix is
 
 which indeed swaps $|01\rangle$ and $|10\rangle$ . Beyond these, the
 simulator can apply any general two-qubit unitary: we provide a
-generic TwoQubitGate class that takes a $4\times4$ unitary matrix and
-two target qubit indices. (This allows simulation of custom gates or
+generic _TwoQubitGate_ class that takes a $4\times4$ unitary matrix and
+two target qubit indices.
+
+This allows simulation of custom gates or
 ones like $\sqrt{\text{SWAP}}$ or $i\text{SWAP}$ by specifying their
-matrices , if desired.)
+matrices , if desired.
 
 
 !split
@@ -634,8 +703,10 @@ sequence to evolve the quantum state.
 
 
 
-State evolution: To apply a gate to the full state vector, we perform
-matrix operations on the state. For example, applying a one-qubit gate
+In order to study the state evolution, we apply a gate to the full state vector, we perform
+matrix operations on the state.
+
+For example, applying a one-qubit gate
 $U$ on qubit $j$ in an $n$-qubit state corresponds to the operation $I
 \otimes \cdots \otimes U_j \otimes \cdots \otimes I$ on the combined
 Hilbert space , effectively inserting $U$ on the $j$th qubit’s
@@ -648,7 +719,7 @@ groups amplitudes into pairs (for one-qubit gates) or quadruples (for
 two-qubit gates) corresponding to the basis states of the target
 qubits, and then multiplies by the gate matrix. All matrix
 multiplications use NumPy for performance. After running the circuit,
-Circuit.state holds the final state vector, and we provide helper
+_Circuit.state_ holds the final state vector, and we provide helper
 methods to retrieve the state or the probability of each basis state.
 
 !split
@@ -926,15 +997,22 @@ circuits and visualize the results.
 
 For the single-qubit example, we apply a Hadamard gate to an initial
 $|0\rangle$ state. This should create the state
-$\frac{|0\rangle +|1\rangle}{\sqrt{2}}$, which is often called $|+\rangle$ (a
-superposition along the $x$-axis of the Bloch sphere). After running
+!bt
+\[
+\frac{|0\rangle +|1\rangle}{\sqrt{2}},
+\]
+!et
+which is, as already metnioned,  called $|+\rangle$ a
+superposition along the $x$-axis of the Bloch sphere.
+
+After running
 the circuit, the state vector is approximately $[0.707+0j,;0.707+0j]$,
 meaning equal amplitude (and probability 0.5 each) for $|0\rangle$ and
 $|1\rangle$. We visualize this state on the Bloch sphere.
 
 
-
-Bloch sphere representation of the single-qubit state after applying a
+The figure we produce shows 
+the Bloch sphere representation of the single-qubit state after applying a
 Hadamard gate. The state vector (shown in purple) points along the
 positive $X$-axis, corresponding to the superposition $\frac{|0\rangle
 + |1\rangle}{\sqrt{2}}$ (often denoted $|+\rangle$). On the Bloch
@@ -983,7 +1061,7 @@ state.
 
 
 
-Probability distribution of the two-qubit state after creating a Bell
+The figure we produces shows the probability distribution of the two-qubit state after creating a Bell
 state. The bars show the probabilities of each computational basis
 state $|00\rangle,|01\rangle,|10\rangle,|11\rangle$. Only $|00\rangle$
 and $|11\rangle$ have nonzero probability (each 0.5), confirming that
@@ -1036,23 +1114,10 @@ circuits, demonstrating the correctness of the implementation.
 
 
 
-The definitions of standard quantum gates and their matrices were
-taken from well-known references . The two-qubit gate matrices (CNOT,
-CZ, SWAP) and their effects on basis states are as described in
-quantum computing literature . The Bloch sphere visualization is based
-on the fact that any single-qubit state
-$|\psi\rangle=\alpha|0\rangle+\beta|1\rangle$ can be mapped to a point
-$(x,y,z)$ on the sphere, where $x = 2,\mathrm{Re}(\alpha \beta^)$, $y
-= 2,\mathrm{Im}(\alpha \beta^)$, and $z = |\alpha|^2 - |\beta|^2$ –
-corresponding to the expectation values of the Pauli $X,Y,Z$ operators
-for state $|\psi\rangle$ . This project demonstrates these concepts
-with a fully self-contained Python implementation.
-
-
 
 
 !split
-===== Refined code =====
+===== A refined code =====
 !bc pycod
 
 import numpy as np
@@ -1458,265 +1523,16 @@ if __name__ == "__main__":
 !ec
 
 
-!split
-===== More codes =====
-
-!bc pycod
-import numpy as np
-
-# One-qubit gates
-def I():  return np.eye(2)
-def X():  return np.array([[0,1],[1,0]])
-def Y():  return np.array([[0,-1j],[1j,0]])
-def Z():  return np.array([[1,0],[0,-1]])
-def H():  return (1/np.sqrt(2))*np.array([[1,1],[1,-1]])
-def S():  return np.array([[1,0],[0,1j]])
-def T():  return np.array([[1,0],[0,np.exp(1j*np.pi/4)]])
-
-def Rx(theta):
-    return np.array([
-        [np.cos(theta/2), -1j*np.sin(theta/2)],
-        [-1j*np.sin(theta/2), np.cos(theta/2)]
-    ])
-
-def Ry(theta):
-    return np.array([
-        [np.cos(theta/2), -np.sin(theta/2)],
-        [np.sin(theta/2),  np.cos(theta/2)]
-    ])
-
-def Rz(theta):
-    return np.array([
-        [np.exp(-1j*theta/2), 0],
-        [0, np.exp(1j*theta/2)]
-    ])
-
-# Two-qubit gates
-def CNOT():
-    return np.array([
-        [1,0,0,0],
-        [0,1,0,0],
-        [0,0,0,1],
-        [0,0,1,0]
-    ])
-
-def CZ():
-    return np.array([
-        [1,0,0,0],
-        [0,1,0,0],
-        [0,0,1,0],
-        [0,0,0,-1]
-    ])
-
-def SWAP():
-    return np.array([
-        [1,0,0,0],
-        [0,0,1,0],
-        [0,1,0,0],
-        [0,0,0,1]
-    ])
-
-
-!ec
-
-
-!split
-===== Circuit =====
-!bc pycod
-import random
-from collections import Counter
-
-class Gate:
-    def __init__(self, matrix, targets):
-        self.matrix = matrix
-        self.targets = targets
-
-class Circuit:
-    def __init__(self, num_qubits):
-        self.n = num_qubits
-        self.reset()
-
-    def reset(self):
-        self.state = np.zeros(2**self.n, dtype=np.complex128)
-        self.state[0] = 1.0
-        self.gates = []
-
-    def add_gate(self, gate):
-        self.gates.append(gate)
-
-    def run(self):
-        for gate in self.gates:
-            self.apply_gate(gate)
-
-    def apply_gate(self, gate):
-        full_U = self.expand_gate(gate)
-        self.state = full_U @ self.state
-
-    def expand_gate(self, gate):
-        if len(gate.targets) == 1:
-            return self.tensor_product_gate(gate)
-        elif len(gate.targets) == 2:
-            return self.tensor_product_two_qubit_gate(gate)
-        else:
-            raise ValueError("Only 1 or 2 qubit gates supported.")
-
-    def tensor_product_gate(self, gate):
-        ops = [np.eye(2) for _ in range(self.n)]
-        ops[gate.targets[0]] = gate.matrix
-        U = ops[0]
-        for op in ops[1:]:
-            U = np.kron(U, op)
-        return U
-
-    def tensor_product_two_qubit_gate(self, gate):
-        ops = [np.eye(2) for _ in range(self.n)]
-        idx = sorted(gate.targets)
-        # naive expansion for generality:
-        full_U = np.eye(1)
-        for i in range(self.n):
-            if i in gate.targets:
-                continue
-            full_U = np.kron(full_U, np.eye(2))
-        full_U = np.kron(gate.matrix, full_U)
-        return full_U  # for small N this works; we can optimize later
-
-    def get_statevector(self):
-        return self.state
-
-    def get_probabilities(self):
-        return np.abs(self.state)**2
-
-    def measure(self, shots=1024):
-        probs = self.get_probabilities()
-        basis_states = [format(i, f'0{self.n}b') for i in range(2**self.n)]
-        samples = random.choices(basis_states, weights=probs, k=shots)
-        return dict(Counter(samples))
-
-
-!ec
-
-!split
-===== Noise model =====
-!bc pycod
-
-import numpy as np
-import random
-
-def bit_flip(state, p):
-    noisy_state = state.copy()
-    for i in range(len(state)):
-        if random.random() < p:
-            flipped = i ^ 1  # flips qubit 0
-            noisy_state[flipped] += state[i]
-            noisy_state[i] = 0
-    return noisy_state / np.linalg.norm(noisy_state)
-
-def depolarizing(state, p):
-    d = len(state)
-    noisy_state = (1-p) * state + p/d * np.ones(d)
-    return noisy_state / np.linalg.norm(noisy_state)
-
-def bit_flip(state, p):
-    noisy_state = state.copy()
-    for i in range(len(state)):
-        if random.random() < p:
-            flipped = i ^ 1  # flips qubit 0
-            noisy_state[flipped] += state[i]
-            noisy_state[i] = 0
-    return noisy_state / np.linalg.norm(noisy_state)
-
-def depolarizing(state, p):
-    d = len(state)
-    noisy_state = (1-p) * state + p/d * np.ones(d)
-    return noisy_state / np.linalg.norm(noisy_state)
-
-
-!ec
-
-!split
-===== Bell states =====
-!bc pycod
-from core.circuit import Circuit, Gate
-from core import gates
-
-def bell_state(label="Phi+"):
-    c = Circuit(2)
-    c.add_gate(Gate(gates.H(), [0]))
-    c.add_gate(Gate(gates.CNOT(), [0,1]))
-
-    if label == "Phi+":
-        pass
-    elif label == "Phi-":
-        c.add_gate(Gate(gates.Z(), [0]))
-    elif label == "Psi+":
-        c.add_gate(Gate(gates.X(), [1]))
-    elif label == "Psi-":
-        c.add_gate(Gate(gates.X(), [1]))
-        c.add_gate(Gate(gates.Z(), [0]))
-    else:
-        raise ValueError("Unknown Bell state label")
-
-    c.run()
-    # Assuming the Circuit class has a measure method for simulation
-    # If not, this line will need to be adjusted based on how measurement is handled
-    return c
-
-!ec
-
-!split
-===== Example =====
-!bc pycod
-import matplotlib.pyplot as plt
-import numpy as np # Add numpy import
-
-# Assuming Circuit and Gate are available in the environment from previous cell execution
-# If not, you might need to re-import them here or ensure the 'core' module is structured correctly.
-# For now, let's assume they are available after running the previous cell.
-
-labels = ["Phi+", "Phi-", "Psi+", "Psi-"]
-shots = 1000
-
-for label in labels:
-    print(f"\nBell state {label}")
-    c = bell_state(label)
-    probs = c.get_probabilities()
-    print("Statevector probabilities:", probs)
-    # The Circuit class defined earlier does NOT have a 'measure' method.
-    # You need to implement a simulation of measurement based on probabilities.
-    # Here's a possible implementation:
-    counts = {}
-    statevector = c.get_statevector()
-    num_qubits = int(np.log2(len(statevector))) # infer number of qubits
-    basis_states = [bin(i)[2:].zfill(num_qubits) for i in range(len(statevector))]
-
-    # Simulate shots based on probabilities
-    measured_indices = np.random.choice(len(statevector), size=shots, p=probs)
-    for idx in measured_indices:
-        basis_state_str = basis_states[idx]
-        counts[basis_state_str] = counts.get(basis_state_str, 0) + 1
-
-    print("Measurement counts:", counts)
-    plt.bar(counts.keys(), counts.values())
-    plt.title(f"Bell state {label}")
-    plt.show()
-
-!ec
-
-
-
-
 
 
 !split
 ===== Introduction to "Qiskit":"https://qiskit.org/" =====
 
-This part is best seen using the jupyter-notebook.
-
 
 For the installation
 !bc pycod
-pip install qiskit
-pip install qiskit-ibm-runtime
+!pip install qiskit
+!pip install qiskit-ibm-runtime
 !ec
 
 Documentation can be found at URL:"https://docs.quantum.ibm.com/api/qiskit "
