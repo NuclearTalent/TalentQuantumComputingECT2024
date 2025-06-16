@@ -35,7 +35,7 @@ notes, exercises and projects are also available in the program here
 | :---- | :---- | :---- |
 |   9.15am-10.00am | Repetition from Monday and start discussion of quantum simulations for spin models and their connection to nuclear physics (e.g. Jordan-Wigner transform)  [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJune17/Firstlecture.ipynb)| Morten |
 | 10.00am-10.15am | Break |  |
-| 10.15am-11.00am | Measuring observables (direct, Hadamard test), non unitary gates [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJune17/)| Alessandro and Ryan |
+| 10.15am-11.00am | Measuring observables (direct, Hadamard test), non unitary gates [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJune17/)| Alessandro |
 | 11.00am-11.30am | Coffee break |  |
 | 11.30am-12.15am | Methods for Hamiltonian dynamics [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJune17/) | Alessandro |
 | 12.15pm-  2.30pm | Lunch |  |
