@@ -1706,10 +1706,10 @@ plot_histogram(results)
 
 Now it's your turn to make create the other three bell states, which are
 
-$$ \vert \Phi_+\rangle = \frac{\vert00\rangle + \vert11\rangle}{\sqrt{2}} $$
-$$ \vert \Phi_-\rangle = \frac{\vert00\rangle - \vert11\rangle}{\sqrt{2}} $$
-$$ \vert \Psi_+\rangle = \frac{\vert01\rangle + \vert10\rangle}{\sqrt{2}} $$
-$$ \vert \Psi_-\rangle = \frac{vert01\rangle - \vert10\rangle}{\sqrt{2}} $$
+$$ \vert \Phi_+\rangle = \frac{\vert 00\rangle + \vert 11\rangle}{\sqrt{2}} $$
+$$ \vert \Phi_-\rangle = \frac{\vert 00\rangle - \vert 11\rangle}{\sqrt{2}} $$
+$$ \vert \Psi_+\rangle = \frac{\vert 01\rangle + \vert 10\rangle}{\sqrt{2}} $$
+$$ \vert \Psi_-\rangle = \frac{\vert 01\rangle - \vert 10\rangle}{\sqrt{2}} $$
 
 
 !bc pycod
