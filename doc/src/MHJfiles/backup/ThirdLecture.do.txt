@@ -438,24 +438,24 @@ $|1\rangle$.
 For example, the Pauli-$X$ gate (quantum NOT) has matrix
 !bt
 \[
-X=\begin{pmatrix}0 & 1\\ 1 & 0\end{pmatrix},
+X=\begin{bmatrix}0 & 1\\ 1 & 0\end{bmatrix},
 \]
 !et
 
 which flips the
-amplitudes of $|0\rangle$ and $|1\rangle.
+amplitudes of $|0\rangle$ and $|1\rangle$.
 
 Similarly,
 !bt
 \[
-Y=\begin{pmatrix}0 & -i\\ i & 0\end{pmatrix}$,
+Y=\begin{bmatrix}0 & -i\\ i & 0\end{bmatrix},
 \]
 !et
 
 and
 !bt
 \[
-Z=\begin{pmatrix}1 & 0\\ 0 & -1\end{pmatrix},
+Z=\begin{bmatrix}1 & 0\\ 0 & -1\end{bmatrix},
 \]
 !et
 are 180° rotations about the $y$- and
@@ -468,13 +468,13 @@ $|1\rangle$ (changing its sign).
 The Hadamard gate
 !bt
 \[
-H=\frac{1}{\sqrt{2}}\begin{pmatrix}1 & 1\\ 1 & -1\end{pmatrix},
+H=\frac{1}{\sqrt{2}}\begin{bmatrix}1 & 1\\ 1 & -1\end{bmatrix},
 \]
 !et
-creates superposition:
+creates superpositions
 !bt
 \[
-H\vert 0\rangle =\frac{\vert 0\rangle+\vert 1\rangle}{\sqrt{2}}$ and $H\vert 1\rangle =
+H\vert 0\rangle =\frac{\vert 0\rangle+\vert 1\rangle}{\sqrt{2}}\hspace{1cm} \mathrm{and} \hspace{1cm} H\vert 1\rangle =
 \frac{\vert 0\rangle-\vert 1\rangle}{\sqrt{2}}.
 \]
 !et
@@ -485,14 +485,14 @@ gates $S$ and $T$, which are quarter-turn $Z$-rotations:
 !bt
 \[
 S =
-\begin{pmatrix}1&0\\ 0&i\end{pmatrix},
+\begin{bmatrix}1&0\\ 0&i\end{bmatrix},
 \]
 !et
 (90° phase shift on $|1\rangle$)
 and
 !bt
 \[
-T = \begin{pmatrix}1&0\0&e^{i\pi/4}\end{pmatrix},
+T = \begin{bmatrix}1&0\\ 0&e^{i\pi/4}\end{bmatrix},
 \]
 !et
 a 45 degrees phase
@@ -505,23 +505,23 @@ $y$, or $z$ axis of the Bloch sphere . For instance,
 !bt
 \[
 R_x(\theta) =
-e^{-i\theta X/2} = \begin{pmatrix}\cos(\theta/2) &
--i\sin(\theta/2)\\ -i\sin(\theta/2) & \cos(\theta/2)\end{pmatrix},
+e^{-i\theta X/2} = \begin{bmatrix}\cos(\theta/2) &
+-i\sin(\theta/2)\\ -i\sin(\theta/2) & \cos(\theta/2)\end{bmatrix},
 \]
 !et
 and
 !bt
 \[
-R_z(\theta) = \begin{pmatrix}e^{-i\theta/2} & 0\ 0 &
-e^{i\theta/2}\end{pmatrix}.
+R_z(\theta) = \begin{bmatrix}e^{-i\theta/2} & 0\ 0 &
+e^{i\theta/2}\end{bmatrix}.
 \]
 !et
 
 The $R_y$ matrix is similarly
 !bt
 \[
-\begin{pmatrix}\cos(\theta/2) & -\sin(\theta/2)\\ \sin(\theta/2) &
-\cos(\theta/2)\end{pmatrix}.
+\begin{bmatrix}\cos(\theta/2) & -\sin(\theta/2)\\ \sin(\theta/2) &
+\cos(\theta/2)\end{bmatrix}.
 \]
 !et
 
@@ -645,7 +645,7 @@ second), CNOT is:
 
 
 !bt
-\[ \text{CNOT} = \begin{pmatrix}
+\[ \text{CNOT} = \begin{bmatrix}
 
 1 & 0 & 0 & 0\\
 
@@ -654,7 +654,7 @@ second), CNOT is:
 0 & 0 & 0 & 1\\
 
 0 & 0 & 1 & 0
-\end{pmatrix},
+\end{bmatrix},
 \]
 !et
 
@@ -673,7 +673,7 @@ its matrix is
 
 !bt
 \[
-\text{SWAP} = \begin{pmatrix} 1 & 0 & 0 & 0\\ 0 & 0 & 1 & 0\\ 0 & 1 & 0 & 0\\ 0 & 0 & 0 & 1 \end{pmatrix},
+\text{SWAP} = \begin{bmatrix} 1 & 0 & 0 & 0\\ 0 & 0 & 1 & 0\\ 0 & 1 & 0 & 0\\ 0 & 0 & 0 & 1 \end{bmatrix},
 \]
 !et
 
@@ -1093,7 +1093,7 @@ circuit2.visualize_state()
 
 
 !split
-===== Discussion =====
+===== Short summary =====
 
 These examples show that our simulator correctly evolves quantum
 states under the defined gates. The object-oriented design (with
