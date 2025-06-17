@@ -55,7 +55,7 @@ notes, exercises and projects are also available in the program here
 | 11.00am-11.30am | Coffee break |  |
 | 11.30am-12.15pm | Hamiltonian formulation of lattice gauge theories III [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/WednesdayJune18/) | Zohreh |
 | 12.15pm-  2.30pm | Lunch |  |
-|   2.30pm-  6.00pm | Exercises on … Hamiltonian simulation of lattice Schwinger model  [Exercises](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/Exercises)  |  |
+|   2.30pm-  6.00pm | Exercises on Hamiltonian simulation of lattice Schwinger model  [Exercises](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/Exercises)  |  |
 
 \#\#\#  Thursday June 19
 
