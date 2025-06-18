@@ -54,8 +54,8 @@ notes, exercises and projects are also available in the program here
 |   10.15am-11.00am | Hamiltonian formulation of lattice gauge theories II [Lecture material](https://drive.google.com/file/d/1cxXbFsvM0VmpCPmC0dEwOSxOk6ut2LMq/view?usp=sharing)| Zohreh |
 | 11.00am-11.30am | Coffee break |  |
 | 11.30am-12.15pm | Hamiltonian formulation of lattice gauge theories III [Lecture material](https://drive.google.com/file/d/1cxXbFsvM0VmpCPmC0dEwOSxOk6ut2LMq/view?usp=sharing) | Zohreh |
-| 12.15pm-  2.30pm | Lunch |  |
-|   2.30pm-  6.00pm | Exercises on Hamiltonian simulation of lattice Schwinger model  [Exercises](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/Exercises)  |  |
+| 12.15pm-  2.00pm | Lunch |  |
+|   2.00pm-  5.00pm | Exercises on Hamiltonian simulation of lattice Schwinger model  [Exercises](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/Exercises)  |  |
 
 \#\#\#  Thursday June 19
 
@@ -66,8 +66,8 @@ notes, exercises and projects are also available in the program here
 |  10.15am-11.00am | Quantum-simulation basics II [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/ThursdayJune19/) | Zohreh |
 | 11.00am-11.30am | Coffee break |  |
 | 11.30am-12.15pm | Quantum-simulation basics III [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/ThursdayJune19/) | Zohreh |
-| 12.15pm-  2.30pm | Lunch |  |
-|   2.30pm-  6.00pm | Exercises [Exercises](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/Exercises)  | \*\*\* |
+| 12.15pm-  2.00pm | Lunch |  |
+|   2.00pm-  5.00pm | Exercises [Exercises](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/Exercises)  | \*\*\* |
 
 \#\#\#  Friday June 20
 
@@ -78,8 +78,8 @@ notes, exercises and projects are also available in the program here
 |  10.15am-11.00am | Quantum computation of lattice gauge theories II [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/FridayJune20/) | Zohreh |
 | 11.00am-11.30am | Coffee break |  |
 | 11.30am-12.15pm | Quantum computation of lattice gauge theories III [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/FridayJune20/) | Zohreh |
-| 12.15pm-  2.30pm | Lunch |  |
-|   2.30pm-  6.00pm | [Exercises](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/Exercises)  | \*\*\* |
+| 12.15pm-  2.00pm | Lunch |  |
+|   2.00pm-  5.00pm | [Exercises](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/Exercises)  | \*\*\* |
 
 # Week 2, June 23-27
 
@@ -92,8 +92,8 @@ notes, exercises and projects are also available in the program here
 | 10.15am-11.00am | Variational quantum eigensolver (VQE), part 1 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/MondayJune23/)| Ryan, Morten, Alexei |
 | 11.00am-11.30am | Coffee break |  |
 | 11.30am-12.15pm | Variational quantum eigensolver (VQE), part 2 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/MondayJune23/)| Ryan,Morten, Alexei |
-| 12.15pm-  2.30pm | Lunch |  |
-|   2.30pm-  6.00pm | Exercises on … |  |
+| 12.15pm-  2.00pm | Lunch |  |
+|   2.00pm-  5.00pm | Exercises on … |  |
 
 \#\#\#  Tuesday June 24
 
@@ -104,8 +104,8 @@ notes, exercises and projects are also available in the program here
 | 10.15am-11.00am | Noise mitigation and NISQ computing 1 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJune24/)| Ryan |
 | 11.00am-11.30am | Coffee break |  |
 | 11.30am-12.15pm | Noise mitigation and NISQ computing 2 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJune24/)| Ryan |
-| 12.15pm-  2.30pm | Lunch |  |
-|   2.30pm-  6.00pm | Exercises on … |  |
+| 12.15pm-  2.00pm | Lunch |  |
+|   2.00pm-  5.00pm | Exercises on … |  |
 
 \#\#\#  Wednesday June 25
 
@@ -116,8 +116,8 @@ notes, exercises and projects are also available in the program here
 | 10.15am-11.00am | Quantum Fourier Transforms and circuits for QFTs [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/WednesdayJune25/)| Alexei, Ryan |
 | 11.00am-11.30am | Coffee break |  |
 | 11.30am-12.15pm | QFTs and Quantum Phase Estimation (QPE) algorithm [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/WednesdayJune25/)| Alexei, Ryan |
-| 12.15pm-  2.30pm | Lunch |  |
-|   2.30pm-  6.00pm | Exercises on … |  |
+| 12.15pm-  2.00pm | Lunch |  |
+|   2.00pm-  5.00pm | Exercises on … |  |
 
 \#\#\#  Thursday June 26
 
@@ -132,8 +132,8 @@ Feste Vigiliane, ECT* is closed on Thursday
 | 10.15am-11.00am | Simple eigenvalue problems and the QPE [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/FridayJune27/) | Alexei |
 | 11.00am-11.30am | Coffee break |  |
 | 11.30am-12.15pm | Nuclear response functions [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/FridayJune27/) | Alessandro |
-| 12.15pm-  2.30pm | Lunch |  |
-|   2.30pm-  6.00pm | Exercises on … |  |
+| 12.15pm-  2.00pm | Lunch |  |
+|   2.00pm-  5.00pm | Exercises on … |  |
 
 # Week 3, June 30-July 4
 
@@ -146,8 +146,8 @@ Feste Vigiliane, ECT* is closed on Thursday
 | 10.15am-11.00am | Rodeo algorithm for nuclear eigenvalue problems, part 2 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/MondayJune30/) | Dean |
 | 11.00am-11.30am | Coffee break |  |
 | 11.30am-12.15pm | Implementing the Rodeo algorithm [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/MondayJune30/) | Dean |
-| 12.15pm-  2.30pm | Lunch |  |
-|   2.30pm-  6.00pm | Exercises on … |  |
+| 12.15pm-  2.00pm | Lunch |  |
+|   2.00pm-  5.00pm | Exercises on … |  |
 
 \#\#\#  Tuesday July 1
 
@@ -158,8 +158,8 @@ Feste Vigiliane, ECT* is closed on Thursday
 | 10.15am-11.00am | Quantum error correction and fault tolerance, part 2 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJuly1/) | Alessandro, Dean |
 | 11.00am-11.30am | Coffee break |  |
 | 11.30am-12.15pm | Grover/amplitude amplification/estimation [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJuly1/) | Alessandro, Dean |
-| 12.15pm-  2.30pm | Lunch |  |
-|   2.30pm-  6.00pm | Exercises on … |  |
+| 12.15pm-  2.00pm | Lunch |  |
+|   2.00pm-  5.00pm | Exercises on … |  |
 
 \#\#\#  Wednesday July 2
 
@@ -170,8 +170,8 @@ Feste Vigiliane, ECT* is closed on Thursday
 | 10.15am-11.00am | Modern techniques (LCU,QSP), part 2 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/WednesdayJuly2/) | Alessandro |
 | 11.00am-11.30am | Coffee break |  |
 | 11.30am-12.15pm | Randomized quantum algorithms [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/WednesdayJuly2/) | Alessandro |
-| 12.15pm-  2.30pm | Lunch |  |
-|   2.30pm-  6.00pm | Exercises on … |  |
+| 12.15pm-  2.00pm | Lunch |  |
+|   2.00pm-  5.00pm | Exercises on … |  |
 
 \#\#\#  Thursday July 3
 
@@ -182,8 +182,8 @@ Feste Vigiliane, ECT* is closed on Thursday
 | 10.15am-11.00am | Encoding (relativistic and nonrelativistic) fermions and bosons on quantum computers, part 2 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/ThursdayJuly3/) | Dea |
 | 11.00am-11.30am | Coffee break |  |
 | 11.30am-12.15pm | Adiabatic state preparation [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/ThursdayJuly3/) | Dean |
-| 12.15pm-  2.30pm | Lunch |  |
-|   2.30pm-  6.00pm | Exercises on … |  |
+| 12.15pm-  2.00pm | Lunch |  |
+|   2.00pm-  5.00pm | Exercises on … |  |
 
 \#\#\#  Friday July 4
 
@@ -194,8 +194,8 @@ Feste Vigiliane, ECT* is closed on Thursday
 | 10.15am-11.00am | Discussion of projects |  |
 | 11.00am-11.30am | Coffee break |  |
 | 11.30am-12.15pm | Discussion of projects |  |
-| 12.15pm-  2.30pm | Lunch |  |
-|   2.30pm-  6.00pm | Exercises on … |  |
+| 12.15pm-  2.00pm | Lunch |  |
+|   2.00pm-  5.00pm | Exercises on … |  |
 
 
 
