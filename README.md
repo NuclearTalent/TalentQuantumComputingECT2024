@@ -105,7 +105,10 @@ notes, exercises and projects are also available in the program here
 | 11.00am-11.30am | Coffee break |  |
 | 11.30am-12.15pm | Noise mitigation and NISQ computing 2 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJune24/)| Ryan |
 | 12.15pm-  2.00pm | Lunch |  |
-|   2.00pm-  5.00pm | Exercises on … |  |
+|   2.00pm-  3.00pm | Exercises on … |  |
+|   3.00pm-  4.00pm | Seminar by Federica Mantegazzini, FBK and Trento, title to come |  |
+|   4.00pm-  5.00pm | Exercises on … |  |
+
 
 \#\#\#  Wednesday June 25
 
