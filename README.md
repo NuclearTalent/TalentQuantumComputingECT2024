@@ -89,9 +89,9 @@ notes, exercises and projects are also available in the program here
 | :---- | :---- | :---- |
 |   9.15am-10.00am | Introducing realistic nuclear physics Hamiltonians, the Lipkin model [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/MondayJune23/) | Morten |
 | 10.00am-10.15am | Break |  |
-| 10.15am-11.00am | Variational quantum eigensolver (VQE), part 1 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/MondayJune23/)| Ryan, Morten, Alexei |
+| 10.15am-11.00am | Variational quantum eigensolver (VQE), part 1 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/MondayJune23/)| Morten  |
 | 11.00am-11.30am | Coffee break |  |
-| 11.30am-12.15pm | Variational quantum eigensolver (VQE), part 2 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/MondayJune23/)| Ryan,Morten, Alexei |
+| 11.30am-12.15pm | Variational quantum eigensolver (VQE), part 2 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/MondayJune23/)| Morten |
 | 12.15pm-  2.00pm | Lunch |  |
 |   2.00pm-  5.00pm | Exercises on … |  |
 
@@ -99,7 +99,7 @@ notes, exercises and projects are also available in the program here
 
 | Time | Topic | Lecturers |
 | :---- | :---- | :---- |
-|   9.15am-10.00am | Nuclear Hamiltonians and the VQE [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJune24/)| Morten |
+|   9.15am-10.00am | Nuclear Hamiltonians and the VQE, summary from the Monday June 23 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJune24/)| Morten |
 | 10.00am-10.15am | Break |  |
 | 10.15am-11.00am | Noise mitigation and NISQ computing 1 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJune24/)| Ryan |
 | 11.00am-11.30am | Coffee break |  |
