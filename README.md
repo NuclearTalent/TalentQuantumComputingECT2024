@@ -81,7 +81,7 @@ notes, exercises and projects are also available in the program here
 | 11.00am-11.30am | Coffee break |  |
 | 11.30am-12.15pm | Why quantum computation for lattice gauge theories? And some highlights! [Lecture material](https://drive.google.com/file/d/18dimLJIDsS4s78OODEkV5ViJSdAphF8n/view?usp=sharing) | Zohreh |
 | 12.15pm-  2.00pm | Lunch |  |
-|   2.00pm-  5.00pm | [Exercises]  | \*\*\* |
+|   2.00pm-  5.00pm | [Exercises]  | Chung-Chun Hsieh |
 
 # Week 2, June 23-27
 
