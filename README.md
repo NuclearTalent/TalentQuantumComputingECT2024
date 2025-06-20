@@ -13,6 +13,8 @@ notes, exercises and projects are also available in the program here
 
 # **DTP/TALENT Program**
 
+[Here](https://maps.app.goo.gl/Ucaufqk2NonAbp7H8) is a short, and biased, list of suggestions for places to eat nearby. Enjoy!
+
 # Week 1, June 16-20
 
 \#\#\#  Monday June 16
