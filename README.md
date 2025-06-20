@@ -101,11 +101,11 @@ notes, exercises and projects are also available in the program here
 
 | Time | Topic | Lecturers |
 | :---- | :---- | :---- |
-|   9.15am-10.00am | Nuclear Hamiltonians and the VQE, summary from the Monday June 23 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJune24/)| Morten |
+|   9.15am-10.00am | Nuclear Hamiltonians and the Jordan-Wigner Transformation [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJune24/)| Alexei |
 | 10.00am-10.15am | Break |  |
-| 10.15am-11.00am | Noise mitigation and NISQ computing 1 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJune24/)| Ryan |
+| 10.15am-11.00am | Time evolution via Trotter [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJune24/)| Ryan |
 | 11.00am-11.30am | Coffee break |  |
-| 11.30am-12.15pm | Noise mitigation and NISQ computing 2 [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJune24/)| Ryan |
+| 11.30am-12.15pm | Measuring observables [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/TuesdayJune24/)| Ryan |
 | 12.15pm-  2.00pm | Lunch |  |
 |   2.00pm-  3.00pm | Exercises on … |  |
 |   3.00pm-  4.00pm | [Seminar by Federica Mantegazzini, Quantum Technologies in Trento: experimental platforms and recent developments](https://sd.fbk.eu/en/people/detail/federica-mantegazzini/) |  |
@@ -117,11 +117,11 @@ notes, exercises and projects are also available in the program here
 
 | Time | Topic | Lecturers |
 | :---- | :---- | :---- |
-|   9.15am-10.00am |  Quantum Fourier Transforms (QFTs) [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/WednesdayJune25/) | Alexei, Ryan |
+|   9.15am-10.00am |  Quantum Fourier Transforms (QFTs) [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/WednesdayJune25/) | Alexei |
 | 10.00am-10.15am | Break |  |
-| 10.15am-11.00am | Quantum Fourier Transforms and circuits for QFTs [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/WednesdayJune25/)| Alexei, Ryan |
+| 10.15am-11.00am | Quantum Phase Estimation I [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/WednesdayJune25/)| Ryan |
 | 11.00am-11.30am | Coffee break |  |
-| 11.30am-12.15pm | QFTs and Quantum Phase Estimation (QPE) algorithm [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/WednesdayJune25/)| Alexei, Ryan |
+| 11.30am-12.15pm | Quantum Phase Estimation II [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/WednesdayJune25/)| Alexei, Ryan |
 | 12.15pm-  2.00pm | Lunch |  |
 |   2.00pm-  5.00pm | Project work |  |
 
@@ -133,11 +133,11 @@ Feste Vigiliane, ECT* is closed on Thursday
 
 | Time | Topic | Lecturers |
 | :---- | :---- | :---- |
-|   9.15am-10.00am | How to implement the QPE algorithm and simple eigenvalue problems [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/FridayJune27/)| Alexei |
+|   9.15am-10.00am | Quantum channels & errors [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/FridayJune27/)| Ryan |
 | 10.00am-10.15am | Break |  |
-| 10.15am-11.00am | Simple eigenvalue problems and the QPE [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/FridayJune27/) | Alexei |
+| 10.15am-11.00am | Quantum error mitigation [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/FridayJune27/) | Ryan |
 | 11.00am-11.30am | Coffee break |  |
-| 11.30am-12.15pm | Nuclear response functions [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/FridayJune27/) | Alessandro |
+| 11.30am-12.15pm | State preparation for the Schwinger model [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/FridayJune27/) | Alexei |
 | 12.15pm-  2.00pm | Lunch |  |
 |   2.00pm-  5.00pm | Project work |  |
 
