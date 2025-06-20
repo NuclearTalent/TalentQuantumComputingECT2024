@@ -75,13 +75,13 @@ notes, exercises and projects are also available in the program here
 
 | Time | Topic | Lecturers |
 | :---- | :---- | :---- |
-|   9.15am-10.00am | Quantum computation of lattice gauge theories I [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/FridayJune20/) | Zohreh |
+|   9.15am-10.00am | Quantum computation of lattice gauge theories IV [Lecture material](https://drive.google.com/file/d/1pCn-q7zwCfVOBq-YJsgTK0Wx_1GWgzo0/view?usp=sharing) | Zohreh |
 | 10.00am-10.15am | Break |  |
-|  10.15am-11.00am | Quantum computation of lattice gauge theories II [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/FridayJune20/) | Zohreh |
+|  10.15am-11.00am | Quantum computation of lattice gauge theories V [Lecture material](https://drive.google.com/file/d/1pCn-q7zwCfVOBq-YJsgTK0Wx_1GWgzo0/view?usp=sharing) | Zohreh |
 | 11.00am-11.30am | Coffee break |  |
-| 11.30am-12.15pm | Quantum computation of lattice gauge theories III [Lecture material](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/FridayJune20/) | Zohreh |
+| 11.30am-12.15pm | Why quantum computation for lattice gauge theories? And some highlights! [Lecture material](https://drive.google.com/file/d/18dimLJIDsS4s78OODEkV5ViJSdAphF8n/view?usp=sharing) | Zohreh |
 | 12.15pm-  2.00pm | Lunch |  |
-|   2.00pm-  5.00pm | [Exercises](https://github.com/NuclearTalent/TalentQuantumComputingECT2025/blob/main/doc/pub/Exercises)  | \*\*\* |
+|   2.00pm-  5.00pm | [Exercises]  | \*\*\* |
 
 # Week 2, June 23-27
 
